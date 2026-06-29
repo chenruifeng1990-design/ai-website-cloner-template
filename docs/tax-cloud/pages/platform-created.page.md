@@ -59,6 +59,19 @@
 | `TaxCloudFooterActors` | 收款人/复核人/开票人等底栏 | pending |
 | `TaxCloudDigitalLoginPanel` | 数电登录/认证侧栏 | pending |
 
+## 接口候选
+
+- 流水号：`/bussiness/bizBillInfo/getSerialNumber`、`/bussiness/bizInvoiceInfo/getSerialNumber`，L0。
+- 销方信息：`/bussiness/bizInvoiceInfo/getSellerInfo`、`/bussiness/bizInvoiceInfo/getDefaultSellerInfo`，L0。
+- 额度：`/prod-api/bussiness/credit/creditInfo/1`、`/bussiness/credit/creditInfo/2`、`/bussiness/bizInvoiceInfo/getCreditInfo/2`，L0。
+- 网上办税信息：`/system/bizOnlineTaxInformation/getOnlineTax`，L0。
+- 草稿箱/待开发票：`/bussiness/bizBillInfo/findDraftList`、`/bussiness/bizInvoiceInfo/getDraftInvoiceList`、`/bussiness/bizInvoiceInfo/getWaitInvoiceList`，L0。
+- 暂存草稿：`/bussiness/bizBillInfo/stagingOrder`、`/bussiness/bizInvoiceInfo/saveStagingOrder`，L2。
+- 清单导入：`/bussiness/bizInvoiceInfo/billListImport2`，L1。
+- 税收分类编码：`ynfp.invoice.batch.taxCode`，L0，曾返回 7007，需要复测。
+- 场景模板：`/bussiness/bizInvoiceInfo/getSceneTemplateList`、`/bussiness/bizInvoiceInfo/getSceneTemplateDetail`，L0。
+- 真实开票：`ynfp.invoice.issue.sync`，L4，只能走 ERP 飞书审批、preview hash、服务端总闸。
+
 ## 已知差距提醒
 
 ERP 当前票面最容易跑偏的位置：
@@ -68,4 +81,3 @@ ERP 当前票面最容易跑偏的位置：
 3. label 和冒号必须结构化对齐，不要用散文本。
 4. 额度接口必须显示真实接口状态，不能写死假值。
 5. 数税云原页面有数电登录/认证状态侧栏，ERP 当前票面还没完整映射。
-

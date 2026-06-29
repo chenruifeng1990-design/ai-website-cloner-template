@@ -90,7 +90,7 @@ docs/tax-cloud/TAX_CLOUD_VERIFICATION_REPORT.md
 当前机器验收口径：
 
 ```text
-页面/spec/动作矩阵/P0 demo：通过
+页面/spec/动作矩阵/P0 demo/候选接口证据：通过
 真实 HAR 接口证据：未通过
 ```
 

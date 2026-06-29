@@ -614,6 +614,7 @@ docs/tax-cloud/TAX_CLOUD_VERIFICATION_REPORT.md
 - 总控文档、缺口台账、动作矩阵、HAR 手册是否齐全。
 - 非手工 P0 页面是否全部进入动作矩阵和 P0 demo。
 - P1/P2/P3 页面是否进入动作矩阵。
+- 每页 page spec 是否都有接口候选或明确接口策略。
 - 每个非手工页面是否已经有 normalized HAR 真实接口证据。
 
 严格完成验收必须跑：

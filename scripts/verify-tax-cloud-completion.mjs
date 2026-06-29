@@ -82,6 +82,7 @@ const targetPages = await readJson("docs/tax-cloud/captures/target-pages.json", 
 const pageKeys = targetPages.map((page) => page.key).filter(Boolean);
 
 const pageRows = [];
+const candidateRows = [];
 for (const page of targetPages) {
   const key = page.key;
   const raw = page.captureFiles?.raw || `docs/tax-cloud/captures/${key}.raw.json`;
@@ -93,6 +94,8 @@ for (const page of targetPages) {
       ? "docs/design-references/tax-cloud-created-fullpage.png"
       : `docs/design-references/tax-cloud-${key}-fullpage.png`);
   const spec = `docs/tax-cloud/pages/${key}.page.md`;
+  const specText = await readText(spec);
+  const candidates = extractSectionBullets(specText, "接口候选");
   pageRows.push({
     key,
     menu: `${page.menu1 || ""}/${page.menu2 || ""}`,
@@ -101,6 +104,12 @@ for (const page of targetPages) {
     screenshot: await exists(screenshot),
     designReference: await exists(designReference),
     spec: await exists(spec),
+  });
+  candidateRows.push({
+    key,
+    menu: `${page.menu1 || ""}/${page.menu2 || ""}`,
+    count: candidates.length,
+    candidates,
   });
 }
 
@@ -147,6 +156,21 @@ function safePathname(url) {
   }
 }
 
+function extractSectionBullets(markdown, heading) {
+  if (!markdown) return [];
+  const lines = markdown.split(/\r?\n/);
+  const start = lines.findIndex((line) => line.trim() === `## ${heading}`);
+  if (start === -1) return [];
+  const result = [];
+  for (let index = start + 1; index < lines.length; index += 1) {
+    const line = lines[index];
+    if (/^##\s+/.test(line)) break;
+    const match = line.match(/^\s*-\s+(.+?)\s*$/);
+    if (match) result.push(match[1]);
+  }
+  return result;
+}
+
 const pageByKey = Object.fromEntries(targetPages.map((page) => [page.key, page]));
 const missingP0Actions = expectedP0DemoKeys.filter((key) => !pageCoveredInText(pageByKey[key] || { key }, p0ActionText));
 const missingP0Demo = expectedP0DemoKeys.filter((key) => !p0DemoText.includes(key));
@@ -154,6 +178,7 @@ const p123ActionCoverageMissing = pageKeys.filter((key) => {
   if (expectedP0DemoKeys.includes(key) || key === "platform-created") return false;
   return !pageCoveredInText(pageByKey[key] || { key }, p123ActionText);
 });
+const missingCandidateEvidence = candidateRows.filter((row) => row.count === 0).map((row) => row.key);
 
 const totalHarPages = new Set(harRows.filter((row) => row.taxCloudApiEntries > 0).map((row) => row.pageKey)).size;
 const requiredHarPageKeys = pageKeys.filter((key) => key !== "platform-created");
@@ -194,6 +219,14 @@ const checks = [
       p123ActionCoverageMissing.length === 0
         ? "all remaining keys present"
         : `missing ${p123ActionCoverageMissing.join(", ")}`,
+  },
+  {
+    name: "Page spec candidate interface evidence",
+    pass: missingCandidateEvidence.length === 0,
+    evidence:
+      missingCandidateEvidence.length === 0
+        ? `${candidateRows.length}/${candidateRows.length} pages have candidate interface notes`
+        : `missing ${missingCandidateEvidence.join(", ")}`,
   },
   {
     name: "HAR-backed real interface evidence",
@@ -256,6 +289,22 @@ ${pageRows
 | pages with HAR evidence | ${totalHarPages} |
 | required non-manual pages | ${requiredHarPageKeys.length} |
 | missing HAR evidence pages | ${missingHarEvidence.length} |
+
+## 候选接口证据
+
+| 项目 | 数量 |
+|---|---:|
+| pages with candidate interface notes | ${candidateRows.length - missingCandidateEvidence.length} |
+| pages missing candidate interface notes | ${missingCandidateEvidence.length} |
+
+| key | 候选接口/策略数量 | 说明 |
+|---|---:|---|
+${candidateRows
+  .map(
+    (row) =>
+      `| \`${row.key}\` | ${row.count} | ${row.candidates.length > 0 ? row.candidates.map((item) => item.replace(/\|/g, "\\|")).join("<br>") : "missing"} |`,
+  )
+  .join("\n")}
 
 缺 HAR 证据页面：
 
