@@ -435,6 +435,44 @@
           </tbody>
         </table>
       </section>
+
+      <section class="section">
+        <h2>P1 / P2 / P3 执行队列</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>优先级</th>
+              <th>页面</th>
+              <th>key</th>
+              <th>当前状态</th>
+              <th>下一步</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>P1</td><td>扫码开票</td><td><code>platform-scanCode</code></td><td>page spec done</td><td>补二维码/链接/失效状态 demo 和 Network</td></tr>
+            <tr><td>P1</td><td>扫码记录</td><td><code>platform-scanRecords</code></td><td>page spec done</td><td>补列表、详情、导出动作</td></tr>
+            <tr><td>P1</td><td>订单开票</td><td><code>platform-billIssue</code></td><td>page spec done</td><td>和 ERP 待开票合同缺口台账对齐</td></tr>
+            <tr><td>P1</td><td>开票申请单</td><td><code>platform-invoiceApplication</code></td><td>visual-only spec done</td><td>只保留视觉参考，不恢复旧申请主线</td></tr>
+            <tr><td>P1</td><td>红字确认单</td><td><code>platform-redMark</code></td><td>page spec done</td><td>查询台账先行，L3 红字动作后置</td></tr>
+            <tr><td>P1</td><td>快捷勾选</td><td><code>income-scanCodeCheck</code></td><td>page spec done</td><td>补 L3 门禁和批量确认</td></tr>
+            <tr><td>P1</td><td>勾选审核</td><td><code>income-confirmCheck</code></td><td>page spec done</td><td>补批次审核/撤销动作</td></tr>
+            <tr><td>P1</td><td>签收</td><td><code>billCenter-sign</code></td><td>page spec done</td><td>先展示签收状态，真实签收后置</td></tr>
+            <tr><td>P1</td><td>查验</td><td><code>billCenter-invoiceVerification</code></td><td>page spec done</td><td>补查验表单、批量查验、失败态</td></tr>
+            <tr><td>P1</td><td>取票设置</td><td><code>billCenter-accessSetting</code></td><td>page spec done</td><td>补配置白名单和同步任务映射</td></tr>
+            <tr><td>P1</td><td>任务管理</td><td><code>billCenter-taskManagement</code></td><td>page spec done</td><td>补重试、失败明细、下载结果</td></tr>
+            <tr><td>P1</td><td>下载中心</td><td><code>downloadCenter</code></td><td>page spec done</td><td>补文件下载、过期、权限不足态</td></tr>
+            <tr><td>P2</td><td>商品信息</td><td><code>bussiness-info</code></td><td>page spec done</td><td>补商品税编映射</td></tr>
+            <tr><td>P2</td><td>客户管理</td><td><code>bussiness-customer</code></td><td>page spec done</td><td>补 ERP/金蝶/数税云客户资料血缘</td></tr>
+            <tr><td>P2</td><td>开票额度配置</td><td><code>bussiness-credit</code></td><td>page spec done</td><td>补额度配置和开票页额度展示闭环</td></tr>
+            <tr><td>P2</td><td>配置管理</td><td><code>bussiness-configurationManagement</code></td><td>page spec done</td><td>筛选进入 ERP 的配置白名单</td></tr>
+            <tr><td>P2</td><td>网上办税信息</td><td><code>system-onlineTaxationInfo</code></td><td>page spec done</td><td>补数电账号安全存储方案</td></tr>
+            <tr><td>P3</td><td>组织管理</td><td><code>system-dept</code></td><td>page spec done</td><td>只做参考，不覆盖 ERP 组织</td></tr>
+            <tr><td>P3</td><td>部门管理</td><td><code>system-departmentInfo</code></td><td>page spec done</td><td>只做参考，不覆盖 ERP 部门</td></tr>
+            <tr><td>P3</td><td>角色管理</td><td><code>system-role</code></td><td>page spec done</td><td>只做参考，不覆盖 ERP 权限</td></tr>
+            <tr><td>P3</td><td>用户管理</td><td><code>system-user</code></td><td>page spec done</td><td>只做数税云账号映射参考</td></tr>
+          </tbody>
+        </table>
+      </section>
     </main>
   </body>
 </html>

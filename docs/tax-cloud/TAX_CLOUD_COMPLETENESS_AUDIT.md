@@ -128,8 +128,9 @@ visible DOM：docs/tax-cloud/captures/*.visible-dom.json
 
 缺口：
 
-- 目前只有手工开票页 7 个组件 spec。
-- 其余页面还没有 page spec / demo。
+- 33 个页面已经都有 page spec 初版。
+- 目前只有 P0 demo 总览，P1/P2/P3 还没有页面级 demo。
+- 手工开票页 7 个组件 spec 已可作为冻结基线。
 - ERP 主干只完成了部分真实开票页，不等于税务工作台完成。
 
 验收条件：
@@ -144,7 +145,7 @@ visible DOM：docs/tax-cloud/captures/*.visible-dom.json
 
 ```text
 已采页面三件套
-→ 页面 spec
+→ 页面 spec（已完成 33/33 初版）
 → 接口逐动作复核
 → 状态补采
 → ERP 映射

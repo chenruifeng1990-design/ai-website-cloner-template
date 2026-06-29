@@ -15,6 +15,7 @@
 | P0 demo 总览页 | `tax-cloud-ui-demos/index.html` | 已生成 |
 | P0 动作复核矩阵 | `docs/tax-cloud/TAX_CLOUD_P0_INTERFACE_ACTION_AUDIT.md` | 已生成 |
 | P0 页面 spec | `docs/tax-cloud/pages/*.page.md` | 非手工 P0 11 页已生成 |
+| 全量页面 spec | `docs/tax-cloud/pages/*.page.md` | 33 页初版已生成 |
 | 缺口台账 | `docs/tax-cloud/TAX_CLOUD_GAP_LEDGER.md` | 已更新 |
 | ERP 映射 | `docs/tax-cloud/TAX_CLOUD_TO_ERP_MAPPING.md` | 待本轮同步更新 |
 
@@ -55,7 +56,7 @@ find docs/tax-cloud/screenshots -name '*-fullpage.png' | wc -l
 
 预期：
 
-- 页面 spec 至少 12 个：手工开票 1 个 + 非手工 P0 11 个
+- 页面 spec 33 个：全部数税云已采页面均有初版
 - 全页截图 33 个
 
 ### 2. 接口动作验收
