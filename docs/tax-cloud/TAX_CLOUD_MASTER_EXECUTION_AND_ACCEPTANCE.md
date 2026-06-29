@@ -87,6 +87,7 @@ clone-website 不用于：
 - `docs/tax-cloud/TAX_CLOUD_P0_DEMO_ACCEPTANCE.md`
 - `docs/tax-cloud/TAX_CLOUD_CHROME_NETWORK_PROBE_20260629.md`
 - `docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_AND_PARSE_RUNBOOK.md`
+- `docs/tax-cloud/TAX_CLOUD_VERIFICATION_REPORT.md`
 - `docs/tax-cloud/captures/`
 - `docs/tax-cloud/screenshots/`
 - `docs/research/tax-cloud/components/`
@@ -107,6 +108,7 @@ clone-website 不用于：
 - P1/P2/P3 动作矩阵：已生成初版，真实 Network 待补
 - Chrome Network 自动探测：当前受限，需 HAR、服务端代理或可访问 DevTools Network 的通道
 - HAR 解析工具：已补 `scripts/parse-tax-cloud-har.mjs`，可把 HAR 转成脱敏接口清单
+- 机器验收工具：已补 `scripts/verify-tax-cloud-completion.mjs`，可生成 `TAX_CLOUD_VERIFICATION_REPORT.md`
 
 当前仍需继续推进的问题：
 
@@ -590,6 +592,37 @@ preview hash 不一致不能开票
 ```
 
 ## 7. 验收体系
+
+### 7.0 机器验收命令
+
+每轮推进后必须先跑机器验收，再写人工结论：
+
+```bash
+npm run tax-cloud:audit
+```
+
+该命令会生成：
+
+```text
+docs/tax-cloud/TAX_CLOUD_VERIFICATION_REPORT.md
+```
+
+它会检查：
+
+- 33 个目标页是否齐全。
+- 每页 raw JSON、visible DOM、截图、design reference、page spec 是否齐全。
+- 总控文档、缺口台账、动作矩阵、HAR 手册是否齐全。
+- 非手工 P0 页面是否全部进入动作矩阵和 P0 demo。
+- P1/P2/P3 页面是否进入动作矩阵。
+- 每个非手工页面是否已经有 normalized HAR 真实接口证据。
+
+严格完成验收必须跑：
+
+```bash
+npm run tax-cloud:audit:strict
+```
+
+`tax-cloud:audit:strict` 通过，才允许说“数税云采集、接口证据、demo 验收层已全部跑完”。如果 strict 失败，只能说当前处于部分完成状态，并以报告中的 FAIL 项作为下一步。
 
 ### 7.1 文档验收
 

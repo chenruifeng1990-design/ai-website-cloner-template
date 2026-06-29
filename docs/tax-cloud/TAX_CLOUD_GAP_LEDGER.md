@@ -72,6 +72,30 @@ ERP 数据血缘未逐字段确认
 
 ## 横向缺口
 
+### 机器验收
+
+当前已提供统一验收命令：
+
+```bash
+npm run tax-cloud:audit
+npm run tax-cloud:audit:strict
+```
+
+报告位置：
+
+```text
+docs/tax-cloud/TAX_CLOUD_VERIFICATION_REPORT.md
+```
+
+当前机器验收口径：
+
+```text
+页面/spec/动作矩阵/P0 demo：通过
+真实 HAR 接口证据：未通过
+```
+
+因此“全部跑完”的剩余硬缺口，以 strict 报告中的 FAIL 项为准。
+
 ### 接口
 
 - 每页 Network 未逐动作全量记录。

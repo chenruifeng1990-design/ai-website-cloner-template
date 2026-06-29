@@ -152,3 +152,12 @@ visible DOM：docs/tax-cloud/captures/*.visible-dom.json
 → demo
 → ERP 落地
 ```
+
+当前可用机器验收：
+
+```bash
+npm run tax-cloud:audit
+npm run tax-cloud:audit:strict
+```
+
+`tax-cloud:audit` 用于生成当前进度报告；`tax-cloud:audit:strict` 用于判断是否真正达到“全部跑完并验收”。当前如果没有 32 个非手工页面的 normalized HAR 证据，strict 必然失败，不能宣布接口层完成。
