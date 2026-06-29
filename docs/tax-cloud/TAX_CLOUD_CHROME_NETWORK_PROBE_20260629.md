@@ -88,6 +88,12 @@ TAX_CLOUD_P0_INTERFACE_ACTION_AUDIT.md
 TAX_CLOUD_P1_P2_P3_INTERFACE_ACTION_AUDIT.md
 ```
 
+解析脚本：
+
+```bash
+node scripts/parse-tax-cloud-har.mjs docs/tax-cloud/network-har/<file>.har --page-key=<page-key>
+```
+
 ### 方案 B：临时关闭拦截插件后重试额度接口
 
 当前额度接口页被扩展拦截。临时停用相关拦截扩展后，重新打开：

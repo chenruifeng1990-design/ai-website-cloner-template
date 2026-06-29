@@ -86,6 +86,7 @@ clone-website 不用于：
 - `docs/tax-cloud/TAX_CLOUD_P1_P2_P3_INTERFACE_ACTION_AUDIT.md`
 - `docs/tax-cloud/TAX_CLOUD_P0_DEMO_ACCEPTANCE.md`
 - `docs/tax-cloud/TAX_CLOUD_CHROME_NETWORK_PROBE_20260629.md`
+- `docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_AND_PARSE_RUNBOOK.md`
 - `docs/tax-cloud/captures/`
 - `docs/tax-cloud/screenshots/`
 - `docs/research/tax-cloud/components/`
@@ -105,6 +106,7 @@ clone-website 不用于：
 - 非手工 P0 动作矩阵：已生成，真实 Network 待补
 - P1/P2/P3 动作矩阵：已生成初版，真实 Network 待补
 - Chrome Network 自动探测：当前受限，需 HAR、服务端代理或可访问 DevTools Network 的通道
+- HAR 解析工具：已补 `scripts/parse-tax-cloud-har.mjs`，可把 HAR 转成脱敏接口清单
 
 当前仍需继续推进的问题：
 
