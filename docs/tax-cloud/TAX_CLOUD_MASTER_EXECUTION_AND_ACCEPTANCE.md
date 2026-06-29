@@ -82,9 +82,13 @@ clone-website 不用于：
 - `docs/tax-cloud/TAX_CLOUD_CAPTURE_SUMMARY.md`
 - `docs/tax-cloud/TAX_CLOUD_COMPLETENESS_AUDIT.md`
 - `docs/tax-cloud/TAX_CLOUD_GAP_LEDGER.md`
+- `docs/tax-cloud/TAX_CLOUD_P0_INTERFACE_ACTION_AUDIT.md`
+- `docs/tax-cloud/TAX_CLOUD_P0_DEMO_ACCEPTANCE.md`
 - `docs/tax-cloud/captures/`
 - `docs/tax-cloud/screenshots/`
 - `docs/research/tax-cloud/components/`
+- `docs/tax-cloud/pages/`
+- `tax-cloud-ui-demos/index.html`
 
 已有采集结果：
 
@@ -93,12 +97,16 @@ clone-website 不用于：
 - DOM / raw JSON：33 组
 - 手工开票页组件 spec：7 个
 - 手工开票票面：当前已可用，冻结为票面基线；后续只做接口补齐和回归保护，不再重跑票面。
+- 非手工 P0 页面 spec：11 个
+- 非手工 P0 demo 总览：已生成
+- 非手工 P0 动作矩阵：已生成，真实 Network 待补
 
-必须先修正的文档问题：
+当前仍需继续推进的问题：
 
-- `TAX_CLOUD_CAPTURE_SUMMARY.md` 已说明 33 页 captured。
-- `TAX_CLOUD_PAGE_INVENTORY.md` 仍有大量 pending 表述。
-- 下一步必须把 pending 改成更准确的状态：`page-captured / api-pending / demo-pending / erp-pending`。
+- P1/P2/P3 还没有批量生成 demo。
+- P0 的 Chrome Network 仍需逐按钮实抓。
+- P0 的 ERP adapter 只完成方向映射，未全部落地。
+- 字段血缘已有 P0 基线，仍需逐字段扩展到 33 页。
 
 ## 4. 模块范围
 
@@ -391,12 +399,19 @@ P3：
 - 组件 spec
 - 静态 demo
 - 视觉差距台账
+- P0 demo 验收手册
 
 验收：
 
 - demo 页面和数税云截图能一屏对照。
 - 票面不是 div/grid 硬拼，必须是表格合并结构。
 - 每个 demo 都标注：数据是 mock、接口未接、风险动作不可触发。
+
+当前状态：
+
+- 手工开票：已可用，冻结为票面基线。
+- 非手工 P0：11 个页面 spec 已完成，`tax-cloud-ui-demos/index.html` 已生成总览。
+- P1/P2/P3：待继续生成页面 spec 和 demo。
 
 ### 阶段 4：ERP 映射和数据血缘
 
@@ -443,6 +458,11 @@ ERP 字段
 - 不存在“页面字段不知道从哪来”的字段。
 - 金蝶已入账 / 未入账状态明确。
 - 数税云税票数据和 ERP 业务数据职责边界清楚。
+
+当前状态：
+
+- `TAX_CLOUD_TO_ERP_MAPPING.md` 已补 P0 页面级映射和 P0 字段血缘基线。
+- 33 页逐字段血缘仍待扩展。
 
 ### 阶段 5：ERP 页面落地
 
@@ -750,6 +770,8 @@ preview hash 不一致不能开票
 
 验收：文档 100% 覆盖 33 页。
 
+当前状态：第一轮已完成。33 页采集完整，P0 已补动作矩阵、demo 验收、ERP 映射基线。
+
 ### 交付包 2：核心 demo
 
 - 手工开票
@@ -760,6 +782,8 @@ preview hash 不一致不能开票
 - 分析看板 6 页
 
 验收：demo 和截图对照通过。
+
+当前状态：手工开票冻结为基线；非手工 P0 已完成 demo 总览，下一步补页面级静态细节和状态截图。
 
 ### 交付包 3：ERP 查询类上线
 

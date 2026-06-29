@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>数税云 P0 复刻与接入验收台</title>
+    <style>
+      :root {
+        --bg: #f5f7fb;
+        --panel: #ffffff;
+        --ink: #172033;
+        --muted: #6b7280;
+        --line: #d8e0ec;
+        --blue: #2178ff;
+        --orange: #a65710;
+        --green: #0f8f61;
+        --red: #c93535;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+          "Microsoft YaHei", sans-serif;
+        line-height: 1.55;
+      }
+
+      main {
+        width: min(1480px, calc(100vw - 48px));
+        margin: 0 auto;
+        padding: 32px 0 56px;
+      }
+
+      header {
+        display: grid;
+        gap: 14px;
+        margin-bottom: 24px;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 28px;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        font-size: 19px;
+        margin-bottom: 12px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+
+      .summary {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .card,
+      .module,
+      .section {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      .card {
+        padding: 16px;
+      }
+
+      .metric {
+        font-size: 26px;
+        font-weight: 720;
+      }
+
+      .label {
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      .section {
+        padding: 18px;
+        margin-top: 16px;
+      }
+
+      .modules {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .module {
+        overflow: hidden;
+        display: grid;
+        grid-template-rows: auto 1fr;
+      }
+
+      .module img {
+        width: 100%;
+        height: 168px;
+        object-fit: cover;
+        object-position: top left;
+        background: #eef2f7;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .module-body {
+        padding: 14px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .tag {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 2px 8px;
+        font-size: 12px;
+        color: var(--muted);
+        background: #fafcff;
+      }
+
+      .tag.done {
+        color: var(--green);
+        border-color: #bdebd8;
+        background: #f0fff8;
+      }
+
+      .tag.pending {
+        color: #9a5c00;
+        border-color: #f2d7a6;
+        background: #fff8eb;
+      }
+
+      .tag.risk {
+        color: var(--red);
+        border-color: #f1b8b8;
+        background: #fff3f3;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+      }
+
+      th,
+      td {
+        border-bottom: 1px solid var(--line);
+        padding: 9px 8px;
+        text-align: left;
+        vertical-align: top;
+      }
+
+      th {
+        color: #334155;
+        background: #f8fafc;
+      }
+
+      a {
+        color: var(--blue);
+        text-decoration: none;
+      }
+
+      code {
+        background: #eef2f7;
+        border-radius: 4px;
+        padding: 1px 5px;
+      }
+
+      .note {
+        border-left: 4px solid var(--orange);
+        background: #fff9f2;
+        padding: 12px 14px;
+        color: #5e3308;
+      }
+
+      @media (max-width: 1100px) {
+        .summary,
+        .modules {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 720px) {
+        main {
+          width: min(100vw - 24px, 1480px);
+          padding-top: 18px;
+        }
+
+        .summary,
+        .modules {
+          grid-template-columns: 1fr;
+        }
+
+        .module img {
+          height: 220px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="label">Tax Cloud P0 Clone & ERP Acceptance Console</p>
+        <h1>数税云 P0 复刻与接入验收台</h1>
+        <p>
+          本页只承载非手工开票 P0 页面。手工开票票面已经可用并冻结为基线，后续只补额度、税编、客户库、场景模板接口和回归保护。
+        </p>
+      </header>
+
+      <section class="summary" aria-label="进度总览">
+        <div class="card">
+          <div class="metric">33 / 33</div>
+          <div class="label">数税云页面已完成第一轮采集</div>
+        </div>
+        <div class="card">
+          <div class="metric">11</div>
+          <div class="label">非手工 P0 页面已形成 page spec</div>
+        </div>
+        <div class="card">
+          <div class="metric">6</div>
+          <div class="label">分析看板必须独立保留的子页面</div>
+        </div>
+        <div class="card">
+          <div class="metric">L3/L4</div>
+          <div class="label">真实税务动作默认禁用，必须单独门禁</div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>当前完成口径</h2>
+        <div class="note">
+          已完成的是“页面层 + P0 动作矩阵 + demo 总览 + ERP 映射口径”。还没有完成的是“Chrome Network 逐按钮实抓、P0 页面真实 ERP adapter 全接入、P1/P2/P3 全量 demo”。
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>P0 页面总览</h2>
+        <div class="modules">
+          <article class="module">
+            <img src="../docs/tax-cloud/screenshots/platform-records-fullpage.png" alt="开票记录截图" />
+            <div class="module-body">
+              <h3>开票记录</h3>
+              <p class="label">销项管理 / platform-records</p>
+              <div class="meta">
+                <span class="tag done">page spec</span>
+                <span class="tag done">动作矩阵</span>
+                <span class="tag pending">Network 待实抓</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="module">
+            <img src="../docs/tax-cloud/screenshots/billCenter-fullInvoiceQuery-fullpage.png" alt="发票池截图" />
+            <div class="module-body">
+              <h3>发票池</h3>
+              <p class="label">票据中心 / billCenter-fullInvoiceQuery</p>
+              <div class="meta">
+                <span class="tag done">事实池主入口</span>
+                <span class="tag done">动作矩阵</span>
+                <span class="tag risk">L3 动作禁用</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="module">
+            <img src="../docs/tax-cloud/screenshots/income-invoiceCheck-fullpage.png" alt="手工勾选截图" />
+            <div class="module-body">
+              <h3>手工勾选</h3>
+              <p class="label">进项管理 / income-invoiceCheck</p>
+              <div class="meta">
+                <span class="tag done">page spec</span>
+                <span class="tag risk">勾选 L3</span>
+                <span class="tag pending">用途接口待抓</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="module">
+            <img src="../docs/tax-cloud/screenshots/income-confirmSign-fullpage.png" alt="统计确认截图" />
+            <div class="module-body">
+              <h3>统计确认 / 留抵</h3>
+              <p class="label">进项管理 / income-confirmSign</p>
+              <div class="meta">
+                <span class="tag done">三步状态</span>
+                <span class="tag risk">确认 L3</span>
+                <span class="tag pending">留抵口径待接口</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="module">
+            <img src="../docs/tax-cloud/screenshots/income-certificationResults-fullpage.png" alt="认证结果截图" />
+            <div class="module-body">
+              <h3>认证结果</h3>
+              <p class="label">进项管理 / income-certificationResults</p>
+              <div class="meta">
+                <span class="tag done">page spec</span>
+                <span class="tag done">金蝶核对映射</span>
+                <span class="tag pending">批次接口待抓</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="module">
+            <img src="../docs/tax-cloud/screenshots/analysisBoard-invoceRateView-fullpage.png" alt="按税率统计截图" />
+            <div class="module-body">
+              <h3>按税率统计</h3>
+              <p class="label">分析看板 / analysisBoard-invoceRateView</p>
+              <div class="meta">
+                <span class="tag done">独立子页</span>
+                <span class="tag pending">图表接口待抓</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="module">
+            <img src="../docs/tax-cloud/screenshots/analysisBoard-invoiceTypeView-fullpage.png" alt="按发票种类统计截图" />
+            <div class="module-body">
+              <h3>按发票种类统计</h3>
+              <p class="label">分析看板 / analysisBoard-invoiceTypeView</p>
+              <div class="meta">
+                <span class="tag done">独立子页</span>
+                <span class="tag pending">票种分桶待接口</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="module">
+            <img src="../docs/tax-cloud/screenshots/analysisBoard-businessRateView-fullpage.png" alt="按上下游企业统计截图" />
+            <div class="module-body">
+              <h3>按上下游企业统计</h3>
+              <p class="label">分析看板 / analysisBoard-businessRateView</p>
+              <div class="meta">
+                <span class="tag done">独立子页</span>
+                <span class="tag pending">客商下钻待接口</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="module">
+            <img src="../docs/tax-cloud/screenshots/analysisBoard-goodsRateView-fullpage.png" alt="按进销商品统计截图" />
+            <div class="module-body">
+              <h3>按进销商品统计</h3>
+              <p class="label">分析看板 / analysisBoard-goodsRateView</p>
+              <div class="meta">
+                <span class="tag done">独立子页</span>
+                <span class="tag pending">商品税编映射待补</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="module">
+            <img src="../docs/tax-cloud/screenshots/analysisBoard-purchaseSalesTrend-fullpage.png" alt="按进销趋势统计截图" />
+            <div class="module-body">
+              <h3>按进销趋势统计</h3>
+              <p class="label">分析看板 / analysisBoard-purchaseSalesTrend</p>
+              <div class="meta">
+                <span class="tag done">独立子页</span>
+                <span class="tag pending">时间口径待确认</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="module">
+            <img src="../docs/tax-cloud/screenshots/analysisBoard-invoiceRegionView-fullpage.png" alt="按进销地区统计截图" />
+            <div class="module-body">
+              <h3>按进销地区统计</h3>
+              <p class="label">分析看板 / analysisBoard-invoiceRegionView</p>
+              <div class="meta">
+                <span class="tag done">独立子页</span>
+                <span class="tag pending">地区识别口径待确认</span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>验收路径</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>验收项</th>
+              <th>已完成</th>
+              <th>继续执行</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>页面完整性</td>
+              <td>33 个页面截图、raw、visible DOM 已齐</td>
+              <td>补弹窗、抽屉、有数据态、错误态</td>
+            </tr>
+            <tr>
+              <td>P0 页面结构</td>
+              <td>11 个非手工 P0 page spec 已齐</td>
+              <td>从静态 demo 进入 ERP 组件化</td>
+            </tr>
+            <tr>
+              <td>接口动作</td>
+              <td>P0 动作矩阵已列风险等级</td>
+              <td>Chrome Network 逐按钮实抓</td>
+            </tr>
+            <tr>
+              <td>业务融合</td>
+              <td>ERP / 数税云 / 金蝶职责边界已定</td>
+              <td>逐字段血缘和 adapter 落地</td>
+            </tr>
+            <tr>
+              <td>高风险动作</td>
+              <td>L3/L4 已默认禁用</td>
+              <td>单独审批、审计、幂等、门禁设计</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
