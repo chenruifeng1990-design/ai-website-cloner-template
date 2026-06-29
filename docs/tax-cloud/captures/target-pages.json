@@ -1,0 +1,762 @@
+[
+  {
+    "key": "platform-created",
+    "menu1": "销项管理",
+    "menu2": "手工开票",
+    "url": "https://fp.enuoyun.com/platform/created",
+    "status": "captured",
+    "capturedAt": "2026-06-29T00:56:43.860Z",
+    "counts": {
+      "buttons": 12,
+      "controls": 72,
+      "inputs": 26,
+      "links": 34,
+      "scripts": 238,
+      "styles": 121,
+      "tables": 27
+    },
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/platform-created.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/platform-created.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/platform-created-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-created-fullpage.png"
+    }
+  },
+  {
+    "key": "platform-scanCode",
+    "menu1": "销项管理",
+    "menu2": "扫码开票",
+    "url": "https://fp.enuoyun.com/platform/scanCode",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:14.056Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/platform-scanCode.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/platform-scanCode.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/platform-scanCode-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-platform-scanCode-fullpage.png"
+    },
+    "counts": {
+      "buttons": 32,
+      "controls": 16,
+      "inputs": 15,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 0
+    }
+  },
+  {
+    "key": "platform-scanRecords",
+    "menu1": "销项管理",
+    "menu2": "扫码记录",
+    "url": "https://fp.enuoyun.com/platform/scanRecords",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:15.679Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/platform-scanRecords.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/platform-scanRecords.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/platform-scanRecords-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-platform-scanRecords-fullpage.png"
+    },
+    "counts": {
+      "buttons": 36,
+      "controls": 18,
+      "inputs": 20,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 4
+    }
+  },
+  {
+    "key": "platform-records",
+    "menu1": "销项管理",
+    "menu2": "开票记录",
+    "url": "https://fp.enuoyun.com/platform/records",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:17.320Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/platform-records.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/platform-records.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/platform-records-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-platform-records-fullpage.png"
+    },
+    "counts": {
+      "buttons": 77,
+      "controls": 27,
+      "inputs": 34,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 4
+    }
+  },
+  {
+    "key": "platform-billIssue",
+    "menu1": "销项管理",
+    "menu2": "订单开票",
+    "url": "https://fp.enuoyun.com/platform/billIssue",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:18.990Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/platform-billIssue.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/platform-billIssue.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/platform-billIssue-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-platform-billIssue-fullpage.png"
+    },
+    "counts": {
+      "buttons": 21,
+      "controls": 5,
+      "inputs": 4,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 0
+    }
+  },
+  {
+    "key": "platform-invoiceApplication",
+    "menu1": "销项管理",
+    "menu2": "开票申请单",
+    "url": "https://fp.enuoyun.com/platform/invoiceApplication",
+    "status": "captured",
+    "mode": "visual-only",
+    "capturedAt": "2026-06-29T01:08:20.646Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/platform-invoiceApplication.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/platform-invoiceApplication.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/platform-invoiceApplication-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-platform-invoiceApplication-fullpage.png"
+    },
+    "counts": {
+      "buttons": 50,
+      "controls": 32,
+      "inputs": 31,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 4
+    }
+  },
+  {
+    "key": "platform-redMark",
+    "menu1": "销项管理",
+    "menu2": "红字确认单",
+    "url": "https://fp.enuoyun.com/platform/redMark",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:22.313Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/platform-redMark.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/platform-redMark.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/platform-redMark-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-platform-redMark-fullpage.png"
+    },
+    "counts": {
+      "buttons": 52,
+      "controls": 15,
+      "inputs": 19,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 4
+    }
+  },
+  {
+    "key": "income-scanCodeCheck",
+    "menu1": "进项管理",
+    "menu2": "快捷勾选",
+    "url": "https://fp.enuoyun.com/income/scanCodeCheck",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:23.974Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/income-scanCodeCheck.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/income-scanCodeCheck.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/income-scanCodeCheck-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-income-scanCodeCheck-fullpage.png"
+    },
+    "counts": {
+      "buttons": 36,
+      "controls": 14,
+      "inputs": 8,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 2
+    }
+  },
+  {
+    "key": "income-invoiceCheck",
+    "menu1": "进项管理",
+    "menu2": "手工勾选",
+    "url": "https://fp.enuoyun.com/income/invoiceCheck",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:25.621Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/income-invoiceCheck.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/income-invoiceCheck.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/income-invoiceCheck-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-income-invoiceCheck-fullpage.png"
+    },
+    "counts": {
+      "buttons": 39,
+      "controls": 23,
+      "inputs": 29,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 3
+    }
+  },
+  {
+    "key": "income-confirmCheck",
+    "menu1": "进项管理",
+    "menu2": "勾选审核",
+    "url": "https://fp.enuoyun.com/income/confirmCheck",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:27.252Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/income-confirmCheck.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/income-confirmCheck.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/income-confirmCheck-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-income-confirmCheck-fullpage.png"
+    },
+    "counts": {
+      "buttons": 23,
+      "controls": 9,
+      "inputs": 4,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 2
+    }
+  },
+  {
+    "key": "income-confirmSign",
+    "menu1": "进项管理",
+    "menu2": "统计确认",
+    "url": "https://fp.enuoyun.com/income/confirmSign",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:28.863Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/income-confirmSign.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/income-confirmSign.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/income-confirmSign-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-income-confirmSign-fullpage.png"
+    },
+    "counts": {
+      "buttons": 20,
+      "controls": 8,
+      "inputs": 3,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 4
+    }
+  },
+  {
+    "key": "income-certificationResults",
+    "menu1": "进项管理",
+    "menu2": "认证结果",
+    "url": "https://fp.enuoyun.com/income/certificationResults",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:30.486Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/income-certificationResults.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/income-certificationResults.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/income-certificationResults-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-income-certificationResults-fullpage.png"
+    },
+    "counts": {
+      "buttons": 30,
+      "controls": 21,
+      "inputs": 21,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 3
+    }
+  },
+  {
+    "key": "billCenter-fullInvoiceQuery",
+    "menu1": "票据中心",
+    "menu2": "发票池",
+    "url": "https://fp.enuoyun.com/billCenter/fullInvoiceQuery",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:32.125Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/billCenter-fullInvoiceQuery.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/billCenter-fullInvoiceQuery.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/billCenter-fullInvoiceQuery-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-billCenter-fullInvoiceQuery-fullpage.png"
+    },
+    "counts": {
+      "buttons": 83,
+      "controls": 35,
+      "inputs": 62,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 4
+    }
+  },
+  {
+    "key": "billCenter-sign",
+    "menu1": "票据中心",
+    "menu2": "签收",
+    "url": "https://fp.enuoyun.com/billCenter/sign",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:34.021Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/billCenter-sign.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/billCenter-sign.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/billCenter-sign-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-billCenter-sign-fullpage.png"
+    },
+    "counts": {
+      "buttons": 23,
+      "controls": 19,
+      "inputs": 11,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 0
+    }
+  },
+  {
+    "key": "billCenter-invoiceVerification",
+    "menu1": "票据中心",
+    "menu2": "查验",
+    "url": "https://fp.enuoyun.com/billCenter/invoiceVerification",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:35.648Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/billCenter-invoiceVerification.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/billCenter-invoiceVerification.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/billCenter-invoiceVerification-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-billCenter-invoiceVerification-fullpage.png"
+    },
+    "counts": {
+      "buttons": 26,
+      "controls": 17,
+      "inputs": 7,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 0
+    }
+  },
+  {
+    "key": "billCenter-accessSetting",
+    "menu1": "票据中心",
+    "menu2": "取票设置",
+    "url": "https://fp.enuoyun.com/billCenter/accessSetting",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:37.264Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/billCenter-accessSetting.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/billCenter-accessSetting.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/billCenter-accessSetting-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-billCenter-accessSetting-fullpage.png"
+    },
+    "counts": {
+      "buttons": 31,
+      "controls": 8,
+      "inputs": 30,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 0
+    }
+  },
+  {
+    "key": "billCenter-taskManagement",
+    "menu1": "票据中心",
+    "menu2": "任务管理",
+    "url": "https://fp.enuoyun.com/billCenter/taskManagement",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:39.401Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/billCenter-taskManagement.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/billCenter-taskManagement.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/billCenter-taskManagement-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-billCenter-taskManagement-fullpage.png"
+    },
+    "counts": {
+      "buttons": 28,
+      "controls": 18,
+      "inputs": 5,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 3
+    }
+  },
+  {
+    "key": "analysisBoard-invoceRateView",
+    "menu1": "分析看板",
+    "menu2": "按税率统计",
+    "url": "https://fp.enuoyun.com/analysisBoard/invoceRateView",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:41.151Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/analysisBoard-invoceRateView.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/analysisBoard-invoceRateView.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/analysisBoard-invoceRateView-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-analysisBoard-invoceRateView-fullpage.png"
+    },
+    "counts": {
+      "buttons": 34,
+      "controls": 28,
+      "inputs": 10,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 3
+    }
+  },
+  {
+    "key": "analysisBoard-invoiceTypeView",
+    "menu1": "分析看板",
+    "menu2": "按发票种类统计",
+    "url": "https://fp.enuoyun.com/analysisBoard/invoiceTypeView",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:42.820Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/analysisBoard-invoiceTypeView.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/analysisBoard-invoiceTypeView.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/analysisBoard-invoiceTypeView-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-analysisBoard-invoiceTypeView-fullpage.png"
+    },
+    "counts": {
+      "buttons": 26,
+      "controls": 20,
+      "inputs": 10,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 3
+    }
+  },
+  {
+    "key": "analysisBoard-businessRateView",
+    "menu1": "分析看板",
+    "menu2": "按上下游企业统计",
+    "url": "https://fp.enuoyun.com/analysisBoard/businessRateView",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:44.437Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/analysisBoard-businessRateView.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/analysisBoard-businessRateView.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/analysisBoard-businessRateView-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-analysisBoard-businessRateView-fullpage.png"
+    },
+    "counts": {
+      "buttons": 47,
+      "controls": 46,
+      "inputs": 12,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 6
+    }
+  },
+  {
+    "key": "analysisBoard-goodsRateView",
+    "menu1": "分析看板",
+    "menu2": "按进销商品统计",
+    "url": "https://fp.enuoyun.com/analysisBoard/goodsRateView",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:46.088Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/analysisBoard-goodsRateView.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/analysisBoard-goodsRateView.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/analysisBoard-goodsRateView-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-analysisBoard-goodsRateView-fullpage.png"
+    },
+    "counts": {
+      "buttons": 20,
+      "controls": 11,
+      "inputs": 10,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 0
+    }
+  },
+  {
+    "key": "analysisBoard-purchaseSalesTrend",
+    "menu1": "分析看板",
+    "menu2": "按进销趋势统计",
+    "url": "https://fp.enuoyun.com/analysisBoard/purchaseSalesTrend",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:47.746Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/analysisBoard-purchaseSalesTrend.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/analysisBoard-purchaseSalesTrend.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/analysisBoard-purchaseSalesTrend-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-analysisBoard-purchaseSalesTrend-fullpage.png"
+    },
+    "counts": {
+      "buttons": 24,
+      "controls": 21,
+      "inputs": 10,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 6
+    }
+  },
+  {
+    "key": "analysisBoard-invoiceRegionView",
+    "menu1": "分析看板",
+    "menu2": "按进销地区统计",
+    "url": "https://fp.enuoyun.com/analysisBoard/invoiceRegionView",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:49.362Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/analysisBoard-invoiceRegionView.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/analysisBoard-invoiceRegionView.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/analysisBoard-invoiceRegionView-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-analysisBoard-invoiceRegionView-fullpage.png"
+    },
+    "counts": {
+      "buttons": 31,
+      "controls": 28,
+      "inputs": 10,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 6
+    }
+  },
+  {
+    "key": "bussiness-info",
+    "menu1": "基础信息",
+    "menu2": "商品信息",
+    "url": "https://fp.enuoyun.com/bussiness/info",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:50.997Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/bussiness-info.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/bussiness-info.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/bussiness-info-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-bussiness-info-fullpage.png"
+    },
+    "counts": {
+      "buttons": 36,
+      "controls": 17,
+      "inputs": 11,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 4
+    }
+  },
+  {
+    "key": "bussiness-customer",
+    "menu1": "基础信息",
+    "menu2": "客户管理",
+    "url": "https://fp.enuoyun.com/bussiness/customer",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:52.622Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/bussiness-customer.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/bussiness-customer.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/bussiness-customer-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-bussiness-customer-fullpage.png"
+    },
+    "counts": {
+      "buttons": 30,
+      "controls": 12,
+      "inputs": 9,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 4
+    }
+  },
+  {
+    "key": "bussiness-credit",
+    "menu1": "基础信息",
+    "menu2": "开票额度配置",
+    "url": "https://fp.enuoyun.com/bussiness/credit",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:54.263Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/bussiness-credit.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/bussiness-credit.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/bussiness-credit-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-bussiness-credit-fullpage.png"
+    },
+    "counts": {
+      "buttons": 23,
+      "controls": 10,
+      "inputs": 4,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 3
+    }
+  },
+  {
+    "key": "bussiness-configurationManagement",
+    "menu1": "基础信息",
+    "menu2": "配置管理",
+    "url": "https://fp.enuoyun.com/bussiness/configurationManagement",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:55.860Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/bussiness-configurationManagement.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/bussiness-configurationManagement.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/bussiness-configurationManagement-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-bussiness-configurationManagement-fullpage.png"
+    },
+    "counts": {
+      "buttons": 29,
+      "controls": 40,
+      "inputs": 29,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 2
+    }
+  },
+  {
+    "key": "system-dept",
+    "menu1": "系统设置",
+    "menu2": "组织管理",
+    "url": "https://fp.enuoyun.com/system/dept",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:57.483Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/system-dept.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/system-dept.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/system-dept-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-system-dept-fullpage.png"
+    },
+    "counts": {
+      "buttons": 24,
+      "controls": 10,
+      "inputs": 4,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 3
+    }
+  },
+  {
+    "key": "system-departmentInfo",
+    "menu1": "系统设置",
+    "menu2": "部门管理",
+    "url": "https://fp.enuoyun.com/system/departmentInfo",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:08:59.104Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/system-departmentInfo.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/system-departmentInfo.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/system-departmentInfo-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-system-departmentInfo-fullpage.png"
+    },
+    "counts": {
+      "buttons": 23,
+      "controls": 7,
+      "inputs": 4,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 2
+    }
+  },
+  {
+    "key": "system-role",
+    "menu1": "系统设置",
+    "menu2": "角色管理",
+    "url": "https://fp.enuoyun.com/system/role",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:09:00.735Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/system-role.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/system-role.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/system-role-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-system-role-fullpage.png"
+    },
+    "counts": {
+      "buttons": 40,
+      "controls": 22,
+      "inputs": 6,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 3
+    }
+  },
+  {
+    "key": "system-onlineTaxationInfo",
+    "menu1": "系统设置",
+    "menu2": "网上办税信息",
+    "url": "https://fp.enuoyun.com/system/onlineTaxationInfo",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:09:02.372Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/system-onlineTaxationInfo.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/system-onlineTaxationInfo.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/system-onlineTaxationInfo-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-system-onlineTaxationInfo-fullpage.png"
+    },
+    "counts": {
+      "buttons": 30,
+      "controls": 18,
+      "inputs": 21,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 3
+    }
+  },
+  {
+    "key": "system-user",
+    "menu1": "系统设置",
+    "menu2": "用户管理",
+    "url": "https://fp.enuoyun.com/system/user",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:09:04.004Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/system-user.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/system-user.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/system-user-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-system-user-fullpage.png"
+    },
+    "counts": {
+      "buttons": 30,
+      "controls": 15,
+      "inputs": 7,
+      "links": 34,
+      "scripts": 238,
+      "styles": 100,
+      "tables": 3
+    }
+  },
+  {
+    "key": "downloadCenter",
+    "menu1": "顶部入口",
+    "menu2": "下载中心",
+    "url": "https://fp.enuoyun.com/downloadCenter",
+    "status": "captured",
+    "capturedAt": "2026-06-29T01:09:05.653Z",
+    "captureFiles": {
+      "raw": "docs/tax-cloud/captures/downloadCenter.raw.json",
+      "visibleDom": "docs/tax-cloud/captures/downloadCenter.visible-dom.json",
+      "screenshot": "docs/tax-cloud/screenshots/downloadCenter-fullpage.png",
+      "designReference": "docs/design-references/tax-cloud-downloadCenter-fullpage.png"
+    },
+    "counts": {
+      "buttons": 18,
+      "controls": 8,
+      "inputs": 3,
+      "links": 39,
+      "scripts": 75,
+      "styles": 13,
+      "tables": 0
+    }
+  }
+]

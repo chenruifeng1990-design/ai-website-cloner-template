@@ -1,0 +1,1715 @@
+{
+  "buttons": [
+    {
+      "cls": "avatar-wrapper el-dropdown-selfdefine",
+      "disabled": false,
+      "rect": {
+        "height": 50,
+        "width": 56,
+        "x": 1654,
+        "y": 0
+      },
+      "text": "管理员"
+    },
+    {
+      "cls": "el-button el-button--default el-button--small change_btn btn_select",
+      "disabled": false,
+      "rect": {
+        "height": 30,
+        "width": 58,
+        "x": 212,
+        "y": 82
+      },
+      "text": "含税"
+    },
+    {
+      "cls": "el-button el-button--plain el-button--small",
+      "disabled": false,
+      "rect": {
+        "height": 33,
+        "width": 84,
+        "x": 280,
+        "y": 82
+      },
+      "text": "待开发票"
+    },
+    {
+      "cls": "el-button el-button--plain el-button--small",
+      "disabled": false,
+      "rect": {
+        "height": 33,
+        "width": 84,
+        "x": 374,
+        "y": 82
+      },
+      "text": "清单导入"
+    },
+    {
+      "cls": "el-button el-button--default el-button--small is-disabled change_btn",
+      "disabled": true,
+      "rect": {
+        "height": 33,
+        "width": 58,
+        "x": 468,
+        "y": 82
+      },
+      "text": "折扣"
+    },
+    {
+      "cls": "el-button el-button--default el-button--small el-popover__reference",
+      "disabled": false,
+      "rect": {
+        "height": 30,
+        "width": 58,
+        "x": 666,
+        "y": 82
+      },
+      "text": "差额"
+    },
+    {
+      "cls": "el-button el-button--plain el-button--small",
+      "disabled": false,
+      "rect": {
+        "height": 33,
+        "width": 58,
+        "x": 874,
+        "y": 82
+      },
+      "text": "复制"
+    },
+    {
+      "cls": "el-button el-button--plain el-button--small",
+      "disabled": false,
+      "rect": {
+        "height": 33,
+        "width": 71,
+        "x": 942,
+        "y": 82
+      },
+      "text": "草稿箱"
+    },
+    {
+      "cls": "el-button el-button--plain el-button--small",
+      "disabled": false,
+      "rect": {
+        "height": 33,
+        "width": 84,
+        "x": 1511,
+        "y": 82
+      },
+      "text": "暂存草稿"
+    },
+    {
+      "cls": "el-button el-button--primary el-button--small is-disabled",
+      "disabled": true,
+      "rect": {
+        "height": 33,
+        "width": 84,
+        "x": 1605,
+        "y": 82
+      },
+      "text": "提交开票"
+    },
+    {
+      "cls": "el-button removerBtn el-button--text el-button--medium",
+      "disabled": false,
+      "rect": {
+        "height": 22,
+        "width": 21,
+        "x": 1616,
+        "y": 369
+      },
+      "text": ""
+    },
+    {
+      "cls": "el-button removerBtn el-button--text el-button--small",
+      "disabled": false,
+      "rect": {
+        "height": 22,
+        "width": 21,
+        "x": 1647,
+        "y": 369
+      },
+      "text": ""
+    }
+  ],
+  "capturedAt": "2026-06-29T00:56:43.860Z",
+  "inputs": [
+    {
+      "placeholder": "请选择",
+      "rect": {
+        "height": 32,
+        "width": 120,
+        "x": 536,
+        "y": 82
+      },
+      "tag": "input",
+      "type": "text",
+      "value": "普通开具"
+    },
+    {
+      "placeholder": "减按征收",
+      "rect": {
+        "height": 32,
+        "width": 120,
+        "x": 744,
+        "y": 82
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入订单编号",
+      "rect": {
+        "height": 36,
+        "width": 220,
+        "x": 218,
+        "y": 176
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请选择",
+      "rect": {
+        "height": 50,
+        "width": 410,
+        "x": 745,
+        "y": 156
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入内容",
+      "rect": {
+        "height": 27,
+        "width": 552,
+        "x": 338,
+        "y": 228
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入纳税人识别号",
+      "rect": {
+        "height": 27,
+        "width": 622,
+        "x": 338,
+        "y": 255
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请选择地址",
+      "rect": {
+        "height": 27,
+        "width": 261,
+        "x": 338,
+        "y": 282
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入电话",
+      "rect": {
+        "height": 27,
+        "width": 195,
+        "x": 699,
+        "y": 282
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入开户行",
+      "rect": {
+        "height": 27,
+        "width": 261,
+        "x": 338,
+        "y": 309
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入银行账号",
+      "rect": {
+        "height": 27,
+        "width": 195,
+        "x": 699,
+        "y": 309
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入手机号码",
+      "rect": {
+        "height": 27,
+        "width": 550,
+        "x": 1070,
+        "y": 228
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入邮箱地址",
+      "rect": {
+        "height": 27,
+        "width": 550,
+        "x": 1070,
+        "y": 255
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入，若有多个请用逗号隔开，最多五个",
+      "rect": {
+        "height": 27,
+        "width": 550,
+        "x": 1070,
+        "y": 282
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入，若有多个请用逗号隔开，最多五个",
+      "rect": {
+        "height": 27,
+        "width": 550,
+        "x": 1070,
+        "y": 309
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "",
+      "rect": {
+        "height": 25,
+        "width": 342,
+        "x": 254,
+        "y": 367
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "",
+      "rect": {
+        "height": 25,
+        "width": 100,
+        "x": 1481,
+        "y": 367
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入名称",
+      "rect": {
+        "height": 27,
+        "width": 622,
+        "x": 338,
+        "y": 512
+      },
+      "tag": "input",
+      "type": "text",
+      "value": "邯郸市聚兴碳素有限公司"
+    },
+    {
+      "placeholder": "请输入纳税人识别号",
+      "rect": {
+        "height": 27,
+        "width": 622,
+        "x": 338,
+        "y": 539
+      },
+      "tag": "input",
+      "type": "text",
+      "value": "911304240774969489"
+    },
+    {
+      "placeholder": "请输入地址",
+      "rect": {
+        "height": 27,
+        "width": 261,
+        "x": 338,
+        "y": 566
+      },
+      "tag": "input",
+      "type": "text",
+      "value": "成安县辛义乡大郭庄村东"
+    },
+    {
+      "placeholder": "请输入电话",
+      "rect": {
+        "height": 27,
+        "width": 251,
+        "x": 643,
+        "y": 566
+      },
+      "tag": "input",
+      "type": "text",
+      "value": "13931067368"
+    },
+    {
+      "placeholder": "请选择开户行",
+      "rect": {
+        "height": 27,
+        "width": 261,
+        "x": 338,
+        "y": 593
+      },
+      "tag": "input",
+      "type": "text",
+      "value": "中国银行股份有限公司成安支行"
+    },
+    {
+      "placeholder": "",
+      "rect": {
+        "height": 27,
+        "width": 195,
+        "x": 699,
+        "y": 593
+      },
+      "tag": "input",
+      "type": "text",
+      "value": "101130063760"
+    },
+    {
+      "placeholder": "请输入内容",
+      "rect": {
+        "height": 90,
+        "width": 650,
+        "x": 1000,
+        "y": 512
+      },
+      "tag": "textarea",
+      "type": "textarea",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入收款人",
+      "rect": {
+        "height": 27,
+        "width": 269,
+        "x": 265,
+        "y": 635
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入复核人",
+      "rect": {
+        "height": 27,
+        "width": 269,
+        "x": 634,
+        "y": 635
+      },
+      "tag": "input",
+      "type": "text",
+      "value": ""
+    },
+    {
+      "placeholder": "请输入开票人",
+      "rect": {
+        "height": 27,
+        "width": 269,
+        "x": 1003,
+        "y": 635
+      },
+      "tag": "input",
+      "type": "text",
+      "value": "郭静云"
+    }
+  ],
+  "links": [
+    {
+      "href": "https://fp.enuoyun.com/platform/created",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "手工开票"
+    },
+    {
+      "href": "https://fp.enuoyun.com/platform/scanCode",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "扫码开票"
+    },
+    {
+      "href": "https://fp.enuoyun.com/platform/scanRecords",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "扫码记录"
+    },
+    {
+      "href": "https://fp.enuoyun.com/platform/records",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "开票记录"
+    },
+    {
+      "href": "https://fp.enuoyun.com/platform/billIssue",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "订单开票"
+    },
+    {
+      "href": "https://fp.enuoyun.com/platform/invoiceApplication",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "开票申请单"
+    },
+    {
+      "href": "https://fp.enuoyun.com/platform/redMark",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "红字确认单"
+    },
+    {
+      "href": "https://fp.enuoyun.com/income/scanCodeCheck",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "快捷勾选"
+    },
+    {
+      "href": "https://fp.enuoyun.com/income/invoiceCheck",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "手工勾选"
+    },
+    {
+      "href": "https://fp.enuoyun.com/income/confirmCheck",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "勾选审核"
+    },
+    {
+      "href": "https://fp.enuoyun.com/income/confirmSign",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "统计确认"
+    },
+    {
+      "href": "https://fp.enuoyun.com/income/certificationResults",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "认证结果"
+    },
+    {
+      "href": "https://fp.enuoyun.com/billCenter/fullInvoiceQuery",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "发票池"
+    },
+    {
+      "href": "https://fp.enuoyun.com/billCenter/sign",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "签收"
+    },
+    {
+      "href": "https://fp.enuoyun.com/billCenter/invoiceVerification",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "查验"
+    },
+    {
+      "href": "https://fp.enuoyun.com/billCenter/accessSetting",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "取票设置"
+    },
+    {
+      "href": "https://fp.enuoyun.com/billCenter/taskManagement",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "任务管理"
+    },
+    {
+      "href": "https://fp.enuoyun.com/analysisBoard/invoceRateView",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "按税率统计"
+    },
+    {
+      "href": "https://fp.enuoyun.com/analysisBoard/invoiceTypeView",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "按发票种类统计"
+    },
+    {
+      "href": "https://fp.enuoyun.com/analysisBoard/businessRateView",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "按上下游企业统计"
+    },
+    {
+      "href": "https://fp.enuoyun.com/analysisBoard/goodsRateView",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "按进销商品统计"
+    },
+    {
+      "href": "https://fp.enuoyun.com/analysisBoard/purchaseSalesTrend",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "按进销趋势统计"
+    },
+    {
+      "href": "https://fp.enuoyun.com/analysisBoard/invoiceRegionView",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "按进销地区统计"
+    },
+    {
+      "href": "https://fp.enuoyun.com/bussiness/info",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "商品信息"
+    },
+    {
+      "href": "https://fp.enuoyun.com/bussiness/customer",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "客户管理"
+    },
+    {
+      "href": "https://fp.enuoyun.com/bussiness/credit",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "开票额度配置"
+    },
+    {
+      "href": "https://fp.enuoyun.com/bussiness/configurationManagement",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "配置管理"
+    },
+    {
+      "href": "https://fp.enuoyun.com/system/dept",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "组织管理"
+    },
+    {
+      "href": "https://fp.enuoyun.com/system/departmentInfo",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "部门管理"
+    },
+    {
+      "href": "https://fp.enuoyun.com/system/role",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "角色管理"
+    },
+    {
+      "href": "https://fp.enuoyun.com/system/onlineTaxationInfo",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "网上办税信息"
+    },
+    {
+      "href": "https://fp.enuoyun.com/system/user",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "用户管理"
+    },
+    {
+      "href": "https://fp.enuoyun.com/downloadCenter",
+      "rect": {
+        "height": 50,
+        "width": 76,
+        "x": 1384,
+        "y": 0
+      },
+      "text": "下载中心"
+    },
+    {
+      "href": "https://fp.enuoyun.com/user/profile",
+      "rect": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "text": "个人中心"
+    }
+  ],
+  "menuCandidates": [
+    {
+      "cls": "el-menu",
+      "href": "",
+      "rect": {
+        "height": 336,
+        "width": 180,
+        "x": 0,
+        "y": 50
+      },
+      "tag": "ul",
+      "text": "销项管理 进项管理 票据中心 分析看板 基础信息 系统设置"
+    },
+    {
+      "cls": "el-submenu is-active",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 50
+      },
+      "tag": "li",
+      "text": "销项管理"
+    },
+    {
+      "cls": "el-submenu__title",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 50
+      },
+      "tag": "div",
+      "text": "销项管理"
+    },
+    {
+      "cls": "el-submenu",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 106
+      },
+      "tag": "li",
+      "text": "进项管理"
+    },
+    {
+      "cls": "el-submenu__title",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 106
+      },
+      "tag": "div",
+      "text": "进项管理"
+    },
+    {
+      "cls": "el-submenu",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 162
+      },
+      "tag": "li",
+      "text": "票据中心"
+    },
+    {
+      "cls": "el-submenu__title",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 162
+      },
+      "tag": "div",
+      "text": "票据中心"
+    },
+    {
+      "cls": "el-submenu",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 218
+      },
+      "tag": "li",
+      "text": "分析看板"
+    },
+    {
+      "cls": "el-submenu__title",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 218
+      },
+      "tag": "div",
+      "text": "分析看板"
+    },
+    {
+      "cls": "el-submenu",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 274
+      },
+      "tag": "li",
+      "text": "基础信息"
+    },
+    {
+      "cls": "el-submenu__title",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 274
+      },
+      "tag": "div",
+      "text": "基础信息"
+    },
+    {
+      "cls": "el-submenu",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 330
+      },
+      "tag": "li",
+      "text": "系统设置"
+    },
+    {
+      "cls": "el-submenu__title",
+      "href": "",
+      "rect": {
+        "height": 56,
+        "width": 180,
+        "x": 0,
+        "y": 330
+      },
+      "tag": "div",
+      "text": "系统设置"
+    },
+    {
+      "cls": "right-menu",
+      "href": "",
+      "rect": {
+        "height": 50,
+        "width": 447,
+        "x": 1281,
+        "y": 0
+      },
+      "tag": "div",
+      "text": "任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员"
+    },
+    {
+      "cls": "avatar-container right-menu-item hover-effect",
+      "href": "",
+      "rect": {
+        "height": 50,
+        "width": 85,
+        "x": 1281,
+        "y": 0
+      },
+      "tag": "div",
+      "text": "任务管理"
+    },
+    {
+      "cls": "avatar-container right-menu-item hover-effect",
+      "href": "",
+      "rect": {
+        "height": 50,
+        "width": 92,
+        "x": 1376,
+        "y": 0
+      },
+      "tag": "div",
+      "text": "下载中心"
+    },
+    {
+      "cls": "",
+      "href": "https://fp.enuoyun.com/downloadCenter",
+      "rect": {
+        "height": 50,
+        "width": 76,
+        "x": 1384,
+        "y": 0
+      },
+      "tag": "a",
+      "text": "下载中心"
+    },
+    {
+      "cls": "avatar-container right-menu-item hover-effect",
+      "href": "",
+      "rect": {
+        "height": 50,
+        "width": 159,
+        "x": 1477,
+        "y": 0
+      },
+      "tag": "div",
+      "text": "邯郸市聚兴碳素有限公司"
+    },
+    {
+      "cls": "avatar-container right-menu-item hover-effect el-dropdown",
+      "href": "",
+      "rect": {
+        "height": 50,
+        "width": 72,
+        "x": 1646,
+        "y": 0
+      },
+      "tag": "div",
+      "text": "管理员"
+    }
+  ],
+  "scripts": [
+    "https://res.wx.qq.com/open/js/jweixin-1.6.0.js",
+    "https://a.alipayobjects.com/g/h5-lib/alipayjsapi/3.0.5/alipayjsapi.inc.min.js",
+    "https://fp.enuoyun.com/static/js/chunk-commons~1ad7283e-2631c28f.js",
+    "https://fp.enuoyun.com/static/js/chunk-2ef63b49-efedeb2b.js",
+    "https://fp.enuoyun.com/static/js/chunk-a22b61a4-718deb26.js",
+    "https://fp.enuoyun.com/static/js/chunk-0cb35f26-591fa874.js",
+    "https://fp.enuoyun.com/static/js/chunk-89ccafd8-5480477b.js",
+    "https://fp.enuoyun.com/static/js/chunk-75abf2d3-1d8879e8.js",
+    "https://fp.enuoyun.com/static/js/chunk-efecadf8-2f4e8449.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d0d094e-10484c0e.js",
+    "https://fp.enuoyun.com/static/js/chunk-26789698-3eec8de4.js",
+    "https://fp.enuoyun.com/static/js/chunk-48aefa0c-ade0bf73.js",
+    "https://fp.enuoyun.com/static/js/chunk-af678434-ce78b0b2.js",
+    "https://fp.enuoyun.com/static/js/chunk-3c1c1620-7d3a1263.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d0c5ac1-bfdb7019.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d217c7d-b518ffd5.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d0e5f10-01b6c74f.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d21a944-7b6d9676.js",
+    "https://fp.enuoyun.com/static/js/chunk-7e0379c6-abfb0829.js",
+    "https://fp.enuoyun.com/static/js/chunk-0c9a5b66-d24db75a.js",
+    "https://fp.enuoyun.com/static/js/chunk-0ecea2ac-d8dfe031.js",
+    "https://fp.enuoyun.com/static/js/chunk-2621366c-1a3f9fd7.js",
+    "https://fp.enuoyun.com/static/js/chunk-01fc6461-c3f31aab.js",
+    "https://fp.enuoyun.com/static/js/chunk-4b263cd4-18036d2a.js",
+    "https://fp.enuoyun.com/static/js/chunk-85197012-f943af46.js",
+    "https://fp.enuoyun.com/static/js/chunk-221d6446-fdfa937d.js",
+    "https://fp.enuoyun.com/static/js/chunk-55645a59-7a45c5b8.js",
+    "https://fp.enuoyun.com/static/js/chunk-54bf46d8-4d7f9b0d.js",
+    "https://fp.enuoyun.com/static/js/chunk-3a76f6db-0cda8ad6.js",
+    "https://fp.enuoyun.com/static/js/chunk-313bcab2-a6ed28a9.js",
+    "https://fp.enuoyun.com/static/js/chunk-1071fa21-98ecd745.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d229067-fcc6caf5.js",
+    "https://fp.enuoyun.com/static/js/chunk-ff888af8-31a0c7a2.js",
+    "https://fp.enuoyun.com/static/js/chunk-c957ad32-26d670e5.js",
+    "https://fp.enuoyun.com/static/js/chunk-128df174-ca3bf6af.js",
+    "https://fp.enuoyun.com/static/js/chunk-6bb8be0b-d60509fe.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d0d603c-79f21886.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d0b5a66-7a3264a8.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d208896-f9d26766.js",
+    "https://fp.enuoyun.com/static/js/chunk-c4c7a9c8-7c730d1e.js",
+    "https://fp.enuoyun.com/static/js/chunk-1c27c99e-f37ce72c.js",
+    "https://fp.enuoyun.com/static/js/chunk-4ac7a3bc-4ef4c3aa.js",
+    "https://fp.enuoyun.com/static/js/chunk-630b548a-9477b70c.js",
+    "https://fp.enuoyun.com/static/js/chunk-b026a4b8-a320336f.js",
+    "https://fp.enuoyun.com/static/js/chunk-09c705d1-9a2dd01d.js",
+    "https://fp.enuoyun.com/static/js/chunk-29897e3b-17660ba9.js",
+    "https://fp.enuoyun.com/static/js/chunk-66a7e1d8-9f9b5a9e.js",
+    "https://fp.enuoyun.com/static/js/chunk-66557ec6-c450c138.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d0b61e5-2d88cc18.js",
+    "https://fp.enuoyun.com/static/js/chunk-1cca5d16-25d4c814.js",
+    "https://fp.enuoyun.com/static/js/chunk-1db8ae86-935b0524.js",
+    "https://fp.enuoyun.com/static/js/chunk-40dea454-5596d284.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d20f014-20b238d8.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d22c94e-16f9b7c6.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d20867c-78f85052.js",
+    "https://fp.enuoyun.com/static/js/chunk-0c573841-d536f745.js",
+    "https://fp.enuoyun.com/static/js/chunk-500d67cc-1d3f0157.js",
+    "https://fp.enuoyun.com/static/js/chunk-d48c0c2a-de76689e.js",
+    "https://fp.enuoyun.com/static/js/chunk-8c6e132a-cc8912f9.js",
+    "https://fp.enuoyun.com/static/js/chunk-38bdf37c-4c149b43.js",
+    "https://fp.enuoyun.com/static/js/chunk-c682d218-64446e39.js",
+    "https://fp.enuoyun.com/static/js/chunk-cc7080f0-2f69bb05.js",
+    "https://fp.enuoyun.com/static/js/chunk-3a7a982e-6417313b.js",
+    "https://fp.enuoyun.com/static/js/chunk-2be512e6-55624576.js",
+    "https://fp.enuoyun.com/static/js/chunk-30a0825c-4c20ca6b.js",
+    "https://fp.enuoyun.com/static/js/chunk-29c14870-a7b1a451.js",
+    "https://fp.enuoyun.com/static/js/chunk-c04e432e-86812a7a.js",
+    "https://fp.enuoyun.com/static/js/chunk-763555fc-8e1c3d6e.js",
+    "https://fp.enuoyun.com/static/js/chunk-c56604c0-07bfce86.js",
+    "https://fp.enuoyun.com/static/js/chunk-c8025d5e-19eec671.js",
+    "https://fp.enuoyun.com/static/js/chunk-685620e8-89530ee9.js",
+    "https://fp.enuoyun.com/static/js/chunk-0d08889a-4c7ddc8a.js",
+    "https://fp.enuoyun.com/static/js/chunk-d98a8cda-92e8edf2.js",
+    "https://fp.enuoyun.com/static/js/chunk-e5c2a71c-b0bfa12c.js",
+    "https://fp.enuoyun.com/static/js/chunk-37cb41f6-024e138b.js",
+    "https://fp.enuoyun.com/static/js/chunk-7f87975b-3f48ffc2.js",
+    "https://fp.enuoyun.com/static/js/chunk-a56e4e0a-367ab3d9.js",
+    "https://fp.enuoyun.com/static/js/chunk-30817f9a-248d4a2d.js",
+    "https://fp.enuoyun.com/static/js/chunk-a47d53da-d163984b.js",
+    "https://fp.enuoyun.com/static/js/chunk-1e52df38-a8646ed8.js",
+    "https://fp.enuoyun.com/static/js/chunk-f6185626-baba249e.js",
+    "https://fp.enuoyun.com/static/js/chunk-5d3e7028-66809ecf.js",
+    "https://fp.enuoyun.com/static/js/chunk-515af35a-c790be11.js",
+    "https://fp.enuoyun.com/static/js/chunk-7b6124b8-d92e0d4c.js",
+    "https://fp.enuoyun.com/static/js/chunk-743ffc0a-b0441ed6.js",
+    "https://fp.enuoyun.com/static/js/chunk-1e32471d-de606db7.js",
+    "https://fp.enuoyun.com/static/js/chunk-1ea27486-8c1349db.js",
+    "https://fp.enuoyun.com/static/js/chunk-1a033acb-1e6360b7.js",
+    "https://fp.enuoyun.com/static/js/chunk-228f37a7-060f8d24.js",
+    "https://fp.enuoyun.com/static/js/chunk-883ac78a-0fee762f.js",
+    "https://fp.enuoyun.com/static/js/chunk-20e1c95c-b381ef1a.js",
+    "https://fp.enuoyun.com/static/js/chunk-6d91e6cc-3dcaa50e.js",
+    "https://fp.enuoyun.com/static/js/chunk-788c1398-90d0bccb.js",
+    "https://fp.enuoyun.com/static/js/chunk-9fe8e2e6-1b9689a3.js",
+    "https://fp.enuoyun.com/static/js/chunk-3f9dffbc-e74ef315.js",
+    "https://fp.enuoyun.com/static/js/chunk-59df5d18-d0effbbb.js",
+    "https://fp.enuoyun.com/static/js/chunk-705d23f4-d58d6602.js",
+    "https://fp.enuoyun.com/static/js/chunk-785f5c9c-24eebe0c.js",
+    "https://fp.enuoyun.com/static/js/chunk-59863db3-4615a7a3.js",
+    "https://fp.enuoyun.com/static/js/chunk-811dcfa0-b9bb41fe.js",
+    "https://fp.enuoyun.com/static/js/chunk-651a8c0a-426ed19b.js",
+    "https://fp.enuoyun.com/static/js/chunk-26d08d16-eaca776a.js",
+    "https://fp.enuoyun.com/static/js/chunk-3a1cbbe4-80080645.js",
+    "https://fp.enuoyun.com/static/js/chunk-5c4fd73e-a775f613.js",
+    "https://fp.enuoyun.com/static/js/chunk-4ba97177-4721b97f.js",
+    "https://fp.enuoyun.com/static/js/chunk-09f678bd-cfc20cd8.js",
+    "https://fp.enuoyun.com/static/js/chunk-31d551c6-d95107e0.js",
+    "https://fp.enuoyun.com/static/js/chunk-49328189-81fbe41c.js",
+    "https://fp.enuoyun.com/static/js/chunk-a01fdbe8-1e015ba0.js",
+    "https://fp.enuoyun.com/static/js/chunk-256b4a32-2f1a6fb5.js",
+    "https://fp.enuoyun.com/static/js/chunk-ef3a6b64-d03ec4d6.js",
+    "https://fp.enuoyun.com/static/js/chunk-7c4c5db4-23fedfe7.js",
+    "https://fp.enuoyun.com/static/js/chunk-ff7b58ce-36d5bbf6.js",
+    "https://fp.enuoyun.com/static/js/chunk-8a9f957e-f503990b.js",
+    "https://fp.enuoyun.com/static/js/chunk-4e880cb6-0a5d66cf.js",
+    "https://fp.enuoyun.com/static/js/chunk-72627e77-ed38d60f.js",
+    "https://fp.enuoyun.com/static/js/chunk-5130c73e-2edffb01.js",
+    "https://fp.enuoyun.com/static/js/chunk-13e0f962-5408f9ea.js",
+    "https://fp.enuoyun.com/static/js/chunk-26f9456e-9bffbab1.js",
+    "https://fp.enuoyun.com/static/js/chunk-20d2e44c-92fe75ef.js",
+    "https://fp.enuoyun.com/static/js/chunk-5a06187e-f37c6bf0.js",
+    "https://fp.enuoyun.com/static/js/chunk-4e2a1b1e-389d48e5.js",
+    "https://fp.enuoyun.com/static/js/chunk-2d2389e3-b70c2be5.js",
+    "https://fp.enuoyun.com/static/js/chunk-413fae6b-b616cb17.js",
+    "https://fp.enuoyun.com/static/js/chunk-b273904a-4fbc12b6.js",
+    "https://fp.enuoyun.com/static/js/chunk-1e74802a-5da38cbe.js",
+    "https://fp.enuoyun.com/static/js/chunk-43799a3e-a73779d7.js",
+    "https://fp.enuoyun.com/static/js/chunk-77b461c2-24edc49b.js",
+    "https://fp.enuoyun.com/static/js/chunk-1202020e-b9844d49.js",
+    "https://fp.enuoyun.com/static/js/chunk-a164b102-1965aa1b.js",
+    "https://fp.enuoyun.com/static/js/chunk-6e1211f0-6d4eb1cd.js",
+    "https://fp.enuoyun.com/static/js/chunk-5c191223-e2d0b6bb.js",
+    "https://fp.enuoyun.com/static/js/chunk-37b2106a-34f90dbb.js",
+    "https://fp.enuoyun.com/static/js/chunk-ea66cb68-f18f6e93.js",
+    "https://fp.enuoyun.com/static/js/chunk-503b65e2-457e35e2.js",
+    "https://fp.enuoyun.com/static/js/chunk-75f1c805-3a78e29b.js",
+    "https://fp.enuoyun.com/static/js/chunk-62a1d7ca-e8cf75ef.js",
+    "https://fp.enuoyun.com/static/js/chunk-2424fbcf-98266655.js",
+    "https://fp.enuoyun.com/static/js/chunk-9a838544-89ba16c6.js",
+    "https://fp.enuoyun.com/static/js/chunk-b010c932-46a5ab67.js",
+    "https://fp.enuoyun.com/static/js/chunk-26585a59-e73b485f.js",
+    "https://fp.enuoyun.com/static/js/chunk-6b44be00-09bb45e9.js",
+    "https://fp.enuoyun.com/static/js/chunk-2e972eae-a48751d5.js",
+    "https://fp.enuoyun.com/static/js/chunk-74c2472d-656f8bcd.js",
+    "https://fp.enuoyun.com/static/js/chunk-0dad5c30-dadfe067.js",
+    "https://fp.enuoyun.com/static/js/chunk-3ad8a5d0-260bdd15.js",
+    "https://fp.enuoyun.com/static/js/chunk-3d1d25db-0cd0494b.js",
+    "https://fp.enuoyun.com/static/js/chunk-aa6088ea-54eda2b9.js",
+    "https://fp.enuoyun.com/static/js/chunk-227313be-1f27278d.js",
+    "https://fp.enuoyun.com/static/js/chunk-022cc1e3-24ba6e4d.js",
+    "https://fp.enuoyun.com/static/js/chunk-09ff22f7-911d8c2c.js",
+    "https://fp.enuoyun.com/static/js/chunk-075b023d-1d31684f.js",
+    "https://fp.enuoyun.com/static/js/chunk-68733c90-a764d79b.js",
+    "https://fp.enuoyun.com/static/js/chunk-65b7fb39-8b0df5c3.js",
+    "https://fp.enuoyun.com/static/js/chunk-9efebae2-3867b5b1.js",
+    "https://fp.enuoyun.com/static/js/chunk-70bcaab4-158c01d7.js",
+    "https://fp.enuoyun.com/static/js/chunk-6a007082-1e9a0840.js",
+    "https://fp.enuoyun.com/static/js/chunk-738e12df-b07436b0.js",
+    "https://fp.enuoyun.com/static/js/chunk-3859aa36-7c9761b1.js",
+    "https://fp.enuoyun.com/static/js/chunk-5f04429c-16873f61.js",
+    "https://fp.enuoyun.com/static/js/chunk-62811963-e7f6a589.js",
+    "https://fp.enuoyun.com/static/js/chunk-5a91697e-9c685121.js",
+    "https://fp.enuoyun.com/static/js/chunk-aa68bc98-0d4fdc91.js",
+    "https://fp.enuoyun.com/static/js/chunk-76f80d33-ed0f9b76.js",
+    "https://fp.enuoyun.com/static/js/chunk-60ba332f-068a342c.js",
+    "https://fp.enuoyun.com/static/js/chunk-3145ad6e-544b4e03.js",
+    "https://fp.enuoyun.com/static/js/runtime-0a5417b0f86fd8438ee4.js",
+    "https://fp.enuoyun.com/static/js/chunk-elementUI~55b4a7eb-671bba49.js",
+    "https://fp.enuoyun.com/static/js/chunk-elementUI~ecfc9d50-3a3623ed.js",
+    "https://fp.enuoyun.com/static/js/chunk-elementUI~ed18628c-aceb7622.js",
+    "https://fp.enuoyun.com/static/js/chunk-elementUI~64ab9f4d-2ee03289.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~b11a4acf-e8cca4e9.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~4ea40c24-8b2aa647.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~b3366722-8056baf0.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~ecd7a499-4cc9dbe6.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~7588055e-95070552.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~66c882ec-05d0193c.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~3c7c737d-cf25083f.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~f0c98c34-9d833e2f.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~9fcc2c77-1c4fc2b4.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~46bea6ff-a8b32a82.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~bdcb54eb-88d43bf2.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~30281e5f-569e1110.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~24ed0919-95996142.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~51ed43db-bc5aa780.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~ab9d6fd1-e4b9d89d.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~7c9f03c4-5a4e7e52.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~774d4b43-d1fbb253.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~68035bb9-fea86310.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~06a58dd1-ef38a96c.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~1cf544cf-0dea3075.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~5d8ad1d4-d5272e49.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~f8f850c4-8143c0ed.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~78292c17-fc7a0268.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~07ee974b-80e71018.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~e461e1bd-1c239ceb.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~cc641330-be5deb39.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~6995d4e1-c785dfee.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~832d8d48-64b63c47.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~a538f3d3-4995e9f3.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~226413fe-0fcbd9ef.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~edf8d598-a6eda91d.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~79f6b6db-0aab9484.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~c630b061-ad306516.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~468874f9-be817926.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~54cd41a5-7e1dac9e.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~21b710c2-804e0e25.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~7209f8b1-a12fdb50.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~6473bfae-676ef68d.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~2ba7865e-dd898cf3.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~d84c263c-8c54f043.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~ff620054-f039d4af.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~f448c9a4-73111de1.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~10bbc0c2-43ae6ebb.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~413c6aae-6e1d9805.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~0d9d1e94-225fa68b.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~d95012db-f7ce9409.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~b4993b9b-7ad6219a.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~dd097d88-bc886071.js",
+    "https://fp.enuoyun.com/static/js/chunk-libs~6729ecdc-50a4d192.js",
+    "https://fp.enuoyun.com/static/js/app~493df0b3-12426db9.js",
+    "https://fp.enuoyun.com/static/js/app~a087208b-3f49c349.js",
+    "https://fp.enuoyun.com/static/js/app~3443cadb-61d9b5ae.js",
+    "https://fp.enuoyun.com/static/js/app~e9c242a2-a33feca3.js",
+    "https://fp.enuoyun.com/static/js/app~c2b2bd9e-268b7b00.js",
+    "https://fp.enuoyun.com/static/js/app~069f6afa-54df42dc.js",
+    "https://fp.enuoyun.com/static/js/app~a97bfcba-ebf87ad8.js",
+    "https://fp.enuoyun.com/static/js/app~e2550e02-a8e5152d.js",
+    "https://fp.enuoyun.com/static/js/app~5a11b65b-9ce05852.js",
+    "https://fp.enuoyun.com/static/js/app~3d9b8e9e-29842089.js",
+    "https://fp.enuoyun.com/static/js/app~ea1f58e8-191e777b.js",
+    "https://fp.enuoyun.com/static/js/app~2350ae4e-29840783.js",
+    "https://fp.enuoyun.com/static/js/app~2591b2df-14c22fa0.js",
+    "https://fp.enuoyun.com/static/js/app~ec26b073-acae9664.js",
+    "https://fp.enuoyun.com/static/js/app~959069b8-21e70b41.js",
+    "https://fp.enuoyun.com/static/js/app~ba27a82c-13a1ed48.js",
+    "https://res.wx.qq.com/open/js/jweixin-1.3.2.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/mathjs/11.7.0/math.min.js"
+  ],
+  "stylesheets": [
+    "https://fp.enuoyun.com/static/css/chunk-libs~7588055e-95070552.css",
+    "https://fp.enuoyun.com/static/css/chunk-libs~2ba7865e-dd898cf3.css",
+    "https://fp.enuoyun.com/static/css/app~a087208b-3f49c349.css",
+    "https://fp.enuoyun.com/static/css/app~e9c242a2-a33feca3.css",
+    "https://fp.enuoyun.com/static/css/app~c2b2bd9e-268b7b00.css",
+    "https://fp.enuoyun.com/static/css/app~069f6afa-54df42dc.css",
+    "https://fp.enuoyun.com/static/css/app~a97bfcba-ebf87ad8.css",
+    "https://fp.enuoyun.com/static/css/app~e2550e02-a8e5152d.css",
+    "https://fp.enuoyun.com/static/css/app~2591b2df-14c22fa0.css",
+    "https://fp.enuoyun.com/static/css/app~ec26b073-acae9664.css",
+    "https://fp.enuoyun.com/static/css/app~959069b8-21e70b41.css",
+    "https://fp.enuoyun.com/static/css/app~ba27a82c-13a1ed48.css",
+    "https://fp.enuoyun.com/static/css/chunk-commons~1ad7283e-2631c28f.css",
+    "https://fp.enuoyun.com/static/css/chunk-2ef63b49-efedeb2b.css",
+    "https://fp.enuoyun.com/static/css/chunk-a22b61a4-718deb26.css",
+    "https://fp.enuoyun.com/static/css/chunk-c957ad32-26d670e5.css",
+    "https://fp.enuoyun.com/static/css/chunk-66557ec6-c450c138.css",
+    "https://fp.enuoyun.com/static/css/chunk-38bdf37c-4c149b43.css",
+    "https://fp.enuoyun.com/static/css/chunk-c682d218-64446e39.css",
+    "https://fp.enuoyun.com/static/css/chunk-cc7080f0-2f69bb05.css",
+    "https://fp.enuoyun.com/static/css/chunk-30a0825c-4c20ca6b.css",
+    "https://fp.enuoyun.com/static/css/chunk-29c14870-a7b1a451.css",
+    "https://fp.enuoyun.com/static/css/chunk-c04e432e-86812a7a.css",
+    "https://fp.enuoyun.com/static/css/chunk-763555fc-8e1c3d6e.css",
+    "https://fp.enuoyun.com/static/css/chunk-c56604c0-07bfce86.css",
+    "https://fp.enuoyun.com/static/css/chunk-c8025d5e-19eec671.css",
+    "https://fp.enuoyun.com/static/css/chunk-685620e8-89530ee9.css",
+    "https://fp.enuoyun.com/static/css/chunk-0d08889a-4c7ddc8a.css",
+    "https://fp.enuoyun.com/static/css/chunk-d98a8cda-92e8edf2.css",
+    "https://fp.enuoyun.com/static/css/chunk-e5c2a71c-b0bfa12c.css",
+    "https://fp.enuoyun.com/static/css/chunk-37cb41f6-024e138b.css",
+    "https://fp.enuoyun.com/static/css/chunk-7f87975b-3f48ffc2.css",
+    "https://fp.enuoyun.com/static/css/chunk-a56e4e0a-367ab3d9.css",
+    "https://fp.enuoyun.com/static/css/chunk-30817f9a-248d4a2d.css",
+    "https://fp.enuoyun.com/static/css/chunk-a47d53da-d163984b.css",
+    "https://fp.enuoyun.com/static/css/chunk-1e52df38-a8646ed8.css",
+    "https://fp.enuoyun.com/static/css/chunk-f6185626-baba249e.css",
+    "https://fp.enuoyun.com/static/css/chunk-5d3e7028-66809ecf.css",
+    "https://fp.enuoyun.com/static/css/chunk-515af35a-c790be11.css",
+    "https://fp.enuoyun.com/static/css/chunk-7b6124b8-d92e0d4c.css",
+    "https://fp.enuoyun.com/static/css/chunk-743ffc0a-b0441ed6.css",
+    "https://fp.enuoyun.com/static/css/chunk-1e32471d-de606db7.css",
+    "https://fp.enuoyun.com/static/css/chunk-1ea27486-8c1349db.css",
+    "https://fp.enuoyun.com/static/css/chunk-1a033acb-1e6360b7.css",
+    "https://fp.enuoyun.com/static/css/chunk-228f37a7-060f8d24.css",
+    "https://fp.enuoyun.com/static/css/chunk-883ac78a-0fee762f.css",
+    "https://fp.enuoyun.com/static/css/chunk-20e1c95c-b381ef1a.css",
+    "https://fp.enuoyun.com/static/css/chunk-6d91e6cc-3dcaa50e.css",
+    "https://fp.enuoyun.com/static/css/chunk-788c1398-90d0bccb.css",
+    "https://fp.enuoyun.com/static/css/chunk-9fe8e2e6-1b9689a3.css",
+    "https://fp.enuoyun.com/static/css/chunk-3f9dffbc-e74ef315.css",
+    "https://fp.enuoyun.com/static/css/chunk-59df5d18-d0effbbb.css",
+    "https://fp.enuoyun.com/static/css/chunk-705d23f4-d58d6602.css",
+    "https://fp.enuoyun.com/static/css/chunk-785f5c9c-24eebe0c.css",
+    "https://fp.enuoyun.com/static/css/chunk-59863db3-4615a7a3.css",
+    "https://fp.enuoyun.com/static/css/chunk-811dcfa0-b9bb41fe.css",
+    "https://fp.enuoyun.com/static/css/chunk-651a8c0a-426ed19b.css",
+    "https://fp.enuoyun.com/static/css/chunk-26d08d16-eaca776a.css",
+    "https://fp.enuoyun.com/static/css/chunk-3a1cbbe4-80080645.css",
+    "https://fp.enuoyun.com/static/css/chunk-5c4fd73e-a775f613.css",
+    "https://fp.enuoyun.com/static/css/chunk-4ba97177-4721b97f.css",
+    "https://fp.enuoyun.com/static/css/chunk-09f678bd-cfc20cd8.css",
+    "https://fp.enuoyun.com/static/css/chunk-31d551c6-d95107e0.css",
+    "https://fp.enuoyun.com/static/css/chunk-49328189-81fbe41c.css",
+    "https://fp.enuoyun.com/static/css/chunk-a01fdbe8-1e015ba0.css",
+    "https://fp.enuoyun.com/static/css/chunk-256b4a32-2f1a6fb5.css",
+    "https://fp.enuoyun.com/static/css/chunk-ef3a6b64-d03ec4d6.css",
+    "https://fp.enuoyun.com/static/css/chunk-7c4c5db4-23fedfe7.css",
+    "https://fp.enuoyun.com/static/css/chunk-ff7b58ce-36d5bbf6.css",
+    "https://fp.enuoyun.com/static/css/chunk-8a9f957e-f503990b.css",
+    "https://fp.enuoyun.com/static/css/chunk-4e880cb6-0a5d66cf.css",
+    "https://fp.enuoyun.com/static/css/chunk-72627e77-ed38d60f.css",
+    "https://fp.enuoyun.com/static/css/chunk-5130c73e-2edffb01.css",
+    "https://fp.enuoyun.com/static/css/chunk-13e0f962-5408f9ea.css",
+    "https://fp.enuoyun.com/static/css/chunk-26f9456e-9bffbab1.css",
+    "https://fp.enuoyun.com/static/css/chunk-20d2e44c-92fe75ef.css",
+    "https://fp.enuoyun.com/static/css/chunk-5a06187e-f37c6bf0.css",
+    "https://fp.enuoyun.com/static/css/chunk-4e2a1b1e-389d48e5.css",
+    "https://fp.enuoyun.com/static/css/chunk-413fae6b-b616cb17.css",
+    "https://fp.enuoyun.com/static/css/chunk-b273904a-4fbc12b6.css",
+    "https://fp.enuoyun.com/static/css/chunk-1e74802a-5da38cbe.css",
+    "https://fp.enuoyun.com/static/css/chunk-43799a3e-a73779d7.css",
+    "https://fp.enuoyun.com/static/css/chunk-77b461c2-24edc49b.css",
+    "https://fp.enuoyun.com/static/css/chunk-1202020e-b9844d49.css",
+    "https://fp.enuoyun.com/static/css/chunk-a164b102-1965aa1b.css",
+    "https://fp.enuoyun.com/static/css/chunk-6e1211f0-6d4eb1cd.css",
+    "https://fp.enuoyun.com/static/css/chunk-5c191223-e2d0b6bb.css",
+    "https://fp.enuoyun.com/static/css/chunk-37b2106a-34f90dbb.css",
+    "https://fp.enuoyun.com/static/css/chunk-ea66cb68-f18f6e93.css",
+    "https://fp.enuoyun.com/static/css/chunk-503b65e2-457e35e2.css",
+    "https://fp.enuoyun.com/static/css/chunk-75f1c805-3a78e29b.css",
+    "https://fp.enuoyun.com/static/css/chunk-62a1d7ca-e8cf75ef.css",
+    "https://fp.enuoyun.com/static/css/chunk-2424fbcf-98266655.css",
+    "https://fp.enuoyun.com/static/css/chunk-9a838544-89ba16c6.css",
+    "https://fp.enuoyun.com/static/css/chunk-b010c932-46a5ab67.css",
+    "https://fp.enuoyun.com/static/css/chunk-26585a59-e73b485f.css",
+    "https://fp.enuoyun.com/static/css/chunk-6b44be00-09bb45e9.css",
+    "https://fp.enuoyun.com/static/css/chunk-2e972eae-a48751d5.css",
+    "https://fp.enuoyun.com/static/css/chunk-74c2472d-656f8bcd.css",
+    "https://fp.enuoyun.com/static/css/chunk-0dad5c30-dadfe067.css",
+    "https://fp.enuoyun.com/static/css/chunk-3ad8a5d0-260bdd15.css",
+    "https://fp.enuoyun.com/static/css/chunk-3d1d25db-0cd0494b.css",
+    "https://fp.enuoyun.com/static/css/chunk-aa6088ea-54eda2b9.css",
+    "https://fp.enuoyun.com/static/css/chunk-227313be-1f27278d.css",
+    "https://fp.enuoyun.com/static/css/chunk-022cc1e3-24ba6e4d.css",
+    "https://fp.enuoyun.com/static/css/chunk-09ff22f7-911d8c2c.css",
+    "https://fp.enuoyun.com/static/css/chunk-075b023d-1d31684f.css",
+    "https://fp.enuoyun.com/static/css/chunk-68733c90-a764d79b.css",
+    "https://fp.enuoyun.com/static/css/chunk-65b7fb39-8b0df5c3.css",
+    "https://fp.enuoyun.com/static/css/chunk-9efebae2-3867b5b1.css",
+    "https://fp.enuoyun.com/static/css/chunk-70bcaab4-158c01d7.css",
+    "https://fp.enuoyun.com/static/css/chunk-6a007082-1e9a0840.css",
+    "https://fp.enuoyun.com/static/css/chunk-738e12df-b07436b0.css",
+    "https://fp.enuoyun.com/static/css/chunk-3859aa36-7c9761b1.css",
+    "https://fp.enuoyun.com/static/css/chunk-5f04429c-16873f61.css",
+    "https://fp.enuoyun.com/static/css/chunk-62811963-e7f6a589.css",
+    "https://fp.enuoyun.com/static/css/chunk-5a91697e-9c685121.css",
+    "https://fp.enuoyun.com/static/css/chunk-aa68bc98-0d4fdc91.css",
+    "https://fp.enuoyun.com/static/css/chunk-76f80d33-ed0f9b76.css",
+    "https://fp.enuoyun.com/static/css/chunk-60ba332f-068a342c.css",
+    "https://fp.enuoyun.com/static/css/chunk-3145ad6e-544b4e03.css"
+  ],
+  "tables": [
+    {
+      "cls": "new_table",
+      "index": 0,
+      "rect": {
+        "height": 164,
+        "width": 1471,
+        "x": 215,
+        "y": 341
+      },
+      "tag": "table",
+      "text": "*简称*项目名称 规格型号 单位 数量 单价 金额 税率/征收率 税额 操作 1 合计 ￥ ￥ 价税合计（大写） （小写）￥"
+    },
+    {
+      "cls": "new_table_border",
+      "index": 1,
+      "rect": {
+        "height": 26,
+        "width": 1471,
+        "x": 215,
+        "y": 341
+      },
+      "tag": "tr",
+      "text": "*简称*项目名称 规格型号 单位 数量 单价 金额 税率/征收率 税额 操作"
+    },
+    {
+      "cls": "activeCurrentRow new_table_border",
+      "index": 2,
+      "rect": {
+        "height": 26,
+        "width": 1471,
+        "x": 215,
+        "y": 367
+      },
+      "tag": "tr",
+      "text": "1"
+    },
+    {
+      "cls": "new_table_span",
+      "index": 3,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 614,
+        "y": 367
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 4,
+      "rect": {
+        "height": 25,
+        "width": 100,
+        "x": 776,
+        "y": 367
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 5,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 878,
+        "y": 367
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 6,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 1040,
+        "y": 367
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 7,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 1202,
+        "y": 367
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span el-input el-input--medium",
+      "index": 8,
+      "rect": {
+        "height": 25,
+        "width": 100,
+        "x": 1481,
+        "y": 367
+      },
+      "tag": "div",
+      "text": ""
+    },
+    {
+      "cls": "new_table_border",
+      "index": 9,
+      "rect": {
+        "height": 26,
+        "width": 1471,
+        "x": 215,
+        "y": 393
+      },
+      "tag": "tr",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 10,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 614,
+        "y": 393
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 11,
+      "rect": {
+        "height": 25,
+        "width": 100,
+        "x": 776,
+        "y": 393
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 12,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 878,
+        "y": 393
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 13,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 1040,
+        "y": 393
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 14,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 1202,
+        "y": 393
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 15,
+      "rect": {
+        "height": 25,
+        "width": 100,
+        "x": 1481,
+        "y": 393
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_border",
+      "index": 16,
+      "rect": {
+        "height": 26,
+        "width": 1471,
+        "x": 215,
+        "y": 419
+      },
+      "tag": "tr",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 17,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 614,
+        "y": 419
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 18,
+      "rect": {
+        "height": 25,
+        "width": 100,
+        "x": 776,
+        "y": 419
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 19,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 878,
+        "y": 419
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 20,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 1040,
+        "y": 419
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 21,
+      "rect": {
+        "height": 25,
+        "width": 144,
+        "x": 1202,
+        "y": 419
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_span",
+      "index": 22,
+      "rect": {
+        "height": 25,
+        "width": 100,
+        "x": 1481,
+        "y": 419
+      },
+      "tag": "span",
+      "text": ""
+    },
+    {
+      "cls": "new_table_border new_table_sum",
+      "index": 23,
+      "rect": {
+        "height": 30,
+        "width": 1471,
+        "x": 215,
+        "y": 445
+      },
+      "tag": "tr",
+      "text": "合计 ￥ ￥"
+    },
+    {
+      "cls": "new_table_span_all",
+      "index": 24,
+      "rect": {
+        "height": 30,
+        "width": 162,
+        "x": 1201,
+        "y": 445
+      },
+      "tag": "td",
+      "text": "￥"
+    },
+    {
+      "cls": "new_table_span_all",
+      "index": 25,
+      "rect": {
+        "height": 30,
+        "width": 118,
+        "x": 1480,
+        "y": 445
+      },
+      "tag": "td",
+      "text": "￥"
+    },
+    {
+      "cls": "new_table_border new_table_sum",
+      "index": 26,
+      "rect": {
+        "height": 30,
+        "width": 1471,
+        "x": 215,
+        "y": 475
+      },
+      "tag": "tr",
+      "text": "价税合计（大写） （小写）￥"
+    }
+  ],
+  "title": "数税云",
+  "url": "https://fp.enuoyun.com/platform/created",
+  "visibleText": "销项管理 进项管理 票据中心 分析看板 基础信息 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 含税 待开发票清单导入折扣 差额 复制草稿箱 暂存草稿提交开票 发票代码： 发票号码： 开票日期：2026年06月29日 购 买 方 名 称 ： 延用 纳税人识别号： 地址 ： 电话 ： 开户行名称： 银行账号 ： 通 知 到 手机号码： 邮箱地址： 抄送手机： 抄送邮箱： *简称*项目名称 规格型号 单位 数量 单价 金额 税率/征收率 税额 操作 1 合计 ￥ ￥ 价税合计（大写） （小写）￥ 销 售 方 名 称 ： 纳税人识别号： 地 址 ： 电话： 开户行名称： 开户行账号： 备 注 收款人： 复核人： 开票人： 销售方(章)： 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证"
+}
