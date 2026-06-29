@@ -77,6 +77,7 @@ ERP 数据血缘未逐字段确认
 - 每页 Network 未逐动作全量记录。
 - 接口风险等级未覆盖到每个按钮。
 - ERP adapter 和数税云接口候选未逐项绑定。
+- 2026-06-29 Chrome 探测显示：当前自动化环境可读页面，但不能直接导出 Network/HAR；额度接口标签被扩展拦截为 `ERR_BLOCKED_BY_CLIENT`。详见 `TAX_CLOUD_CHROME_NETWORK_PROBE_20260629.md`。
 
 ### 状态
 
