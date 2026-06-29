@@ -83,6 +83,7 @@ clone-website 不用于：
 - `docs/tax-cloud/TAX_CLOUD_COMPLETENESS_AUDIT.md`
 - `docs/tax-cloud/TAX_CLOUD_GAP_LEDGER.md`
 - `docs/tax-cloud/TAX_CLOUD_P0_INTERFACE_ACTION_AUDIT.md`
+- `docs/tax-cloud/TAX_CLOUD_P1_P2_P3_INTERFACE_ACTION_AUDIT.md`
 - `docs/tax-cloud/TAX_CLOUD_P0_DEMO_ACCEPTANCE.md`
 - `docs/tax-cloud/captures/`
 - `docs/tax-cloud/screenshots/`
@@ -101,6 +102,7 @@ clone-website 不用于：
 - 非手工 P0 页面 spec：11 个，已完成。
 - 非手工 P0 demo 总览：已生成
 - 非手工 P0 动作矩阵：已生成，真实 Network 待补
+- P1/P2/P3 动作矩阵：已生成初版，真实 Network 待补
 
 当前仍需继续推进的问题：
 

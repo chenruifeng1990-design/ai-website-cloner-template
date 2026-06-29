@@ -124,4 +124,10 @@
 docs/tax-cloud/TAX_CLOUD_P0_INTERFACE_ACTION_AUDIT.md
 ```
 
-下一轮必须在 Chrome 登录态下进入每个菜单页，按该矩阵逐动作记录实际 XHR/fetch 调用，并和上述 ERP 封装逐项比对。L3/L4 动作即使抓到接口，也不得直接接入 ERP 主流程。
+当前也已补充 P1/P2/P3 的动作级矩阵：
+
+```text
+docs/tax-cloud/TAX_CLOUD_P1_P2_P3_INTERFACE_ACTION_AUDIT.md
+```
+
+下一轮必须在 Chrome 登录态下进入每个菜单页，按这两个矩阵逐动作记录实际 XHR/fetch 调用，并和上述 ERP 封装逐项比对。L3/L4 动作即使抓到接口，也不得直接接入 ERP 主流程。

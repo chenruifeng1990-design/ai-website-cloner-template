@@ -1,0 +1,109 @@
+# 数税云 P1/P2/P3 页面接口动作复核矩阵
+
+更新时间：2026-06-29
+
+## 口径
+
+本文件覆盖除 P0 外的 21 个页面。P0 见：
+
+```text
+docs/tax-cloud/TAX_CLOUD_P0_INTERFACE_ACTION_AUDIT.md
+```
+
+当前状态是“动作级候选矩阵”，不是 Chrome Network 最终确认。下一轮必须用已登录 Chrome 逐按钮补真实 XHR/fetch。
+
+## 风险规则
+
+| 风险 | 处理 |
+|---|---|
+| L0 查询 | 可优先接入 ERP adapter |
+| L1 本地状态/导入导出 | 可接入，需审计 |
+| L2 平台任务/下载/查验/同步 | 可灰度，必须有任务记录 |
+| L3 税务状态动作 | 默认禁用，必须单独门禁 |
+| L4 真实开票/红冲 | 只允许走飞书审批、preview hash、服务端总闸 |
+
+## P1：销项管理
+
+| 页面 | 动作 | 风险 | 数税云接口候选 | ERP 对应策略 |
+|---|---|---|---|---|
+| 扫码开票 | 生成二维码/链接 | L2 | 待真实 Network | ERP 生成扫码资料候选，不触发真实开票 |
+| 扫码开票 | 复制/下载二维码 | L1 | 待真实 Network | 本地下载/复制即可 |
+| 扫码开票 | 作废扫码单 | L2 | 待真实 Network | 必须审计，不能影响已开票记录 |
+| 扫码开票 | 客户扫码补资料 | L1 | 待真实 Network | 进入客户资料候选，不直接覆盖主数据 |
+| 扫码记录 | 列表/筛选/分页 | L0 | 待真实 Network | ERP 扫码记录台账 |
+| 扫码记录 | 查看详情 | L0 | 待真实 Network | 展示客户提交资料和状态 |
+| 扫码记录 | 导出 | L1 | 待真实 Network | ERP 导出任务 |
+| 订单开票 | 订单列表/筛选 | L0 | 待真实 Network | ERP 仍以合同/出库缺口为主 |
+| 订单开票 | 从订单发起开票 | L2/L4 | 待真实 Network | 禁止直连；必须转为 ERP 草稿审批链路 |
+| 开票申请单 | 申请单列表/详情 | L0 | 待真实 Network | visual-only，不恢复 ERP 旧申请主线 |
+| 开票申请单 | 申请单操作 | L2/L3 | 待真实 Network | 不进入新主线 |
+| 红字确认单 | 查询/详情 | L0 | `ynfp.invoice.red.confirm.query`、`ynfp.invoice.red.confirmDetail.query` | 红字台账查询 |
+| 红字确认单 | 下载 | L2 | `ynfp.invoice.red.confirm.down` | 下载任务记录 |
+| 红字确认单 | 申请/操作/红冲关联 | L3/L4 | `ynfp.invoice.red.confirm.issue`、`ynfp.invoice.red.confirm.operate`、`ynfp.invoice.associate.negative` | 默认禁用，单独红字审批和幂等 |
+
+## P1：进项管理
+
+| 页面 | 动作 | 风险 | 数税云接口候选 | ERP 对应策略 |
+|---|---|---|---|---|
+| 快捷勾选 | 条件查询 | L0 | 发票池/用途状态查询待抓 | ERP 进项票列表筛选 |
+| 快捷勾选 | 快捷勾选提交 | L3 | 待真实 Network | 默认禁用，先生成 ERP 批次 |
+| 快捷勾选 | 导出 | L1 | 待真实 Network | ERP 导出任务 |
+| 勾选审核 | 批次列表/详情 | L0 | 待真实 Network | `/api/tax-invoices/records/certification-batches` |
+| 勾选审核 | 审核/撤销/确认 | L3 | 待真实 Network | 默认禁用，内部审批后再考虑真实动作 |
+
+## P1：票据中心和下载
+
+| 页面 | 动作 | 风险 | 数税云接口候选 | ERP 对应策略 |
+|---|---|---|---|---|
+| 签收 | 签收列表/详情 | L0 | 待真实 Network | 发票池签收状态展示 |
+| 签收 | 单票/批量签收 | L3 | `ynfp.invoice.sign` 或网页端接口待抓 | 默认禁用，签收税务后果确认后再开 |
+| 查验 | 单票查验 | L2 | `ynfp.invoice.check` | `/api/tax-invoices/records/provider-check` |
+| 查验 | 批量查验 | L2 | 待真实 Network | ERP 任务队列，失败明细可见 |
+| 查验 | 导入/导出 | L1 | 待真实 Network | 本地文件任务 |
+| 取票设置 | 列表/详情 | L0 | 待真实 Network | 同步配置读取 |
+| 取票设置 | 新增/编辑/启停 | L1/L2 | 待真实 Network | 配置变更必须审计 |
+| 任务管理 | 任务列表/详情 | L0 | 待真实 Network | ERP 同步/下载/查验任务 |
+| 任务管理 | 重试/下载结果 | L2 | 待真实 Network | 幂等重试和错误可见 |
+| 下载中心 | 下载任务列表 | L0 | 待真实 Network | ERP 文件任务列表 |
+| 下载中心 | 文件下载/重试 | L2 | 版式文件、导出文件接口待抓 | 记录来源页面和来源动作 |
+
+## P2：基础信息
+
+| 页面 | 动作 | 风险 | 数税云接口候选 | ERP 对应策略 |
+|---|---|---|---|---|
+| 商品信息 | 商品列表/详情 | L0 | 待真实 Network | ERP 商品税编资料 |
+| 商品信息 | 新增/编辑/导入/导出 | L1 | 商品库接口待抓，税编接口 `ynfp.invoice.batch.taxCode` | 写入前人工确认，和 ERP 商品保留映射 |
+| 客户管理 | 客户列表/详情 | L0 | 待真实 Network | ERP 客户开票资料库 |
+| 客户管理 | 新增/编辑/导入/导出 | L1 | 待真实 Network | 客户资料候选，不自动覆盖金蝶/ERP |
+| 开票额度配置 | 额度查询 | L0 | `/prod-api/bussiness/credit/creditInfo/1` | `/api/tax-invoices/issue-credit?type=1` |
+| 开票额度配置 | 额度配置/刷新 | L1/L2 | 待真实 Network | 只展示真实额度，不写死 |
+| 配置管理 | 配置列表/详情 | L0 | 待真实 Network | 配置白名单 |
+| 配置管理 | 配置保存/启停 | L1/L2 | 待真实 Network | 只迁移必要税务配置 |
+| 网上办税信息 | 账号/登录状态查询 | L0 | `/system/bizOnlineTaxInformation/getOnlineTax` | 安全配置读取 |
+| 网上办税信息 | 登录/认证/维护凭证 | L3 | 待真实 Network | 默认不在 ERP 触发，需安全方案 |
+
+## P3：系统设置
+
+| 页面 | 动作 | 风险 | 数税云接口候选 | ERP 对应策略 |
+|---|---|---|---|---|
+| 组织管理 | 列表/保存 | L1 | 待真实 Network | 只做参考，不覆盖 ERP 组织 |
+| 部门管理 | 列表/保存 | L1 | 待真实 Network | 只做参考，签收部门可做映射 |
+| 角色管理 | 角色/权限树 | L1 | 待真实 Network | ERP 权限为主 |
+| 用户管理 | 用户列表/启停 | L1 | 待真实 Network | 只做数税云账号映射和审计参考 |
+
+## 验收结论
+
+- 21 个 P1/P2/P3 页面已经有动作级风险矩阵初版。
+- L0/L1 查询和本地资料类可以进入 ERP adapter 设计。
+- L2 任务类必须有任务进度、失败状态和幂等。
+- L3/L4 继续默认禁用，不能因为 UI demo 完成就接真实动作。
+
+## 下一步
+
+```text
+逐页面打开数税云
+→ 对照本文件点击每个动作
+→ 记录真实 Network URL/method/payload/response
+→ 更新本文件和 TAX_CLOUD_API_INVENTORY.md
+→ 再进入 ERP adapter 实现
+```
