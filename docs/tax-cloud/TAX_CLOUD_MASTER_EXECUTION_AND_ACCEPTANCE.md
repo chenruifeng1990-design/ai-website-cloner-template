@@ -87,6 +87,8 @@ clone-website 不用于：
 - `docs/tax-cloud/TAX_CLOUD_P0_DEMO_ACCEPTANCE.md`
 - `docs/tax-cloud/TAX_CLOUD_CHROME_NETWORK_PROBE_20260629.md`
 - `docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_AND_PARSE_RUNBOOK.md`
+- `docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_TASKS.md`
+- `docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_TASKS.json`
 - `docs/tax-cloud/TAX_CLOUD_VERIFICATION_REPORT.md`
 - `docs/tax-cloud/captures/`
 - `docs/tax-cloud/screenshots/`
@@ -108,12 +110,15 @@ clone-website 不用于：
 - P1/P2/P3 动作矩阵：已生成初版，真实 Network 待补
 - Chrome Network 自动探测：当前受限，需 HAR、服务端代理或可访问 DevTools Network 的通道
 - HAR 解析工具：已补 `scripts/parse-tax-cloud-har.mjs`，可把 HAR 转成脱敏接口清单
+- HAR 批量解析工具：已补 `scripts/parse-tax-cloud-har-directory.mjs`，可把 `network-har/*.har` 批量转成 normalized JSON
+- HAR 采集任务工具：已补 `scripts/generate-tax-cloud-har-capture-tasks.mjs`，当前生成 32 个非手工页面、81 个动作采集任务
 - 机器验收工具：已补 `scripts/verify-tax-cloud-completion.mjs`，可生成 `TAX_CLOUD_VERIFICATION_REPORT.md`
 
 当前仍需继续推进的问题：
 
 - P1/P2/P3 已有 page spec 初版，但还没有批量生成 demo。
 - P0 的 Chrome Network 仍需逐按钮实抓。
+- 32 个非手工页面的 normalized HAR 真实接口证据仍为 0/32，严格验收未通过。
 - P0 的 ERP adapter 只完成方向映射，未全部落地。
 - 字段血缘已有 P0 基线，仍需逐字段扩展到 33 页。
 

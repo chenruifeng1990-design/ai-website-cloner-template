@@ -20,6 +20,7 @@ const expectedDocs = [
   "docs/tax-cloud/TAX_CLOUD_P1_P2_P3_INTERFACE_ACTION_AUDIT.md",
   "docs/tax-cloud/TAX_CLOUD_P0_DEMO_ACCEPTANCE.md",
   "docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_AND_PARSE_RUNBOOK.md",
+  "docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_TASKS.md",
 ];
 
 const expectedP0DemoKeys = [

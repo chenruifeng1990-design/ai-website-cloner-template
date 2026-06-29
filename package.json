@@ -35,7 +35,8 @@
     "check": "npm run lint && npm run typecheck && npm run build",
     "tax-cloud:audit": "node scripts/verify-tax-cloud-completion.mjs",
     "tax-cloud:audit:strict": "node scripts/verify-tax-cloud-completion.mjs --strict",
-    "tax-cloud:har:parse-all": "node scripts/parse-tax-cloud-har-directory.mjs"
+    "tax-cloud:har:parse-all": "node scripts/parse-tax-cloud-har-directory.mjs",
+    "tax-cloud:har:tasks": "node scripts/generate-tax-cloud-har-capture-tasks.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.3.0",

@@ -33,6 +33,21 @@ docs/tax-cloud/apis/*.har-normalized.json
 
 ## 采集步骤
 
+采集前先生成逐页任务清单：
+
+```bash
+npm run tax-cloud:har:tasks
+```
+
+输出：
+
+```text
+docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_TASKS.md
+docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_TASKS.json
+```
+
+该清单会自动排除已冻结的手工开票页，并列出 32 个非手工页面的建议 HAR 文件名、动作、风险初判和当前证据状态。
+
 1. 在 Chrome 打开数税云页面。
 2. 打开 DevTools → Network。
 3. 勾选 Preserve log。
@@ -81,6 +96,7 @@ npm run tax-cloud:har:parse-all
 批量解析后继续跑：
 
 ```bash
+npm run tax-cloud:har:tasks
 npm run tax-cloud:audit
 ```
 

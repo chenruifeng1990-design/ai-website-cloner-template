@@ -1,6 +1,6 @@
 # 数税云全量任务机器验收报告
 
-生成时间：2026-06-29T08:31:01.148Z
+生成时间：2026-06-29T08:39:29.223Z
 
 ## 结论
 
@@ -18,7 +18,7 @@ partial: page/spec/action/demo layers pass; real HAR interface evidence still in
 |---|---|---|
 | 33 page targets | PASS | 33/33 target pages |
 | Page capture four-piece plus page spec | PASS | 33/33 complete |
-| Core control documents | PASS | 11/11 present |
+| Core control documents | PASS | 12/12 present |
 | P0 action matrix covers all non-manual P0 pages | PASS | all P0 keys present |
 | P0 demo covers all non-manual P0 pages | PASS | all P0 demo keys present |
 | P1/P2/P3 action matrix covers remaining pages | PASS | all remaining keys present |
