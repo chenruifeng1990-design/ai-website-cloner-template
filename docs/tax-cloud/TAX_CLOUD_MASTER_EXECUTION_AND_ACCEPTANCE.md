@@ -598,6 +598,7 @@ preview hash 不一致不能开票
 每轮推进后必须先跑机器验收，再写人工结论：
 
 ```bash
+npm run tax-cloud:har:parse-all
 npm run tax-cloud:audit
 ```
 

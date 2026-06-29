@@ -20,13 +20,19 @@ bussiness-credit.creditInfo.har
 解析命令：
 
 ```bash
-node scripts/parse-tax-cloud-har.mjs docs/tax-cloud/network-har/platform-records.default-list.har --page-key=platform-records
+npm run tax-cloud:har:parse-all
 ```
 
 输出目录：
 
 ```text
 docs/tax-cloud/apis/
+```
+
+单文件排查：
+
+```bash
+node scripts/parse-tax-cloud-har.mjs docs/tax-cloud/network-har/platform-records.default-list.har --page-key=platform-records
 ```
 
 安全规则：

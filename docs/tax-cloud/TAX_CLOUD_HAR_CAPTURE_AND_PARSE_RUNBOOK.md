@@ -65,6 +65,27 @@ analysisBoard-invoceRateView.query.har
 
 ## 解析命令
 
+推荐批量解析：
+
+```bash
+npm run tax-cloud:har:parse-all
+```
+
+批量脚本会：
+
+- 扫描 `docs/tax-cloud/network-har/*.har`。
+- 按 `<page-key>.<action>.har` 或 `<page-key>.har` 自动识别页面。
+- 输出到 `docs/tax-cloud/apis/*.har-normalized.json`。
+- 生成 `docs/tax-cloud/TAX_CLOUD_HAR_BATCH_PARSE_REPORT.md`。
+
+批量解析后继续跑：
+
+```bash
+npm run tax-cloud:audit
+```
+
+单文件排查命令：
+
 ```bash
 node scripts/parse-tax-cloud-har.mjs docs/tax-cloud/network-har/platform-records.default-list.har --page-key=platform-records
 ```
