@@ -1,45 +1,13 @@
 {
-  "generatedAt": "2026-06-29T08:39:09.099Z",
+  "generatedAt": "2026-06-30T01:08:34.301Z",
   "frozenPageKeys": [
     "platform-created"
   ],
   "totalPages": 32,
-  "totalTasks": 81,
-  "pagesWithEvidence": 0,
-  "pagesMissingEvidence": [
-    "platform-scanCode",
-    "platform-scanRecords",
-    "platform-records",
-    "platform-billIssue",
-    "platform-invoiceApplication",
-    "platform-redMark",
-    "income-scanCodeCheck",
-    "income-invoiceCheck",
-    "income-confirmCheck",
-    "income-confirmSign",
-    "income-certificationResults",
-    "billCenter-fullInvoiceQuery",
-    "billCenter-sign",
-    "billCenter-invoiceVerification",
-    "billCenter-accessSetting",
-    "billCenter-taskManagement",
-    "analysisBoard-invoceRateView",
-    "analysisBoard-invoiceTypeView",
-    "analysisBoard-businessRateView",
-    "analysisBoard-goodsRateView",
-    "analysisBoard-purchaseSalesTrend",
-    "analysisBoard-invoiceRegionView",
-    "bussiness-info",
-    "bussiness-customer",
-    "bussiness-credit",
-    "bussiness-configurationManagement",
-    "system-dept",
-    "system-departmentInfo",
-    "system-role",
-    "system-onlineTaxationInfo",
-    "system-user",
-    "downloadCenter"
-  ],
+  "totalTasks": 40,
+  "totalExcludedCandidates": 54,
+  "pagesWithEvidence": 32,
+  "pagesMissingEvidence": [],
   "pages": [
     {
       "key": "platform-scanCode",
@@ -65,15 +33,42 @@
           "candidate": "扫码记录查询：和 `platform-scanRecords` 联动，L0。",
           "risk": "L0 query",
           "harFile": "platform-scanCode.default-list.har"
-        },
-        {
-          "action": "action-review",
-          "candidate": "真实开票：禁止从本页直接触发 L4，必须回到 ERP 草稿审批链路。",
-          "risk": "L4/L3 review",
-          "harFile": "platform-scanCode.action-review.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "真实开票：禁止从本页直接触发 L4，必须回到 ERP 草稿审批链路。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/bussiness/scanInvoice/getScanInvoiceInfo",
+          "file": "app~ea1f58e8-191e777b.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/scanInvoice/getScanInvoiceBillInfo",
+          "file": "app~ea1f58e8-191e777b.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/scanInvoice/getOuterPdfBase64",
+          "file": "app~ea1f58e8-191e777b.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/scanInvoice/H5CommitIssue",
+          "file": "app~ea1f58e8-191e777b.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "platform-scanCode.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "platform-scanRecords",
@@ -107,7 +102,33 @@
           "harFile": "platform-scanRecords.download.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [],
+      "staticEvidence": [
+        {
+          "endpoint": "/bussiness/scanInvoice/getClientDateByCode",
+          "file": "app~ea1f58e8-191e777b.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/scanInvoice/getClientGuess",
+          "file": "app~ea1f58e8-191e777b.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/scanInvoice/invoiceDelivery",
+          "file": "app~ea1f58e8-191e777b.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "platform-scanRecords.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "platform-records",
@@ -126,36 +147,29 @@
       "tasks": [
         {
           "action": "default-list",
-          "candidate": "开票结果查询：`ynfp.invoice.detail.query`，L0。",
+          "candidate": "默认页面加载/列表查询：需要抓取首屏接口，L0。",
           "risk": "L0 query",
           "harFile": "platform-records.default-list.har"
-        },
-        {
-          "action": "default-list-2",
-          "candidate": "发票明细列表：`ynfp.invoice.detail.list.query`，L0，曾返回 7007，需要复测权限。",
-          "risk": "L0 query",
-          "harFile": "platform-records.default-list-2.har"
-        },
-        {
-          "action": "default-list-3",
-          "candidate": "ERP 列表：`/api/tax-invoices/records/list`，L0。",
-          "risk": "L0 query",
-          "harFile": "platform-records.default-list-3.har"
-        },
-        {
-          "action": "download",
-          "candidate": "版式下载：`/api/tax-invoices/records/layout-file-download`，L2。",
-          "risk": "L2 review",
-          "harFile": "platform-records.download.har"
-        },
-        {
-          "action": "default",
-          "candidate": "对账：`/api/tax-invoices/records/reconcile`，L0。",
-          "risk": "manual review",
-          "harFile": "platform-records.default.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "开票结果查询：`ynfp.invoice.detail.query`，L0。",
+        "发票明细列表：`ynfp.invoice.detail.list.query`，L0，曾返回 7007，需要复测权限。",
+        "ERP 列表：`/api/tax-invoices/records/list`，L0。",
+        "版式下载：`/api/tax-invoices/records/layout-file-download`，L2。",
+        "对账：`/api/tax-invoices/records/reconcile`，L0。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "platform-records.default-list.har-normalized.json",
+          "taxCloudApiEntries": 32,
+          "byRisk": {
+            "L0-candidate": 30,
+            "L2-review": 2
+          }
+        }
+      ]
     },
     {
       "key": "platform-billIssue",
@@ -165,24 +179,63 @@
       "priority": "P1",
       "specPath": "docs/tax-cloud/pages/platform-billIssue.page.md",
       "candidates": [
-        "数税云订单列表：待真实 Network 补抓，L0。",
+        "数税云订单开票配置/引导态：待真实 Network 补抓，L0/L1。",
+        "数税云订单列表：需要完成前置配置后再补抓，L0。",
         "ERP 合同直达草稿：`/api/invoice-registration/tax-drafts/from-contract`，L1。"
       ],
       "tasks": [
         {
-          "action": "default-list",
-          "candidate": "数税云订单列表：待真实 Network 补抓，L0。",
-          "risk": "L0 query",
-          "harFile": "platform-billIssue.default-list.har"
+          "action": "action-review",
+          "candidate": "数税云订单开票配置/引导态：待真实 Network 补抓，L0/L1。",
+          "risk": "manual review",
+          "harFile": "platform-billIssue.action-review.har"
         },
         {
-          "action": "default",
-          "candidate": "ERP 合同直达草稿：`/api/invoice-registration/tax-drafts/from-contract`，L1。",
-          "risk": "manual review",
-          "harFile": "platform-billIssue.default.har"
+          "action": "default-list",
+          "candidate": "数税云订单列表：需要完成前置配置后再补抓，L0。",
+          "risk": "L0 query",
+          "harFile": "platform-billIssue.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "ERP 合同直达草稿：`/api/invoice-registration/tax-drafts/from-contract`，L1。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/bussiness/billIssue/",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/bizBillInfo/findDraftList",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/bizBillInfo/stagingOrder",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/bizBillInfo/issue",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/bizBillInfo/allElectricInvoice/issue",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "platform-billIssue.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "platform-invoiceApplication",
@@ -201,15 +254,37 @@
           "candidate": "数税云申请单列表：待真实 Network 补抓，L0。",
           "risk": "L0 query",
           "harFile": "platform-invoiceApplication.default-list.har"
-        },
-        {
-          "action": "action-review",
-          "candidate": "ERP 不新增旧申请接口。",
-          "risk": "L2 review",
-          "harFile": "platform-invoiceApplication.action-review.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "ERP 不新增旧申请接口。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/deliveryWithGoods/list",
+          "file": "app~3d9b8e9e-29842089.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/deliveryWithGoods/detail",
+          "file": "app~3d9b8e9e-29842089.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/deliveryWithGoods/search",
+          "file": "app~3d9b8e9e-29842089.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "platform-invoiceApplication.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "platform-redMark",
@@ -227,37 +302,55 @@
       ],
       "tasks": [
         {
-          "action": "default",
-          "candidate": "`ynfp.invoice.red.confirm.query`，L0。",
-          "risk": "manual review",
-          "harFile": "platform-redMark.default.har"
-        },
-        {
-          "action": "default-2",
-          "candidate": "`ynfp.invoice.red.confirmDetail.query`，L0。",
-          "risk": "manual review",
-          "harFile": "platform-redMark.default-2.har"
-        },
-        {
-          "action": "default-3",
-          "candidate": "`ynfp.invoice.red.confirm.issue`，L3。",
-          "risk": "manual review",
-          "harFile": "platform-redMark.default-3.har"
-        },
-        {
-          "action": "default-4",
-          "candidate": "`ynfp.invoice.red.confirm.operate`，L3。",
-          "risk": "manual review",
-          "harFile": "platform-redMark.default-4.har"
-        },
-        {
-          "action": "default-5",
-          "candidate": "`ynfp.invoice.red.confirm.down`，L2。",
-          "risk": "manual review",
-          "harFile": "platform-redMark.default-5.har"
+          "action": "default-list",
+          "candidate": "默认页面加载/列表查询：需要抓取首屏接口，L0。",
+          "risk": "L0 query",
+          "harFile": "platform-redMark.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "`ynfp.invoice.red.confirm.query`，L0。",
+        "`ynfp.invoice.red.confirmDetail.query`，L0。",
+        "`ynfp.invoice.red.confirm.issue`，L3。",
+        "`ynfp.invoice.red.confirm.operate`，L3。",
+        "`ynfp.invoice.red.confirm.down`，L2。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/bussiness/redConfirmInfo/list",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/redConfirmInfo/queryBlue",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/redConfirmInfo/commit",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/redConfirmInfo/batchConfirm",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/redConfirmInfo/sync",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "platform-redMark.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L3-review": 1
+          }
+        }
+      ]
     },
     {
       "key": "income-scanCodeCheck",
@@ -272,19 +365,26 @@
       ],
       "tasks": [
         {
-          "action": "default-list",
-          "candidate": "用途状态查询：`ynfp.invoice.usage.status.query`，L0。",
-          "risk": "L0 query",
-          "harFile": "income-scanCodeCheck.default-list.har"
-        },
-        {
           "action": "action-review",
           "candidate": "快捷勾选提交：待真实 Network 补抓，L3。",
           "risk": "manual review",
           "harFile": "income-scanCodeCheck.action-review.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "用途状态查询：`ynfp.invoice.usage.status.query`，L0。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "income-scanCodeCheck.default-list.har-normalized.json",
+          "taxCloudApiEntries": 20,
+          "byRisk": {
+            "L0-candidate": 18,
+            "L2-review": 2
+          }
+        }
+      ]
     },
     {
       "key": "income-invoiceCheck",
@@ -302,37 +402,30 @@
       ],
       "tasks": [
         {
-          "action": "default-list",
-          "candidate": "用途状态查询：`ynfp.invoice.usage.status.query`，L0。",
-          "risk": "L0 query",
-          "harFile": "income-invoiceCheck.default-list.har"
-        },
-        {
-          "action": "default-list-2",
-          "candidate": "发票池列表：`ynfp.invoice.pool.list.query`，L0。",
-          "risk": "L0 query",
-          "harFile": "income-invoiceCheck.default-list-2.har"
-        },
-        {
-          "action": "download",
-          "candidate": "下载发票：`ynfp.invoice.pool.file.download`，L2。",
-          "risk": "L2 review",
-          "harFile": "income-invoiceCheck.download.har"
-        },
-        {
           "action": "action-review",
           "candidate": "勾选/不抵扣类动作：需重新确认真实接口，按 L3 预设。",
           "risk": "manual review",
           "harFile": "income-invoiceCheck.action-review.har"
-        },
-        {
-          "action": "default",
-          "candidate": "ERP 状态动作：`/api/tax-invoices/records/status-action`，L2/L3。",
-          "risk": "manual review",
-          "harFile": "income-invoiceCheck.default.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "用途状态查询：`ynfp.invoice.usage.status.query`，L0。",
+        "发票池列表：`ynfp.invoice.pool.list.query`，L0。",
+        "下载发票：`ynfp.invoice.pool.file.download`，L2。",
+        "ERP 状态动作：`/api/tax-invoices/records/status-action`，L2/L3。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "income-invoiceCheck.default-list.har-normalized.json",
+          "taxCloudApiEntries": 30,
+          "byRisk": {
+            "L0-candidate": 25,
+            "L2-review": 3,
+            "L3-review": 2
+          }
+        }
+      ]
     },
     {
       "key": "income-confirmCheck",
@@ -358,15 +451,24 @@
           "candidate": "审核/确认：待真实 Network 补抓，L3。",
           "risk": "manual review",
           "harFile": "income-confirmCheck.action-review.har"
-        },
-        {
-          "action": "default",
-          "candidate": "ERP 批次：`/api/tax-invoices/records/certification-batches`，L1/L2。",
-          "risk": "manual review",
-          "harFile": "income-confirmCheck.default.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "ERP 批次：`/api/tax-invoices/records/certification-batches`，L1/L2。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "income-confirmCheck.default-list.har-normalized.json",
+          "taxCloudApiEntries": 23,
+          "byRisk": {
+            "L0-candidate": 18,
+            "L2-review": 3,
+            "L1-review": 1,
+            "L3-review": 1
+          }
+        }
+      ]
     },
     {
       "key": "income-confirmSign",
@@ -386,21 +488,24 @@
           "candidate": "统计确认相关接口需通过 Network 补抓。",
           "risk": "L4/L3 review",
           "harFile": "income-confirmSign.default-list.har"
-        },
-        {
-          "action": "action-review",
-          "candidate": "认证结果/批次：`/api/tax-invoices/records/certification-batches`，L1/L2。",
-          "risk": "manual review",
-          "harFile": "income-confirmSign.action-review.har"
-        },
-        {
-          "action": "detail",
-          "candidate": "发票池明细：`/api/tax-invoices/records/list`，L0。",
-          "risk": "manual review",
-          "harFile": "income-confirmSign.detail.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "认证结果/批次：`/api/tax-invoices/records/certification-batches`，L1/L2。",
+        "发票池明细：`/api/tax-invoices/records/list`，L0。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "income-confirmSign.default-list.har-normalized.json",
+          "taxCloudApiEntries": 19,
+          "byRisk": {
+            "L0-candidate": 16,
+            "L2-review": 1,
+            "L1-review": 2
+          }
+        }
+      ]
     },
     {
       "key": "income-certificationResults",
@@ -417,24 +522,27 @@
       "tasks": [
         {
           "action": "default-list",
-          "candidate": "用途状态查询：`ynfp.invoice.usage.status.query`，L0。",
+          "candidate": "默认页面加载/列表查询：需要抓取首屏接口，L0。",
           "risk": "L0 query",
           "harFile": "income-certificationResults.default-list.har"
-        },
-        {
-          "action": "default-list-2",
-          "candidate": "发票池列表/详情：`ynfp.invoice.pool.list.query` / `ynfp.invoice.pool.detail.query`，L0。",
-          "risk": "L0 query",
-          "harFile": "income-certificationResults.default-list-2.har"
-        },
-        {
-          "action": "default",
-          "candidate": "ERP 批次：`/api/tax-invoices/records/certification-batches`，L1/L2。",
-          "risk": "manual review",
-          "harFile": "income-certificationResults.default.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "用途状态查询：`ynfp.invoice.usage.status.query`，L0。",
+        "发票池列表/详情：`ynfp.invoice.pool.list.query` / `ynfp.invoice.pool.detail.query`，L0。",
+        "ERP 批次：`/api/tax-invoices/records/certification-batches`，L1/L2。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "income-certificationResults.default-list.har-normalized.json",
+          "taxCloudApiEntries": 35,
+          "byRisk": {
+            "L0-candidate": 29,
+            "L2-review": 6
+          }
+        }
+      ]
     },
     {
       "key": "billCenter-fullInvoiceQuery",
@@ -454,42 +562,29 @@
       "tasks": [
         {
           "action": "default-list",
-          "candidate": "发票池列表：`ynfp.invoice.pool.list.query`，L0，曾返回 7007，需要复测。",
+          "candidate": "默认页面加载/列表查询：需要抓取首屏接口，L0。",
           "risk": "L0 query",
           "harFile": "billCenter-fullInvoiceQuery.default-list.har"
-        },
-        {
-          "action": "detail",
-          "candidate": "发票池详情：`ynfp.invoice.pool.detail.query`，L0。",
-          "risk": "L0 query",
-          "harFile": "billCenter-fullInvoiceQuery.detail.har"
-        },
-        {
-          "action": "download",
-          "candidate": "版式文件下载：`ynfp.invoice.pool.file.download`，L2。",
-          "risk": "L2 review",
-          "harFile": "billCenter-fullInvoiceQuery.download.har"
-        },
-        {
-          "action": "sync",
-          "candidate": "发票获取/取票：`ynfp.invoice.obtain`，L2。",
-          "risk": "L2 review",
-          "harFile": "billCenter-fullInvoiceQuery.sync.har"
-        },
-        {
-          "action": "default-list-2",
-          "candidate": "税局入账状态查询：`ynfp.invoice.pool.rz.cx`，L0。",
-          "risk": "L0 query",
-          "harFile": "billCenter-fullInvoiceQuery.default-list-2.har"
-        },
-        {
-          "action": "default-list-3",
-          "candidate": "入账状态提交/调整：`ynfp.invoice.pool.rz.tj` / `ynfp.invoice.pool.rz.tz`，L3，默认禁用。",
-          "risk": "manual review",
-          "harFile": "billCenter-fullInvoiceQuery.default-list-3.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "发票池列表：`ynfp.invoice.pool.list.query`，L0，曾返回 7007，需要复测。",
+        "发票池详情：`ynfp.invoice.pool.detail.query`，L0。",
+        "版式文件下载：`ynfp.invoice.pool.file.download`，L2。",
+        "发票获取/取票：`ynfp.invoice.obtain`，L2。",
+        "税局入账状态查询：`ynfp.invoice.pool.rz.cx`，L0。",
+        "入账状态提交/调整：`ynfp.invoice.pool.rz.tj` / `ynfp.invoice.pool.rz.tz`，L3，默认禁用。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "billCenter-fullInvoiceQuery.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L1-review": 1
+          }
+        }
+      ]
     },
     {
       "key": "billCenter-sign",
@@ -499,24 +594,53 @@
       "priority": "P1，高风险后置",
       "specPath": "docs/tax-cloud/pages/billCenter-sign.page.md",
       "candidates": [
-        "签收列表：待真实 Network 补抓，L0。",
+        "单张签收表单初始化：待真实 Network 补抓，L0。",
+        "签收历史列表：待真实 Network 补抓，L0。",
         "`ynfp.invoice.sign`，L2/L3，真实后果待确认。"
       ],
       "tasks": [
         {
-          "action": "default-list",
-          "candidate": "签收列表：待真实 Network 补抓，L0。",
-          "risk": "L2 review",
-          "harFile": "billCenter-sign.default-list.har"
+          "action": "action-review",
+          "candidate": "单张签收表单初始化：待真实 Network 补抓，L0。",
+          "risk": "L0 query",
+          "harFile": "billCenter-sign.action-review.har"
         },
         {
-          "action": "action-review",
-          "candidate": "`ynfp.invoice.sign`，L2/L3，真实后果待确认。",
-          "risk": "manual review",
-          "harFile": "billCenter-sign.action-review.har"
+          "action": "default-list",
+          "candidate": "签收历史列表：待真实 Network 补抓，L0。",
+          "risk": "L0 query",
+          "harFile": "billCenter-sign.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "`ynfp.invoice.sign`，L2/L3，真实后果待确认。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/invoicePool/signInvoices",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/invoiceFolder/addFromPool",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/inputtax/h51InputTax/confirmSign",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "billCenter-sign.action-review.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "billCenter-invoiceVerification",
@@ -531,19 +655,47 @@
       ],
       "tasks": [
         {
-          "action": "default",
-          "candidate": "`ynfp.invoice.check`，L2。",
-          "risk": "manual review",
-          "harFile": "billCenter-invoiceVerification.default.har"
-        },
-        {
-          "action": "default-2",
-          "candidate": "ERP：`/api/tax-invoices/records/provider-check`，L2。",
-          "risk": "manual review",
-          "harFile": "billCenter-invoiceVerification.default-2.har"
+          "action": "default-list",
+          "candidate": "默认页面加载/列表查询：需要抓取首屏接口，L0。",
+          "risk": "L0 query",
+          "harFile": "billCenter-invoiceVerification.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "`ynfp.invoice.check`，L2。",
+        "ERP：`/api/tax-invoices/records/provider-check`，L2。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/invoicecheck/check/list/thirdPlatform/dataList",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/invoicecheck/check/list/thirdPlatform/getData",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/invoicecheck/validate/code/value/",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/reCheckInvoice",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "billCenter-invoiceVerification.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L2-review": 1
+          }
+        }
+      ]
     },
     {
       "key": "billCenter-accessSetting",
@@ -553,24 +705,50 @@
       "priority": "P1",
       "specPath": "docs/tax-cloud/pages/billCenter-accessSetting.page.md",
       "candidates": [
-        "取票设置列表/保存：待真实 Network 补抓，L1/L2。",
+        "取票设置读取：`/invoicecenter/sjruzhang/getSjruzhangSetting` 候选，L0。",
+        "取票设置保存：`/invoicecenter/sjruzhang/saveSjruzhangSetting` 候选，L2，禁止自动触发。",
+        "取票任务重启：`/invoicecenter/sjruzhang/restartTask` 候选，L2，禁止自动触发。",
         "ERP 同步游标：`/api/tax-invoices/sync-cursors`，L0。"
       ],
       "tasks": [
         {
-          "action": "default-list",
-          "candidate": "取票设置列表/保存：待真实 Network 补抓，L1/L2。",
-          "risk": "L2 review",
-          "harFile": "billCenter-accessSetting.default-list.har"
-        },
-        {
           "action": "sync",
-          "candidate": "ERP 同步游标：`/api/tax-invoices/sync-cursors`，L0。",
-          "risk": "L2 review",
+          "candidate": "取票设置读取：`/invoicecenter/sjruzhang/getSjruzhangSetting` 候选，L0。",
+          "risk": "L0 query",
           "harFile": "billCenter-accessSetting.sync.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "取票设置保存：`/invoicecenter/sjruzhang/saveSjruzhangSetting` 候选，L2，禁止自动触发。",
+        "取票任务重启：`/invoicecenter/sjruzhang/restartTask` 候选，L2，禁止自动触发。",
+        "ERP 同步游标：`/api/tax-invoices/sync-cursors`，L0。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/invoicecenter/sjruzhang/getSjruzhangSetting",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/invoicecenter/sjruzhang/saveSjruzhangSetting",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/invoicecenter/sjruzhang/restartTask",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "billCenter-accessSetting.sync.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L1-review": 1
+          }
+        }
+      ]
     },
     {
       "key": "billCenter-taskManagement",
@@ -580,24 +758,55 @@
       "priority": "P1",
       "specPath": "docs/tax-cloud/pages/billCenter-taskManagement.page.md",
       "candidates": [
-        "任务列表/详情/重试：待真实 Network 补抓，L1/L2。",
+        "数据同步任务列表：`/system/taskRecord/list` 候选，L0。",
+        "任务重试：`/system/taskRecord/restart/` 候选，L2，禁止自动触发。",
+        "下载任务列表：切换下载任务 Tab 后待真实 Network 补抓，L0/L2。",
         "ERP 同步任务：`/api/tax-invoices/sync-sales`、`/api/tax-invoices/sync-purchases`，L2。"
       ],
       "tasks": [
         {
           "action": "default-list",
-          "candidate": "任务列表/详情/重试：待真实 Network 补抓，L1/L2。",
-          "risk": "L2 review",
+          "candidate": "数据同步任务列表：`/system/taskRecord/list` 候选，L0。",
+          "risk": "L0 query",
           "harFile": "billCenter-taskManagement.default-list.har"
         },
         {
-          "action": "sync",
-          "candidate": "ERP 同步任务：`/api/tax-invoices/sync-sales`、`/api/tax-invoices/sync-purchases`，L2。",
-          "risk": "L2 review",
-          "harFile": "billCenter-taskManagement.sync.har"
+          "action": "default-list-2",
+          "candidate": "下载任务列表：切换下载任务 Tab 后待真实 Network 补抓，L0/L2。",
+          "risk": "L0 query",
+          "harFile": "billCenter-taskManagement.default-list-2.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "任务重试：`/system/taskRecord/restart/` 候选，L2，禁止自动触发。",
+        "ERP 同步任务：`/api/tax-invoices/sync-sales`、`/api/tax-invoices/sync-purchases`，L2。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/system/taskRecord/list",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/taskRecord/restart/",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/invoicecenter/sjruzhang/getSjruzhangInfo",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "billCenter-taskManagement.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L2-review": 1
+          }
+        }
+      ]
     },
     {
       "key": "analysisBoard-invoceRateView",
@@ -612,19 +821,25 @@
       ],
       "tasks": [
         {
-          "action": "default",
-          "candidate": "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。",
-          "risk": "manual review",
-          "harFile": "analysisBoard-invoceRateView.default.har"
-        },
-        {
           "action": "default-list",
           "candidate": "数税云真实分析接口：待 Network 补抓。",
           "risk": "L0 query",
           "harFile": "analysisBoard-invoceRateView.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "analysisBoard-invoceRateView.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L1-review": 1
+          }
+        }
+      ]
     },
     {
       "key": "analysisBoard-invoiceTypeView",
@@ -639,19 +854,25 @@
       ],
       "tasks": [
         {
-          "action": "default",
-          "candidate": "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。",
-          "risk": "manual review",
-          "harFile": "analysisBoard-invoiceTypeView.default.har"
-        },
-        {
           "action": "default-list",
           "candidate": "数税云真实分析接口：待 Network 补抓。",
           "risk": "L0 query",
           "harFile": "analysisBoard-invoiceTypeView.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "analysisBoard-invoiceTypeView.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L1-review": 1
+          }
+        }
+      ]
     },
     {
       "key": "analysisBoard-businessRateView",
@@ -667,25 +888,27 @@
       ],
       "tasks": [
         {
-          "action": "default",
-          "candidate": "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。",
-          "risk": "manual review",
-          "harFile": "analysisBoard-businessRateView.default.har"
-        },
-        {
-          "action": "detail",
-          "candidate": "发票池明细下钻：`/api/tax-invoices/records/list`，L0。",
-          "risk": "manual review",
-          "harFile": "analysisBoard-businessRateView.detail.har"
-        },
-        {
           "action": "default-list",
           "candidate": "数税云真实分析接口：待 Network 补抓。",
           "risk": "L0 query",
           "harFile": "analysisBoard-businessRateView.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。",
+        "发票池明细下钻：`/api/tax-invoices/records/list`，L0。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "analysisBoard-businessRateView.default-list.har-normalized.json",
+          "taxCloudApiEntries": 3,
+          "byRisk": {
+            "L0-candidate": 1,
+            "L1-review": 2
+          }
+        }
+      ]
     },
     {
       "key": "analysisBoard-goodsRateView",
@@ -701,25 +924,26 @@
       ],
       "tasks": [
         {
-          "action": "default",
-          "candidate": "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。",
-          "risk": "manual review",
-          "harFile": "analysisBoard-goodsRateView.default.har"
-        },
-        {
-          "action": "default-2",
-          "candidate": "商品税编：`ynfp.invoice.batch.taxCode`，L0，曾返回 7007，需要复测。",
-          "risk": "manual review",
-          "harFile": "analysisBoard-goodsRateView.default-2.har"
-        },
-        {
           "action": "default-list",
           "candidate": "数税云真实分析接口：待 Network 补抓。",
           "risk": "L0 query",
           "harFile": "analysisBoard-goodsRateView.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。",
+        "商品税编：`ynfp.invoice.batch.taxCode`，L0，曾返回 7007，需要复测。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "analysisBoard-goodsRateView.default-list.har-normalized.json",
+          "taxCloudApiEntries": 2,
+          "byRisk": {
+            "L1-review": 2
+          }
+        }
+      ]
     },
     {
       "key": "analysisBoard-purchaseSalesTrend",
@@ -735,25 +959,26 @@
       ],
       "tasks": [
         {
-          "action": "default",
-          "candidate": "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。",
-          "risk": "manual review",
-          "harFile": "analysisBoard-purchaseSalesTrend.default.har"
-        },
-        {
           "action": "default-list",
-          "candidate": "发票池列表下钻：`/api/tax-invoices/records/list`，L0。",
-          "risk": "L0 query",
-          "harFile": "analysisBoard-purchaseSalesTrend.default-list.har"
-        },
-        {
-          "action": "default-list-2",
           "candidate": "数税云真实分析接口：待 Network 补抓。",
           "risk": "L0 query",
-          "harFile": "analysisBoard-purchaseSalesTrend.default-list-2.har"
+          "harFile": "analysisBoard-purchaseSalesTrend.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。",
+        "发票池列表下钻：`/api/tax-invoices/records/list`，L0。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "analysisBoard-purchaseSalesTrend.default-list.har-normalized.json",
+          "taxCloudApiEntries": 2,
+          "byRisk": {
+            "L1-review": 2
+          }
+        }
+      ]
     },
     {
       "key": "analysisBoard-invoiceRegionView",
@@ -769,25 +994,26 @@
       ],
       "tasks": [
         {
-          "action": "default",
-          "candidate": "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。",
-          "risk": "manual review",
-          "harFile": "analysisBoard-invoiceRegionView.default.har"
-        },
-        {
           "action": "default-list",
-          "candidate": "发票池列表下钻：`/api/tax-invoices/records/list`，L0。",
-          "risk": "L0 query",
-          "harFile": "analysisBoard-invoiceRegionView.default-list.har"
-        },
-        {
-          "action": "default-list-2",
           "candidate": "数税云真实分析接口：待 Network 补抓。",
           "risk": "L0 query",
-          "harFile": "analysisBoard-invoiceRegionView.default-list-2.har"
+          "harFile": "analysisBoard-invoiceRegionView.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。",
+        "发票池列表下钻：`/api/tax-invoices/records/list`，L0。"
+      ],
+      "staticEvidence": [],
+      "evidence": [
+        {
+          "file": "analysisBoard-invoiceRegionView.default-list-2.har-normalized.json",
+          "taxCloudApiEntries": 6,
+          "byRisk": {
+            "L1-review": 6
+          }
+        }
+      ]
     },
     {
       "key": "bussiness-info",
@@ -806,15 +1032,42 @@
           "candidate": "商品列表/保存：待真实 Network 补抓，L1。",
           "risk": "L2 review",
           "harFile": "bussiness-info.default-list.har"
-        },
-        {
-          "action": "default",
-          "candidate": "税收分类编码：`ynfp.invoice.batch.taxCode`，L0。",
-          "risk": "manual review",
-          "harFile": "bussiness-info.default.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "税收分类编码：`ynfp.invoice.batch.taxCode`，L0。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/bizGoodsInfo/getGoodsGuess",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/kpm/getSpxxByKpmGoodsId",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/kpm/checkKpmmcRepeat",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "bussiness-info.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "bussiness-customer",
@@ -833,15 +1086,37 @@
           "candidate": "客户列表/详情/保存：待真实 Network 补抓，L1。",
           "risk": "L2 review",
           "harFile": "bussiness-customer.default-list.har"
-        },
-        {
-          "action": "action-review",
-          "candidate": "开票页客户库：`/api/tax-invoices/issue-buyer-addresses`，L0。",
-          "risk": "manual review",
-          "harFile": "bussiness-customer.action-review.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "开票页客户库：`/api/tax-invoices/issue-buyer-addresses`，L0。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/bussiness/bizCustomer/selectBizCustomerInfoOutNotList",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/bizCustomer/getClientGuessIssue",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/bizCustomer/getClientDateByCodeIssue",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "bussiness-customer.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "bussiness-credit",
@@ -868,7 +1143,28 @@
           "harFile": "bussiness-credit.default-2.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [],
+      "staticEvidence": [
+        {
+          "endpoint": "/bussiness/creditLine/query",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/prod-api/bussiness/credit/creditInfo/1",
+          "file": "",
+          "foundInStaticBundle": false
+        }
+      ],
+      "evidence": [
+        {
+          "file": "bussiness-credit.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "bussiness-configurationManagement",
@@ -878,17 +1174,51 @@
       "priority": "P2/P3",
       "specPath": "docs/tax-cloud/pages/bussiness-configurationManagement.page.md",
       "candidates": [
-        "配置列表/保存：待真实 Network 补抓，L1/L2。"
+        "开票信息读取/保存：待真实 Network 补抓，L1/L2，保存禁止自动触发。",
+        "配置管理各 Tab 列表/保存：待真实 Network 补抓，L1/L2。"
       ],
       "tasks": [
         {
           "action": "default-list",
-          "candidate": "配置列表/保存：待真实 Network 补抓，L1/L2。",
+          "candidate": "配置管理各 Tab 列表/保存：待真实 Network 补抓，L1/L2。",
           "risk": "L2 review",
           "harFile": "bussiness-configurationManagement.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "开票信息读取/保存：待真实 Network 补抓，L1/L2，保存禁止自动触发。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/system/config/list",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/config/configKey/",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/config/clearCache",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/bussiness/configurationManagement",
+          "file": "app~ea1f58e8-191e777b.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "bussiness-configurationManagement.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "system-dept",
@@ -908,7 +1238,38 @@
           "harFile": "system-dept.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [],
+      "staticEvidence": [
+        {
+          "endpoint": "/system/dept/list",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/dept/treeselect",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/dept/getOneInfo",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/dept/loginDeptList",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "system-dept.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "system-departmentInfo",
@@ -928,7 +1289,28 @@
           "harFile": "system-departmentInfo.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [],
+      "staticEvidence": [
+        {
+          "endpoint": "/system/departmentInfo/list",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/departmentInfo/listByDeptIds",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "system-departmentInfo.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "system-role",
@@ -948,7 +1330,28 @@
           "harFile": "system-role.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [],
+      "staticEvidence": [
+        {
+          "endpoint": "/system/role",
+          "file": "",
+          "foundInStaticBundle": false
+        },
+        {
+          "endpoint": "/system/dept/roleDeptTreeselect/",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "system-role.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "system-onlineTaxationInfo",
@@ -967,15 +1370,37 @@
           "candidate": "`/system/bizOnlineTaxInformation/getOnlineTax`，L0。",
           "risk": "manual review",
           "harFile": "system-onlineTaxationInfo.default.har"
-        },
-        {
-          "action": "default-list",
-          "candidate": "登录/认证动作：待真实 Network 补抓，L3，默认不在 ERP 触发。",
-          "risk": "manual review",
-          "harFile": "system-onlineTaxationInfo.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "登录/认证动作：待真实 Network 补抓，L3，默认不在 ERP 触发。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/system/bizOnlineTaxInformation/getOnlineTax",
+          "file": "",
+          "foundInStaticBundle": false
+        },
+        {
+          "endpoint": "/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/bizOnlineTaxInformation/getUserLoginInfoByDeptIdAndUserId",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "system-onlineTaxationInfo.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L1-review": 1
+          }
+        }
+      ]
     },
     {
       "key": "system-user",
@@ -995,7 +1420,33 @@
           "harFile": "system-user.default-list.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [],
+      "staticEvidence": [
+        {
+          "endpoint": "/system/user",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/user/profile/avatar",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/system/user/noviceGuide",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "system-user.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L0-candidate": 1
+          }
+        }
+      ]
     },
     {
       "key": "downloadCenter",
@@ -1005,24 +1456,58 @@
       "priority": "P1",
       "specPath": "docs/tax-cloud/pages/downloadCenter.page.md",
       "candidates": [
-        "下载任务列表/文件下载：待真实 Network 补抓，L0/L2。",
-        "版式文件下载：`ynfp.invoice.pool.file.download`，L2。"
+        "工具安装包静态链接：Chrome DOM 已确认 `CloudTaxBaseService.exe`、`AisinoPrinterSetup.exe`、`accessClient.exe`、`ERPImportTool.zip`、`shushuiyunkehuduan.zip`，L0-static，不要求 HAR。",
+        "数税云接口候选：`/prod-api/invoicecenter/invoiceTemplate/v1/download/template/taskId` 当前只读探针 HTTP 200 但空 body，需页面动作 HAR 确认是否为文件流/任务型响应，不算业务成功。",
+        "版式文件下载：`ynfp.invoice.pool.file.download`，L2，属于发票池/开票记录动作，不等同于下载中心工具包。"
       ],
       "tasks": [
         {
-          "action": "default-list",
-          "candidate": "下载任务列表/文件下载：待真实 Network 补抓，L0/L2。",
-          "risk": "L2 review",
-          "harFile": "downloadCenter.default-list.har"
-        },
-        {
           "action": "download",
-          "candidate": "版式文件下载：`ynfp.invoice.pool.file.download`，L2。",
+          "candidate": "数税云接口候选：`/prod-api/invoicecenter/invoiceTemplate/v1/download/template/taskId` 当前只读探针 HTTP 200 但空 body，需页面动作 HAR 确认是否为文件流/任务型响应，不算业务成功。",
           "risk": "L2 review",
           "harFile": "downloadCenter.download.har"
         }
       ],
-      "evidence": []
+      "excludedCandidates": [
+        "工具安装包静态链接：Chrome DOM 已确认 `CloudTaxBaseService.exe`、`AisinoPrinterSetup.exe`、`accessClient.exe`、`ERPImportTool.zip`、`shushuiyunkehuduan.zip`，L0-static，不要求 HAR。",
+        "版式文件下载：`ynfp.invoice.pool.file.download`，L2，属于发票池/开票记录动作，不等同于下载中心工具包。"
+      ],
+      "staticEvidence": [
+        {
+          "endpoint": "/download/template",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/download/template/taskId",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/download/XML/taskId",
+          "file": "app~493df0b3-12426db9.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/invoicecenter/invoiceTemplate/v1/download/template",
+          "file": "app~ea1f58e8-191e777b.js",
+          "foundInStaticBundle": true
+        },
+        {
+          "endpoint": "/invoicecenter/invoiceTemplate/v1/download/XML",
+          "file": "app~ea1f58e8-191e777b.js",
+          "foundInStaticBundle": true
+        }
+      ],
+      "evidence": [
+        {
+          "file": "downloadCenter.default-list.har-normalized.json",
+          "taxCloudApiEntries": 1,
+          "byRisk": {
+            "L1-review": 1
+          }
+        }
+      ]
     }
   ]
 }

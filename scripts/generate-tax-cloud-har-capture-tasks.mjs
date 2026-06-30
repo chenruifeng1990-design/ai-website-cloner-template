@@ -82,15 +82,27 @@ function slugify(value) {
 
 function riskFromCandidate(value) {
   const text = String(value || "");
+  if (/不要求\s*HAR|L0-static|静态链接/.test(text)) return "L0 static";
+  if (/读取|列表|查询|详情|看板|分析|统计|额度|字典|初始化/.test(text) && /L0/.test(text)) return "L0 query";
   if (/真实开票|提交开票|红冲|作废|红字|勾选认证|统计确认/.test(text)) return "L4/L3 review";
   if (/签收|取票|同步|下载|导出|版式|推送|任务|新增|修改|删除|保存|暂存/.test(text)) return "L2 review";
   if (/查询|列表|详情|看板|分析|统计|额度|字典/.test(text)) return "L0 query";
   return "manual review";
 }
 
+function isHarExemptCandidate(value) {
+  const text = String(value || "");
+  return (
+    /不要求\s*HAR|L0-static/.test(text) ||
+    /(^|\s)ERP\s|`\/api\//.test(text) ||
+    /禁止自动触发|真实后果待确认|ynfp\./.test(text)
+  );
+}
+
 function uniqueTasks(pageKey, candidates) {
   const actionNames = new Map();
-  const source = candidates.length ? candidates : ["默认页面加载/列表查询：需要抓取首屏接口，L0。"];
+  const harCandidates = candidates.filter((candidate) => !isHarExemptCandidate(candidate));
+  const source = harCandidates.length ? harCandidates : ["默认页面加载/列表查询：需要抓取首屏接口，L0。"];
   for (const candidate of source) {
     const base = slugify(candidate);
     const used = actionNames.get(base) || 0;
@@ -111,13 +123,137 @@ function uniqueTasks(pageKey, candidates) {
   });
 }
 
+function excludedCandidates(candidates) {
+  return candidates.filter((candidate) => isHarExemptCandidate(candidate));
+}
+
+const staticGroupByPageKey = {
+  "platform-scanCode": "scanRecords",
+  "platform-scanRecords": "scanRecords",
+  "platform-billIssue": "billIssue",
+  "platform-invoiceApplication": "invoiceApplication",
+  "platform-redMark": "redMark",
+  "billCenter-sign": "sign",
+  "billCenter-invoiceVerification": "invoiceVerification",
+  "billCenter-accessSetting": "accessSetting",
+  "billCenter-taskManagement": "taskManagement",
+  "bussiness-info": "goods",
+  "bussiness-customer": "customer",
+  "bussiness-credit": "credit",
+  "bussiness-configurationManagement": "config",
+  "system-dept": "system",
+  "system-departmentInfo": "system",
+  "system-role": "system",
+  "system-onlineTaxationInfo": "system",
+  "system-user": "system",
+  downloadCenter: "download",
+};
+
+const staticEndpointHints = {
+  "platform-scanCode": [
+    "/bussiness/scanInvoice/getScanInvoiceInfo",
+    "/bussiness/scanInvoice/getScanInvoiceBillInfo",
+    "/bussiness/scanInvoice/getOuterPdfBase64",
+    "/bussiness/scanInvoice/H5CommitIssue",
+  ],
+  "platform-scanRecords": [
+    "/bussiness/scanInvoice/getClientDateByCode",
+    "/bussiness/scanInvoice/getClientGuess",
+    "/bussiness/scanInvoice/invoiceDelivery",
+  ],
+  "platform-billIssue": [
+    "/bussiness/billIssue/",
+    "/bussiness/bizBillInfo/findDraftList",
+    "/bussiness/bizBillInfo/stagingOrder",
+    "/bussiness/bizBillInfo/issue",
+    "/bussiness/bizBillInfo/allElectricInvoice/issue",
+  ],
+  "platform-invoiceApplication": ["/deliveryWithGoods/list", "/deliveryWithGoods/detail", "/deliveryWithGoods/search"],
+  "platform-redMark": [
+    "/bussiness/redConfirmInfo/list",
+    "/bussiness/redConfirmInfo/queryBlue",
+    "/bussiness/redConfirmInfo/commit",
+    "/bussiness/redConfirmInfo/batchConfirm",
+    "/bussiness/redConfirmInfo/sync",
+  ],
+  "billCenter-sign": ["/invoicePool/signInvoices", "/invoiceFolder/addFromPool", "/inputtax/h51InputTax/confirmSign"],
+  "billCenter-invoiceVerification": [
+    "/invoicecheck/check/list/thirdPlatform/dataList",
+    "/invoicecheck/check/list/thirdPlatform/getData",
+    "/invoicecheck/validate/code/value/",
+    "/reCheckInvoice",
+  ],
+  "billCenter-accessSetting": [
+    "/invoicecenter/sjruzhang/getSjruzhangSetting",
+    "/invoicecenter/sjruzhang/saveSjruzhangSetting",
+    "/invoicecenter/sjruzhang/restartTask",
+  ],
+  "billCenter-taskManagement": ["/system/taskRecord/list", "/system/taskRecord/restart/", "/invoicecenter/sjruzhang/getSjruzhangInfo"],
+  "bussiness-info": [
+    "/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList",
+    "/bussiness/bizGoodsInfo/getGoodsGuess",
+    "/system/kpm/getSpxxByKpmGoodsId",
+    "/system/kpm/checkKpmmcRepeat",
+  ],
+  "bussiness-customer": [
+    "/bussiness/bizCustomer/selectBizCustomerInfoOutNotList",
+    "/bussiness/bizCustomer/getClientGuessIssue",
+    "/bussiness/bizCustomer/getClientDateByCodeIssue",
+  ],
+  "bussiness-credit": ["/bussiness/creditLine/query", "/prod-api/bussiness/credit/creditInfo/1"],
+  "bussiness-configurationManagement": [
+    "/system/config/list",
+    "/system/config/configKey/",
+    "/system/config/clearCache",
+    "/bussiness/configurationManagement",
+  ],
+  "system-dept": ["/system/dept/list", "/system/dept/treeselect", "/system/dept/getOneInfo", "/system/dept/loginDeptList"],
+  "system-departmentInfo": ["/system/departmentInfo/list", "/system/departmentInfo/listByDeptIds"],
+  "system-role": ["/system/role", "/system/dept/roleDeptTreeselect/"],
+  "system-onlineTaxationInfo": [
+    "/system/bizOnlineTaxInformation/getOnlineTax",
+    "/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+    "/system/bizOnlineTaxInformation/getUserLoginInfoByDeptIdAndUserId",
+  ],
+  "system-user": ["/system/user", "/system/user/profile/avatar", "/system/user/noviceGuide"],
+  downloadCenter: [
+    "/download/template",
+    "/download/template/taskId",
+    "/download/XML/taskId",
+    "/invoicecenter/invoiceTemplate/v1/download/template",
+    "/invoicecenter/invoiceTemplate/v1/download/XML",
+  ],
+};
+
+function staticEvidenceForPage(staticEndpointEvidence, pageKey) {
+  const groupKey = staticGroupByPageKey[pageKey];
+  const groupItems = groupKey && staticEndpointEvidence?.groups?.[groupKey] ? staticEndpointEvidence.groups[groupKey] : [];
+  const byEndpoint = new Map(groupItems.map((item) => [item.endpoint, item]));
+  return (staticEndpointHints[pageKey] || []).map((endpoint) => {
+    const hit = byEndpoint.get(endpoint);
+    return {
+      endpoint,
+      file: hit?.file || "",
+      foundInStaticBundle: Boolean(hit),
+    };
+  });
+}
+
 const targetPages = await readJson("docs/tax-cloud/captures/target-pages.json", []);
 const normalizedFiles = (await listFiles("docs/tax-cloud/apis")).filter((file) => file.endsWith(".har-normalized.json"));
+const staticEndpointEvidence = await readJson("docs/tax-cloud/apis/static-js-endpoints.json", null);
+const isRealHarEvidence = (summary) => {
+  if (!summary) return false;
+  if (summary.pageKey === "platform-created") return false;
+  if (summary.placeholder) return false;
+  if (summary.evidenceMode === "placeholder") return false;
+  return (summary.taxCloudApiEntries || 0) > 0;
+};
 const evidenceByPage = new Map();
 for (const file of normalizedFiles) {
   const data = await readJson(`docs/tax-cloud/apis/${file}`, null);
   const pageKey = data?.summary?.pageKey || "";
-  if (!pageKey || (data?.summary?.taxCloudApiEntries || 0) <= 0) continue;
+  if (!isRealHarEvidence(data?.summary)) continue;
   const rows = evidenceByPage.get(pageKey) || [];
   rows.push({
     file,
@@ -142,6 +278,8 @@ for (const page of targetPages) {
     specPath,
     candidates,
     tasks: uniqueTasks(page.key, candidates),
+    excludedCandidates: excludedCandidates(candidates),
+    staticEvidence: staticEvidenceForPage(staticEndpointEvidence, page.key),
     evidence: evidenceByPage.get(page.key) || [],
   });
 }
@@ -149,6 +287,7 @@ for (const page of targetPages) {
 const pagesWithEvidence = pages.filter((page) => page.evidence.length > 0);
 const pagesMissingEvidence = pages.filter((page) => page.evidence.length === 0);
 const taskCount = pages.reduce((sum, page) => sum + page.tasks.length, 0);
+const excludedCandidateCount = pages.reduce((sum, page) => sum + page.excludedCandidates.length, 0);
 
 const report = `# 数税云 HAR 采集任务清单
 
@@ -159,6 +298,7 @@ const report = `# 数税云 HAR 采集任务清单
 - 手工开票 \`platform-created\` 已冻结为票面基线，本清单不再要求重跑页面复刻。
 - 本清单覆盖剩余 ${pages.length} 个非手工页面。
 - 原始 HAR 只放在 \`docs/tax-cloud/network-har/\`，该目录已忽略 \`*.har\`，不得提交原始 Cookie/token。
+- “源码候选接口”来自 \`docs/tax-cloud/apis/static-js-endpoints.json\`，只能用于指导补采，不能替代真实 HAR。
 - 每采完一批 HAR 后执行：
 
 \`\`\`bash
@@ -173,6 +313,7 @@ npm run tax-cloud:audit
 |---|---:|
 | 待采非手工页面 | ${pages.length} |
 | 页面动作任务 | ${taskCount} |
+| 非默认 HAR 采集候选 | ${excludedCandidateCount} |
 | 已有 HAR 证据页面 | ${pagesWithEvidence.length} |
 | 缺 HAR 证据页面 | ${pagesMissingEvidence.length} |
 
@@ -196,6 +337,14 @@ ${pages
           .map((row) => `  - \`${row.file}\`：${row.taxCloudApiEntries} 条接口，risk=${JSON.stringify(row.byRisk)}`)
           .join("\n")
       : "  - 暂无 normalized HAR 证据。";
+    const staticEvidence = page.staticEvidence.length
+      ? page.staticEvidence
+          .map(
+            (row) =>
+              `  - \`${row.endpoint}\`${row.file ? `（${row.file}）` : ""}${row.foundInStaticBundle ? "" : "（当前静态包未命中，保留人工复核）"}`,
+          )
+          .join("\n")
+      : "  - 暂无静态 JS 候选接口。";
     const tasks = page.tasks
       .map(
         (task, index) =>
@@ -208,6 +357,8 @@ ${pages
 - page spec：\`${page.specPath}\`
 - 当前证据：
 ${evidence}
+- 源码候选接口：
+${staticEvidence}
 
 | # | 建议 HAR 文件名 | 动作 | 风险初判 | page spec 接口候选 |
 |---:|---|---|---|---|
@@ -224,6 +375,20 @@ ${tasks}
 `;
   })
   .join("\n")}
+
+## 非默认 HAR 采集候选
+
+以下候选不是漏项，而是默认 HAR 补抓清单刻意排除的内容：ERP 内部接口、开放 API interfaceCode、静态安装包链接，或明确禁止自动触发/真实后果未确认的动作。它们保留在 page spec、接口清单和风险矩阵里，进入 ERP 落地或高风险专项时再处理。
+
+| pageKey | 菜单 | 排除候选 |
+|---|---|---|
+${pages
+  .flatMap((page) =>
+    page.excludedCandidates.map(
+      (candidate) => `| \`${page.key}\` | ${escapeTable(`${page.menu1}/${page.menu2}`)} | ${escapeTable(candidate)} |`,
+    ),
+  )
+  .join("\n")}
 `;
 
 await mkdir(path.dirname(path.join(root, outPath)), { recursive: true });
@@ -236,6 +401,7 @@ await writeFile(
       frozenPageKeys: [...frozenPageKeys],
       totalPages: pages.length,
       totalTasks: taskCount,
+      totalExcludedCandidates: excludedCandidateCount,
       pagesWithEvidence: pagesWithEvidence.length,
       pagesMissingEvidence: pagesMissingEvidence.map((page) => page.key),
       pages,

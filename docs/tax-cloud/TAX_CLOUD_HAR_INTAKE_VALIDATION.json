@@ -1,0 +1,532 @@
+{
+  "generatedAt": "2026-06-30T01:08:32.344Z",
+  "harDir": "docs/tax-cloud/network-har",
+  "expectedHarFiles": 19,
+  "filesInHarDir": 51,
+  "accepted": 19,
+  "missing": 0,
+  "invalid": 0,
+  "review": 0,
+  "rows": [
+    {
+      "pageKey": "billCenter-accessSetting",
+      "menu": "票据中心/取票设置",
+      "harFile": "billCenter-accessSetting.sync.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/invoicecenter/sjruzhang/getSjruzhangSetting"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/invoicecenter/sjruzhang/getSjruzhangSetting"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/prod-api/invoicecenter/sjruzhang/getSjruzhangSetting",
+          "status": 200,
+          "risk": "L1-review"
+        }
+      ]
+    },
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "harFile": "billCenter-invoiceVerification.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/getInvoiceCheckDetail",
+        "/prod-api/abnormalInvoice/setting",
+        "/prod-api/income/invoiceCheck/getPeriod",
+        "/prod-api/income/invoiceCheck/queryInfoList?pageNum=1&pageSize=1"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/income/invoiceCheck/queryInfoList?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/income/invoiceCheck/queryInfoList",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "billCenter-sign",
+      "menu": "票据中心/签收",
+      "harFile": "billCenter-sign.action-review.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/invoicecenter/integrated/v1/invoicePool/query",
+        "/prod-api/invoicecenter/integrated/v1/invoicePool/query?pageNum=1&pageSize=1",
+        "/prod-api/inputtax/h51InputTax/statistics",
+        "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+        "/prod-api/system/backstage/getInformation"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/system/backstage/getInformation"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/backstage/getInformation",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "billCenter-taskManagement",
+      "menu": "票据中心/任务管理",
+      "harFile": "billCenter-taskManagement.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/system/taskRecord/list?pageNum=1&pageSize=1"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/system/taskRecord/list?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/taskRecord/list",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "downloadCenter",
+      "menu": "顶部入口/下载中心",
+      "harFile": "downloadCenter.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/invoicecenter/invoiceTemplate/v1/download/template/taskId",
+        "/prod-api/income/statistics/getPeriodStatus",
+        "/prod-api/inputtax/h51InputTax/detailsQuery?pageNum=1&pageSize=1",
+        "/prod-api/invoicecenter/invoiceGoods/detailList?pageNum=1&pageSize=1"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/invoicecenter/invoiceGoods/detailList?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/prod-api/invoicecenter/invoiceGoods/detailList",
+          "status": 200,
+          "risk": "L1-review"
+        }
+      ]
+    },
+    {
+      "pageKey": "platform-billIssue",
+      "menu": "销项管理/订单开票",
+      "harFile": "platform-billIssue.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/bussiness/bizBillInfo/findDraftList?pageNum=1&pageSize=1"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/bussiness/bizBillInfo/findDraftList?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/bizBillInfo/findDraftList",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "harFile": "platform-invoiceApplication.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/deliveryWithGoods/list?pageNum=1&pageSize=1",
+        "/prod-api/income/statistics/applyStatistics",
+        "/prod-api/income/statistics/getStatisticsResult",
+        "/prod-api/invoicecheck/check/list/deductCheck?pageNum=1&pageSize=1",
+        "/prod-api/invoicecheck/check/list/deductCheckAll?pageNum=1&pageSize=1",
+        "/prod-api/invoicecheck/check/list/nodeductCheck?pageNum=1&pageSize=1",
+        "/prod-api/statisticsGoodsRateDetail",
+        "/prod-api/statisticsInvoiceInfoQuery?pageNum=1&pageSize=1"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/deliveryWithGoods/list?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/deliveryWithGoods/list",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "platform-redMark",
+      "menu": "销项管理/红字确认单",
+      "harFile": "platform-redMark.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/bussiness/redConfirmInfo/list?pageNum=1&pageSize=1"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/bussiness/redConfirmInfo/list?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/redConfirmInfo/list",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "harFile": "platform-scanCode.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/system/dict/data/getInvoiceType",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+        "/prod-api/bussiness/scanInvoice/getClientGuess",
+        "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+        "/prod-api/bussiness/scanInvoice/getClientDateByCode",
+        "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+        "/prod-api/system/aes/config/encrypt",
+        "/prod-api/system/dict/data/getInvoiceType"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/system/dict/data/getInvoiceType",
+        "/prod-api/system/dict/data/getInvoiceType"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/dict/data/getInvoiceType",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "harFile": "platform-scanRecords.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/bussiness/scanInvoice/getClientGuess",
+        "/prod-api/bussiness/scanInvoice/getClientGuess",
+        "/prod-api/bussiness/scanInvoice/getClientDateByCode",
+        "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+        "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+        "/prod-api/system/aes/config/encrypt",
+        "/prod-api/system/dict/data/getInvoiceType"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/bussiness/scanInvoice/getClientGuess",
+        "/prod-api/bussiness/scanInvoice/getClientGuess"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getClientGuess",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "harFile": "bussiness-configurationManagement.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/system/config/list?pageNum=1&pageSize=1",
+        "/prod-api/system/config/list?pageNum=1&pageSize=1",
+        "/prod-api/system/config/configKey/",
+        "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+        "/prod-api/income/invoiceCheck/getPeriod"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/system/config/list?pageNum=1&pageSize=1",
+        "/prod-api/system/config/list?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/config/list",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "bussiness-credit",
+      "menu": "基础信息/开票额度配置",
+      "harFile": "bussiness-credit.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/bussiness/creditLine/query?pageNum=1&pageSize=1",
+        "/prod-api/bussiness/credit/creditInfo/1?_t=1782781312531",
+        "/prod-api/bussiness/bizBillInfo/h5getFpdyXml"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/bussiness/creditLine/query?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/creditLine/query",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "bussiness-customer",
+      "menu": "基础信息/客户管理",
+      "harFile": "bussiness-customer.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/bussiness/bizCustomer/selectBizCustomerInfoOutNotList?pageNum=1&pageSize=1"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/bussiness/bizCustomer/selectBizCustomerInfoOutNotList?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/bizCustomer/selectBizCustomerInfoOutNotList",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "bussiness-info",
+      "menu": "基础信息/商品信息",
+      "harFile": "bussiness-info.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "system-onlineTaxationInfo",
+      "menu": "系统设置/网上办税信息",
+      "harFile": "system-onlineTaxationInfo.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+        "/prod-api/system/bizOnlineTaxInformation/getOnlineTax"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "POST",
+          "path": "/prod-api/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+          "status": 200,
+          "risk": "L1-review"
+        }
+      ]
+    },
+    {
+      "pageKey": "system-departmentInfo",
+      "menu": "系统设置/部门管理",
+      "harFile": "system-departmentInfo.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/system/departmentInfo/list?pageNum=1&pageSize=1"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/system/departmentInfo/list?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/departmentInfo/list",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "system-dept",
+      "menu": "系统设置/组织管理",
+      "harFile": "system-dept.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/system/dept/list"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/system/dept/list"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/dept/list",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "system-role",
+      "menu": "系统设置/角色管理",
+      "harFile": "system-role.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/system/role/list?pageNum=1&pageSize=1"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/system/role/list?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/role/list",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    },
+    {
+      "pageKey": "system-user",
+      "menu": "系统设置/用户管理",
+      "harFile": "system-user.default-list.har",
+      "status": "accepted",
+      "expectedPaths": [
+        "/prod-api/system/user/list?pageNum=1&pageSize=1"
+      ],
+      "matchedExpectedPaths": [
+        "/prod-api/system/user/list?pageNum=1&pageSize=1"
+      ],
+      "exists": true,
+      "totalEntries": 1,
+      "businessApiEntries": 1,
+      "loginShellEntries": 0,
+      "highRiskEntries": 0,
+      "endpoints": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/user/list",
+          "status": 200,
+          "risk": "L0-candidate"
+        }
+      ]
+    }
+  ]
+}

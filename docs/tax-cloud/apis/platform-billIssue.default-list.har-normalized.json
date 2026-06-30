@@ -1,0 +1,62 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/platform-billIssue.default-list.har",
+    "pageKey": "platform-billIssue",
+    "generatedAt": "2026-06-30T01:08:33.673Z",
+    "totalEntries": 1,
+    "taxCloudApiEntries": 1,
+    "byRisk": {
+      "L0-candidate": 1
+    },
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/prod-api/bussiness/bizBillInfo/findDraftList",
+        "status": 200,
+        "risk": "L0-candidate"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "index": 0,
+      "pageKey": "platform-billIssue",
+      "startedDateTime": "2026-06-30T01:07:39.789Z",
+      "method": "GET",
+      "url": "https://fp.enuoyun.com/prod-api/bussiness/bizBillInfo/findDraftList?pageNum=1&pageSize=1",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/bussiness/bizBillInfo/findDraftList",
+      "query": {
+        "pageNum": "1",
+        "pageSize": "1"
+      },
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 28,
+      "risk": "L0-candidate",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "x-tax-cloud-evidence": "authenticated-read"
+      },
+      "requestPostData": null,
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-encoding": "gzip",
+        "content-type": "application/json",
+        "date": "Tue, 30 Jun 2026 01:12:06 GMT",
+        "transfer-encoding": "chunked"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 43,
+        "json": {
+          "msg": "操作成功",
+          "code": 200,
+          "data": []
+        },
+        "textPreview": "{\"msg\":\"操作成功\",\"code\":200,\"data\":[]}"
+      }
+    }
+  ]
+}

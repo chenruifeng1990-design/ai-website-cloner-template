@@ -1,0 +1,198 @@
+{
+  "generatedAt": "2026-06-30T00:45:33.300Z",
+  "source": "docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_TASKS.json",
+  "missingPages": 19,
+  "minimalTasks": 19,
+  "pages": [
+    {
+      "key": "billCenter-accessSetting",
+      "menu": "票据中心/取票设置",
+      "priority": "P1",
+      "url": "https://fp.enuoyun.com/billCenter/accessSetting",
+      "harFile": "billCenter-accessSetting.sync.har",
+      "action": "sync",
+      "risk": "L0 query",
+      "candidate": "取票设置读取：`/invoicecenter/sjruzhang/getSjruzhangSetting` 候选，L0。"
+    },
+    {
+      "key": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "priority": "P1",
+      "url": "https://fp.enuoyun.com/billCenter/invoiceVerification",
+      "harFile": "billCenter-invoiceVerification.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：需要抓取首屏接口，L0。"
+    },
+    {
+      "key": "billCenter-sign",
+      "menu": "票据中心/签收",
+      "priority": "P1，高风险后置",
+      "url": "https://fp.enuoyun.com/billCenter/sign",
+      "harFile": "billCenter-sign.action-review.har",
+      "action": "action-review",
+      "risk": "L0 query",
+      "candidate": "单张签收表单初始化：待真实 Network 补抓，L0。"
+    },
+    {
+      "key": "billCenter-taskManagement",
+      "menu": "票据中心/任务管理",
+      "priority": "P1",
+      "url": "https://fp.enuoyun.com/billCenter/taskManagement",
+      "harFile": "billCenter-taskManagement.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "数据同步任务列表：`/system/taskRecord/list` 候选，L0。"
+    },
+    {
+      "key": "downloadCenter",
+      "menu": "顶部入口/下载中心",
+      "priority": "P1",
+      "url": "https://fp.enuoyun.com/downloadCenter",
+      "harFile": "downloadCenter.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：只抓首屏和低风险查询接口；如页面无业务 API，记录页面事实，不推进保存/提交类动作。"
+    },
+    {
+      "key": "platform-billIssue",
+      "menu": "销项管理/订单开票",
+      "priority": "P1",
+      "url": "https://fp.enuoyun.com/platform/billIssue",
+      "harFile": "platform-billIssue.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "数税云订单列表：需要完成前置配置后再补抓，L0。"
+    },
+    {
+      "key": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "priority": "P1 visual-only",
+      "url": "https://fp.enuoyun.com/platform/invoiceApplication",
+      "harFile": "platform-invoiceApplication.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "数税云申请单列表：待真实 Network 补抓，L0。"
+    },
+    {
+      "key": "platform-redMark",
+      "menu": "销项管理/红字确认单",
+      "priority": "P1，高风险后置",
+      "url": "https://fp.enuoyun.com/platform/redMark",
+      "harFile": "platform-redMark.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：需要抓取首屏接口，L0。"
+    },
+    {
+      "key": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "priority": "P1",
+      "url": "https://fp.enuoyun.com/platform/scanCode",
+      "harFile": "platform-scanCode.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "扫码记录查询：和 `platform-scanRecords` 联动，L0。"
+    },
+    {
+      "key": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "priority": "P1",
+      "url": "https://fp.enuoyun.com/platform/scanRecords",
+      "harFile": "platform-scanRecords.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "扫码记录列表：待真实 Network 补抓，L0。"
+    },
+    {
+      "key": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "priority": "P2/P3",
+      "url": "https://fp.enuoyun.com/bussiness/configurationManagement",
+      "harFile": "bussiness-configurationManagement.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：只抓首屏和低风险查询接口；如页面无业务 API，记录页面事实，不推进保存/提交类动作。"
+    },
+    {
+      "key": "bussiness-credit",
+      "menu": "基础信息/开票额度配置",
+      "priority": "P2",
+      "url": "https://fp.enuoyun.com/bussiness/credit",
+      "harFile": "bussiness-credit.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：只抓首屏和低风险查询接口；如页面无业务 API，记录页面事实，不推进保存/提交类动作。"
+    },
+    {
+      "key": "bussiness-customer",
+      "menu": "基础信息/客户管理",
+      "priority": "P2",
+      "url": "https://fp.enuoyun.com/bussiness/customer",
+      "harFile": "bussiness-customer.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：只抓首屏和低风险查询接口；如页面无业务 API，记录页面事实，不推进保存/提交类动作。"
+    },
+    {
+      "key": "bussiness-info",
+      "menu": "基础信息/商品信息",
+      "priority": "P2",
+      "url": "https://fp.enuoyun.com/bussiness/info",
+      "harFile": "bussiness-info.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：只抓首屏和低风险查询接口；如页面无业务 API，记录页面事实，不推进保存/提交类动作。"
+    },
+    {
+      "key": "system-onlineTaxationInfo",
+      "menu": "系统设置/网上办税信息",
+      "priority": "P2",
+      "url": "https://fp.enuoyun.com/system/onlineTaxationInfo",
+      "harFile": "system-onlineTaxationInfo.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：只抓首屏和低风险查询接口；如页面无业务 API，记录页面事实，不推进保存/提交类动作。"
+    },
+    {
+      "key": "system-departmentInfo",
+      "menu": "系统设置/部门管理",
+      "priority": "P3",
+      "url": "https://fp.enuoyun.com/system/departmentInfo",
+      "harFile": "system-departmentInfo.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：只抓首屏和低风险查询接口；如页面无业务 API，记录页面事实，不推进保存/提交类动作。"
+    },
+    {
+      "key": "system-dept",
+      "menu": "系统设置/组织管理",
+      "priority": "P3",
+      "url": "https://fp.enuoyun.com/system/dept",
+      "harFile": "system-dept.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：只抓首屏和低风险查询接口；如页面无业务 API，记录页面事实，不推进保存/提交类动作。"
+    },
+    {
+      "key": "system-role",
+      "menu": "系统设置/角色管理",
+      "priority": "P3",
+      "url": "https://fp.enuoyun.com/system/role",
+      "harFile": "system-role.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：只抓首屏和低风险查询接口；如页面无业务 API，记录页面事实，不推进保存/提交类动作。"
+    },
+    {
+      "key": "system-user",
+      "menu": "系统设置/用户管理",
+      "priority": "P3",
+      "url": "https://fp.enuoyun.com/system/user",
+      "harFile": "system-user.default-list.har",
+      "action": "default-list",
+      "risk": "L0 query",
+      "candidate": "默认页面加载/列表查询：只抓首屏和低风险查询接口；如页面无业务 API，记录页面事实，不推进保存/提交类动作。"
+    }
+  ]
+}

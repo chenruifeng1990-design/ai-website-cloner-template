@@ -1,0 +1,183 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/analysisBoard-invoiceTypeView.default-list.har",
+    "pageKey": "analysisBoard-invoiceTypeView",
+    "generatedAt": "2026-06-30T01:08:32.562Z",
+    "totalEntries": 1,
+    "taxCloudApiEntries": 1,
+    "byRisk": {
+      "L1-review": 1
+    },
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/prod-api/dashboard/integrated/v1/invoiceType/statistics",
+        "status": 200,
+        "risk": "L1-review"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "index": 0,
+      "pageKey": "analysisBoard-invoiceTypeView",
+      "startedDateTime": "2026-06-29T09:57:03.482Z",
+      "method": "POST",
+      "url": "https://fp.enuoyun.com/prod-api/dashboard/integrated/v1/invoiceType/statistics?_t=1782727023481",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/dashboard/integrated/v1/invoiceType/statistics",
+      "query": {
+        "_t": "1782727023481"
+      },
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 43.082999996840954,
+      "risk": "L1-review",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "298",
+        "content-type": "application/json;charset=UTF-8",
+        "host": "fp.enuoyun.com",
+        "origin": "https://fp.enuoyun.com",
+        "referer": "https://fp.enuoyun.com/analysisBoard/invoiceTypeView",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "requestPostData": {
+        "mimeType": "application/json;charset=UTF-8",
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "statisticsTimeStart": "2026-05-01",
+              "statisticsTimeEnd": "2026-05-31"
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"statisticsTimeStart\":\"2026-05-01\",\"statisticsTimeEnd\":\"2026-05-31\"}}}"
+      },
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Mon, 29 Jun 2026 09:57:03 GMT",
+        "server": "nginx",
+        "transfer-encoding": "chunked"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 1484,
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "code": "0000",
+              "message": "OK",
+              "data": {
+                "cancellationList": [
+                  {
+                    "invoiceType": "31",
+                    "count": 5,
+                    "noTaxAmount": 9367451.58,
+                    "taxAmount": 1217768.7,
+                    "amountTotal": 10585220.28,
+                    "amountProportion": "1.0000"
+                  }
+                ],
+                "incomeList": [
+                  {
+                    "invoiceType": "31",
+                    "count": 49,
+                    "noTaxAmount": 6101979.42,
+                    "taxAmount": 769328.55,
+                    "amountTotal": 6871307.97,
+                    "amountProportion": "0.9977"
+                  },
+                  {
+                    "invoiceType": "32",
+                    "count": 11,
+                    "noTaxAmount": 15615.04,
+                    "taxAmount": 357.59,
+                    "amountTotal": 15972.63,
+                    "amountProportion": "0.0023"
+                  }
+                ],
+                "mergeList": [
+                  {
+                    "invoiceType": "31",
+                    "cancellationCount": 5,
+                    "cancellationNoTaxAmount": 9367451.58,
+                    "cancellationTaxAmount": 1217768.7,
+                    "cancellationAmountProportion": "1.0000",
+                    "incomeCount": 49,
+                    "incomeNoTaxAmount": 6101979.42,
+                    "incomeTaxAmount": 769328.55,
+                    "incomeAmountProportion": "0.9977"
+                  },
+                  {
+                    "invoiceType": "32",
+                    "cancellationCount": 0,
+                    "cancellationNoTaxAmount": 0,
+                    "cancellationTaxAmount": 0,
+                    "cancellationAmountProportion": "0",
+                    "incomeCount": 11,
+                    "incomeNoTaxAmount": 15615.04,
+                    "incomeTaxAmount": 357.59,
+                    "incomeAmountProportion": "0.0023"
+                  },
+                  {
+                    "invoiceType": "总计",
+                    "cancellationCount": 5,
+                    "cancellationNoTaxAmount": 9367451.58,
+                    "cancellationTaxAmount": 1217768.7,
+                    "cancellationAmountProportion": "1",
+                    "incomeCount": 60,
+                    "incomeNoTaxAmount": 6117594.46,
+                    "incomeTaxAmount": 769686.14,
+                    "incomeAmountProportion": "1"
+                  }
+                ]
+              },
+              "success": true
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"code\":\"0000\",\"message\":\"OK\",\"data\":{\"cancellationList\":[{\"invoiceType\":\"31\",\"count\":5,\"noTaxAmount\":9367451.58,\"taxAmount\":1217768.7,\"amountTotal\":10585220.28,\"amountProportion\":\"1.0000\"}],\"incomeList\":[{\"invoiceType\":\"31\",\"count\":49,\"noTaxAmount\":6101979.42,\"taxAmount\":769328.55,\"amountTotal\":6871307.97,\"amountProportion\":\"0.9977\"},{\"invoiceType\":\"32\",\"count\":11,\"noTaxAmount\":15615.04,\"taxAmount\":357.59,\"amountTotal\":15972.63,\"amountProportion\":\"0.0023\"}],\"mergeList\":[{\"invoiceType\":\"31\",\"cancellationCount\":5,\"cancellationNoTaxAmount\":9367451.58,\"cancellationTaxAmount\":1217768.7,\"cancellationAmountProportion\":\"1.0000\",\"incomeCount\":49,\"incomeNoTaxAmount\":6101979.42,\"incomeTaxAmount\":769328.55,\"incomeAmountProportion\":\"0.9977\"},{\"invoiceType\":\"32\",\"cancellationCount\":0,\"cancellationNoTaxAmount\":0,\"cancellationTaxAmount\":0,\"cancellationAmountProportion\":\"0\",\"incomeCount\":11,\"incomeNoTaxAmount\":15615.04,\"incomeTaxAmount\":357.59,\"incomeAmountProportion\":\"0.0023\"},{\"invoiceType\":\"总计\",\"cancellationCount\":5,\"cancellationNoTaxAmount\":9367451.58,\"cancellationTaxAmount\":1217768.7,\"cancellationAmountProportion\":\"1\",\"incomeCount\":60,\"incomeNoTaxAmount\":6117594.46,\"incomeTaxAmount\":769686.14,\"incomeAmountProportion\":\"1\"}]},\"success\":true}}}"
+      }
+    }
+  ]
+}

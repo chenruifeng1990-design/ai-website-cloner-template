@@ -118,7 +118,35 @@
 
 ## 待补采集
 
-真实数税云页面 Network 尚未逐页抓取。当前已补充非手工 P0 页面的动作级矩阵：
+真实数税云页面 Network 尚未全部逐页抓取。当前机器验收口径：
+
+```text
+页面/spec/菜单采集：33/33
+真实 HAR 接口证据：13/32 非手工页面
+剩余真实 HAR 缺口：19 个页面
+缺口页登录态巡检：19/19
+缺口页已认证只读接口探测：覆盖 19/19，18 页传输可达，17 页认证被接受，11 页成功
+```
+
+已经补充静态 JS 源码候选接口证据：
+
+```text
+docs/tax-cloud/TAX_CLOUD_STATIC_JS_INTERFACE_EVIDENCE.md
+docs/tax-cloud/apis/static-js-endpoints.json
+```
+
+这批源码候选接口只能用于指导补采和 ERP adapter 设计，不能替代真实 HAR。
+
+已经补充当前 Chrome Session Storage 的已认证只读接口探测：
+
+```text
+docs/tax-cloud/TAX_CLOUD_AUTHENTICATED_READ_API_PROBE.md
+docs/tax-cloud/apis/authenticated-read-probe.json
+```
+
+该探测只调用 L0/L1 查询接口，token 只在内存中使用，不落盘；它证明当前认证态和一批查询接口可通，并把未成功接口拆成“权限不足/参数缺失/设备依赖/路径待确认/文件流待确认”等诊断，但仍不替代真实 HAR。
+
+当前已补充非手工 P0 页面的动作级矩阵：
 
 ```text
 docs/tax-cloud/TAX_CLOUD_P0_INTERFACE_ACTION_AUDIT.md
@@ -131,3 +159,29 @@ docs/tax-cloud/TAX_CLOUD_P1_P2_P3_INTERFACE_ACTION_AUDIT.md
 ```
 
 下一轮必须在 Chrome 登录态下进入每个菜单页，按这两个矩阵逐动作记录实际 XHR/fetch 调用，并和上述 ERP 封装逐项比对。L3/L4 动作即使抓到接口，也不得直接接入 ERP 主流程。
+
+## 剩余 19 个页面的源码候选接口补强
+
+来源：`docs/tax-cloud/apis/static-js-endpoints.json` 与 `docs/tax-cloud/TAX_CLOUD_STATIC_JS_INTERFACE_EVIDENCE.md`。
+
+| 页面 | 源码候选接口重点 | 风险口径 |
+|---|---|---|
+| 扫码开票 | `/bussiness/scanInvoice/getScanInvoiceInfo`、`/bussiness/scanInvoice/getScanInvoiceBillInfo`、`/bussiness/scanInvoice/getOuterPdfBase64`、`/bussiness/scanInvoice/H5CommitIssue` | `H5CommitIssue` 按 L4 隔离 |
+| 扫码记录 | `/bussiness/scanInvoice/getClientDateByCode`、`/bussiness/scanInvoice/getClientGuess`、`/bussiness/scanInvoice/invoiceDelivery` | 详情/交付分离 |
+| 订单开票 | `/bussiness/billIssue/`、`/bussiness/bizBillInfo/findDraftList`、`/bussiness/bizBillInfo/stagingOrder`、`/bussiness/bizBillInfo/issue` | `issue` 不接 ERP 直开 |
+| 开票申请单 | `/deliveryWithGoods/list`、`/deliveryWithGoods/detail`、`/deliveryWithGoods/search` | visual-only，不恢复旧申请主线 |
+| 红字确认单 | `/bussiness/redConfirmInfo/list`、`/bussiness/redConfirmInfo/queryBlue`、`/bussiness/redConfirmInfo/commit`、`/bussiness/redConfirmInfo/batchConfirm`、`/bussiness/redConfirmInfo/sync` | 红字动作 L3/L4 隔离 |
+| 签收 | `/invoicePool/signInvoices`、`/invoiceFolder/addFromPool`、`/inputtax/h51InputTax/confirmSign` | 签收动作单独确认 |
+| 查验 | `/invoicecheck/check/list/thirdPlatform/dataList`、`/invoicecheck/check/list/thirdPlatform/getData`、`/invoicecheck/validate/code/value/`、`/reCheckInvoice` | 查询可采，验证码/重查隔离 |
+| 取票设置 | `/invoicecenter/sjruzhang/getSjruzhangSetting`、`/invoicecenter/sjruzhang/saveSjruzhangSetting`、`/invoicecenter/sjruzhang/restartTask` | 保存/重启任务需审计 |
+| 任务管理 | `/system/taskRecord/list`、`/system/taskRecord/restart/`、`/invoicecenter/sjruzhang/getSjruzhangInfo` | 列表优先，重试隔离 |
+| 商品信息 | `/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList`、`/bussiness/bizGoodsInfo/getGoodsGuess`、`/system/kpm/getSpxxByKpmGoodsId`、`/system/kpm/checkKpmmcRepeat` | 商品/税编映射 |
+| 客户管理 | `/bussiness/bizCustomer/selectBizCustomerInfoOutNotList`、`/bussiness/bizCustomer/getClientGuessIssue`、`/bussiness/bizCustomer/getClientDateByCodeIssue` | 客户资料候选，不自动覆盖 ERP/金蝶 |
+| 开票额度配置 | `/bussiness/creditLine/query`、`/prod-api/bussiness/credit/creditInfo/1` | 额度展示 L0，配置动作待审 |
+| 配置管理 | `/system/config/list`、`/system/config/configKey/`、`/system/config/clearCache`、`/bussiness/configurationManagement` | 清缓存/保存不自动触发 |
+| 组织管理 | `/system/dept/list`、`/system/dept/treeselect`、`/system/dept/getOneInfo`、`/system/dept/loginDeptList` | 只做参考 |
+| 部门管理 | `/system/departmentInfo/list`、`/system/departmentInfo/listByDeptIds` | 只做参考 |
+| 角色管理 | `/system/role`、`/system/dept/roleDeptTreeselect/` | ERP 权限为主 |
+| 网上办税信息 | `/system/bizOnlineTaxInformation/getOnlineTax`、`/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList`、`/system/bizOnlineTaxInformation/getUserLoginInfoByDeptIdAndUserId` | 登录/认证不自动触发 |
+| 用户管理 | `/system/user`、`/system/user/profile/avatar`、`/system/user/noviceGuide` | 只做账号映射和审计参考 |
+| 下载中心 | 静态工具包链接：`CloudTaxBaseService.exe`、`AisinoPrinterSetup.exe`、`accessClient.exe`、`ERPImportTool.zip`、`shushuiyunkehuduan.zip`；业务文件接口候选：`/download/template`、`/download/template/taskId`、`/download/XML/taskId`、`/invoicecenter/invoiceTemplate/v1/download/template`、`/invoicecenter/invoiceTemplate/v1/download/XML` | 工具安装包与业务文件下载必须拆分；当前页面不是下载任务列表 |

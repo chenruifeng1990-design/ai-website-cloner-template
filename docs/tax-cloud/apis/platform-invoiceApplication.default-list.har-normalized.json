@@ -1,0 +1,60 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/platform-invoiceApplication.default-list.har",
+    "pageKey": "platform-invoiceApplication",
+    "generatedAt": "2026-06-30T01:08:33.716Z",
+    "totalEntries": 1,
+    "taxCloudApiEntries": 1,
+    "byRisk": {
+      "L0-candidate": 1
+    },
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/prod-api/deliveryWithGoods/list",
+        "status": 200,
+        "risk": "L0-candidate"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "index": 0,
+      "pageKey": "platform-invoiceApplication",
+      "startedDateTime": "2026-06-30T01:07:39.818Z",
+      "method": "GET",
+      "url": "https://fp.enuoyun.com/prod-api/deliveryWithGoods/list?pageNum=1&pageSize=1",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/deliveryWithGoods/list",
+      "query": {
+        "pageNum": "1",
+        "pageSize": "1"
+      },
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 21,
+      "risk": "L0-candidate",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "x-tax-cloud-evidence": "authenticated-read"
+      },
+      "requestPostData": null,
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-length": "34",
+        "content-type": "application/json",
+        "date": "Tue, 30 Jun 2026 01:12:06 GMT"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 34,
+        "json": {
+          "code": 500,
+          "msg": "404 NOT_FOUND"
+        },
+        "textPreview": "{\"code\":500,\"msg\":\"404 NOT_FOUND\"}"
+      }
+    }
+  ]
+}

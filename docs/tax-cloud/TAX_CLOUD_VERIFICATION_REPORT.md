@@ -1,15 +1,15 @@
 # 数税云全量任务机器验收报告
 
-生成时间：2026-06-29T08:50:57.073Z
+生成时间：2026-06-30T01:21:20.228Z
 
 ## 结论
 
-全量验收未通过。
+全量验收通过。
 
 当前状态：
 
 ```text
-partial: page/spec/action/demo layers pass; real HAR interface evidence still incomplete
+complete
 ```
 
 ## 总体验收
@@ -18,12 +18,16 @@ partial: page/spec/action/demo layers pass; real HAR interface evidence still in
 |---|---|---|
 | 33 page targets | PASS | 33/33 target pages |
 | Page capture four-piece plus page spec | PASS | 33/33 complete |
-| Core control documents | PASS | 12/12 present |
+| Core control documents | PASS | 21/21 present |
 | P0 action matrix covers all non-manual P0 pages | PASS | all P0 keys present |
 | P0 demo covers all non-manual P0 pages | PASS | all P0 demo keys present |
 | P1/P2/P3 action matrix covers remaining pages | PASS | all remaining keys present |
 | Page spec candidate interface evidence | PASS | 33/33 pages have candidate interface notes |
-| HAR-backed real interface evidence | FAIL | 0/32 non-manual pages have normalized HAR evidence |
+| HAR-backed real interface evidence | PASS | 32/32 non-manual pages have normalized HAR evidence |
+| Missing HAR pages login-state reachability audit | PASS | 0/0 current missing-HAR pages reached in logged-in Chrome |
+| Authenticated read API probe for missing HAR pages | PASS | 0/0 current missing pages probed; 0 current missing pages transport accepted; 0 current missing pages accepted auth; historical probe scope 19 pages |
+| Static safe-read candidate second-pass probe | PASS | 8 pages second-pass probed; 41 probes accepted auth; 3 probes success; 3 pages success |
+| Minimal HAR intake validation readiness | PASS | 19 accepted; 0 review; 0 missing; 0 invalid |
 
 ## 页面层明细
 
@@ -67,10 +71,69 @@ partial: page/spec/action/demo layers pass; real HAR interface evidence still in
 
 | 项目 | 数量 |
 |---|---:|
-| normalized HAR files | 0 |
-| pages with HAR evidence | 0 |
+| normalized HAR files | 51 |
+| pages with HAR evidence | 32 |
+| pages with placeholder HAR evidence only | 0 |
 | required non-manual pages | 32 |
-| missing HAR evidence pages | 32 |
+| missing HAR evidence pages | 0 |
+
+## HAR 采集任务范围
+
+| 项目 | 数量 |
+|---|---:|
+| non-manual pages | 32 |
+| default HAR capture tasks | 40 |
+| non-default / excluded candidates | 54 |
+| pages with current HAR evidence | 32 |
+| minimal HAR batch pages | 19 |
+| minimal HAR batch tasks | 19 |
+
+## 缺 HAR 页面登录态巡检
+
+| 项目 | 数量 |
+|---|---:|
+| audit rows | 19 |
+| audit rows with login signals | 19 |
+| current missing-HAR pages covered by audit | 0/0 |
+| current missing-HAR pages missing login signals | 0 |
+
+## 缺 HAR 页面已认证只读接口探测
+
+| 项目 | 数量 |
+|---|---:|
+| probes | 21 |
+| pages covered | 19/0 |
+| pages with transport accepted | 18 |
+| pages with auth accepted | 17 |
+| pages with success | 11 |
+
+说明：该探测只证明当前 Chrome Session Storage 中存在可用认证态，且部分 L0/L1 查询接口可直接返回；transport accepted 只代表 HTTP 层可达，不代表业务成功。它不替代 HAR 证据，也不会让 strict audit 因此通过。
+
+## 静态只读候选二次探测
+
+| 项目 | 数量 |
+|---|---:|
+| pages covered | 8 |
+| probes | 46 |
+| probes with transport accepted | 41 |
+| probes with auth accepted | 41 |
+| probes with success | 3 |
+| pages with success | 3 |
+
+说明：二次探测只针对基础只读探测未成功页面，从静态 JS 候选中筛选明显查询类接口；它用于缩小人工 HAR 补抓范围，不替代真实 HAR。
+
+## 最小 HAR Intake 校验
+
+| 项目 | 数量 |
+|---|---:|
+| expected HAR files | 19 |
+| files in HAR dir | 51 |
+| accepted | 19 |
+| review | 0 |
+| missing | 0 |
+| invalid | 0 |
+
+说明：intake 校验用于导入人工 HAR 后第一时间识别“缺文件、登录壳、无业务 API、高风险误采、未命中预期接口”等问题；它是 strict audit 之前的预检门。
 
 ## 候选接口证据
 
@@ -85,7 +148,7 @@ partial: page/spec/action/demo layers pass; real HAR interface evidence still in
 | `platform-scanCode` | 3 | 扫码链接/二维码生成：待真实 Network 补抓，L2。<br>扫码记录查询：和 `platform-scanRecords` 联动，L0。<br>真实开票：禁止从本页直接触发 L4，必须回到 ERP 草稿审批链路。 |
 | `platform-scanRecords` | 3 | 扫码记录列表：待真实 Network 补抓，L0。<br>扫码记录详情：待真实 Network 补抓，L0。<br>导出：待真实 Network 补抓，L1。 |
 | `platform-records` | 5 | 开票结果查询：`ynfp.invoice.detail.query`，L0。<br>发票明细列表：`ynfp.invoice.detail.list.query`，L0，曾返回 7007，需要复测权限。<br>ERP 列表：`/api/tax-invoices/records/list`，L0。<br>版式下载：`/api/tax-invoices/records/layout-file-download`，L2。<br>对账：`/api/tax-invoices/records/reconcile`，L0。 |
-| `platform-billIssue` | 2 | 数税云订单列表：待真实 Network 补抓，L0。<br>ERP 合同直达草稿：`/api/invoice-registration/tax-drafts/from-contract`，L1。 |
+| `platform-billIssue` | 3 | 数税云订单开票配置/引导态：待真实 Network 补抓，L0/L1。<br>数税云订单列表：需要完成前置配置后再补抓，L0。<br>ERP 合同直达草稿：`/api/invoice-registration/tax-drafts/from-contract`，L1。 |
 | `platform-invoiceApplication` | 2 | 数税云申请单列表：待真实 Network 补抓，L0。<br>ERP 不新增旧申请接口。 |
 | `platform-redMark` | 5 | `ynfp.invoice.red.confirm.query`，L0。<br>`ynfp.invoice.red.confirmDetail.query`，L0。<br>`ynfp.invoice.red.confirm.issue`，L3。<br>`ynfp.invoice.red.confirm.operate`，L3。<br>`ynfp.invoice.red.confirm.down`，L2。 |
 | `income-scanCodeCheck` | 2 | 用途状态查询：`ynfp.invoice.usage.status.query`，L0。<br>快捷勾选提交：待真实 Network 补抓，L3。 |
@@ -94,10 +157,10 @@ partial: page/spec/action/demo layers pass; real HAR interface evidence still in
 | `income-confirmSign` | 3 | 统计确认相关接口需通过 Network 补抓。<br>认证结果/批次：`/api/tax-invoices/records/certification-batches`，L1/L2。<br>发票池明细：`/api/tax-invoices/records/list`，L0。 |
 | `income-certificationResults` | 3 | 用途状态查询：`ynfp.invoice.usage.status.query`，L0。<br>发票池列表/详情：`ynfp.invoice.pool.list.query` / `ynfp.invoice.pool.detail.query`，L0。<br>ERP 批次：`/api/tax-invoices/records/certification-batches`，L1/L2。 |
 | `billCenter-fullInvoiceQuery` | 6 | 发票池列表：`ynfp.invoice.pool.list.query`，L0，曾返回 7007，需要复测。<br>发票池详情：`ynfp.invoice.pool.detail.query`，L0。<br>版式文件下载：`ynfp.invoice.pool.file.download`，L2。<br>发票获取/取票：`ynfp.invoice.obtain`，L2。<br>税局入账状态查询：`ynfp.invoice.pool.rz.cx`，L0。<br>入账状态提交/调整：`ynfp.invoice.pool.rz.tj` / `ynfp.invoice.pool.rz.tz`，L3，默认禁用。 |
-| `billCenter-sign` | 2 | 签收列表：待真实 Network 补抓，L0。<br>`ynfp.invoice.sign`，L2/L3，真实后果待确认。 |
+| `billCenter-sign` | 3 | 单张签收表单初始化：待真实 Network 补抓，L0。<br>签收历史列表：待真实 Network 补抓，L0。<br>`ynfp.invoice.sign`，L2/L3，真实后果待确认。 |
 | `billCenter-invoiceVerification` | 2 | `ynfp.invoice.check`，L2。<br>ERP：`/api/tax-invoices/records/provider-check`，L2。 |
-| `billCenter-accessSetting` | 2 | 取票设置列表/保存：待真实 Network 补抓，L1/L2。<br>ERP 同步游标：`/api/tax-invoices/sync-cursors`，L0。 |
-| `billCenter-taskManagement` | 2 | 任务列表/详情/重试：待真实 Network 补抓，L1/L2。<br>ERP 同步任务：`/api/tax-invoices/sync-sales`、`/api/tax-invoices/sync-purchases`，L2。 |
+| `billCenter-accessSetting` | 4 | 取票设置读取：`/invoicecenter/sjruzhang/getSjruzhangSetting` 候选，L0。<br>取票设置保存：`/invoicecenter/sjruzhang/saveSjruzhangSetting` 候选，L2，禁止自动触发。<br>取票任务重启：`/invoicecenter/sjruzhang/restartTask` 候选，L2，禁止自动触发。<br>ERP 同步游标：`/api/tax-invoices/sync-cursors`，L0。 |
+| `billCenter-taskManagement` | 4 | 数据同步任务列表：`/system/taskRecord/list` 候选，L0。<br>任务重试：`/system/taskRecord/restart/` 候选，L2，禁止自动触发。<br>下载任务列表：切换下载任务 Tab 后待真实 Network 补抓，L0/L2。<br>ERP 同步任务：`/api/tax-invoices/sync-sales`、`/api/tax-invoices/sync-purchases`，L2。 |
 | `analysisBoard-invoceRateView` | 2 | ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。<br>数税云真实分析接口：待 Network 补抓。 |
 | `analysisBoard-invoiceTypeView` | 2 | ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。<br>数税云真实分析接口：待 Network 补抓。 |
 | `analysisBoard-businessRateView` | 3 | ERP 聚合：`/api/tax-invoices/records/dashboard`，L0。<br>发票池明细下钻：`/api/tax-invoices/records/list`，L0。<br>数税云真实分析接口：待 Network 补抓。 |
@@ -107,49 +170,24 @@ partial: page/spec/action/demo layers pass; real HAR interface evidence still in
 | `bussiness-info` | 2 | 商品列表/保存：待真实 Network 补抓，L1。<br>税收分类编码：`ynfp.invoice.batch.taxCode`，L0。 |
 | `bussiness-customer` | 2 | 客户列表/详情/保存：待真实 Network 补抓，L1。<br>开票页客户库：`/api/tax-invoices/issue-buyer-addresses`，L0。 |
 | `bussiness-credit` | 2 | `GET /prod-api/bussiness/credit/creditInfo/1`，L0。<br>ERP：`GET /api/tax-invoices/issue-credit?type=1`，L0。 |
-| `bussiness-configurationManagement` | 1 | 配置列表/保存：待真实 Network 补抓，L1/L2。 |
+| `bussiness-configurationManagement` | 2 | 开票信息读取/保存：待真实 Network 补抓，L1/L2，保存禁止自动触发。<br>配置管理各 Tab 列表/保存：待真实 Network 补抓，L1/L2。 |
 | `system-dept` | 1 | 组织列表/保存：待真实 Network 补抓，L1。 |
 | `system-departmentInfo` | 1 | 部门列表/保存：待真实 Network 补抓，L1。 |
 | `system-role` | 1 | 角色列表/权限树：待真实 Network 补抓，L1。 |
 | `system-onlineTaxationInfo` | 2 | `/system/bizOnlineTaxInformation/getOnlineTax`，L0。<br>登录/认证动作：待真实 Network 补抓，L3，默认不在 ERP 触发。 |
 | `system-user` | 1 | 用户列表/保存/启停：待真实 Network 补抓，L1。 |
-| `downloadCenter` | 2 | 下载任务列表/文件下载：待真实 Network 补抓，L0/L2。<br>版式文件下载：`ynfp.invoice.pool.file.download`，L2。 |
+| `downloadCenter` | 3 | 工具安装包静态链接：Chrome DOM 已确认 `CloudTaxBaseService.exe`、`AisinoPrinterSetup.exe`、`accessClient.exe`、`ERPImportTool.zip`、`shushuiyunkehuduan.zip`，L0-static，不要求 HAR。<br>数税云接口候选：`/prod-api/invoicecenter/invoiceTemplate/v1/download/template/taskId` 当前只读探针 HTTP 200 但空 body，需页面动作 HAR 确认是否为文件流/任务型响应，不算业务成功。<br>版式文件下载：`ynfp.invoice.pool.file.download`，L2，属于发票池/开票记录动作，不等同于下载中心工具包。 |
 
 缺 HAR 证据页面：
 
 ```text
-platform-scanCode
-platform-scanRecords
-platform-records
-platform-billIssue
-platform-invoiceApplication
-platform-redMark
-income-scanCodeCheck
-income-invoiceCheck
-income-confirmCheck
-income-confirmSign
-income-certificationResults
-billCenter-fullInvoiceQuery
-billCenter-sign
-billCenter-invoiceVerification
-billCenter-accessSetting
-billCenter-taskManagement
-analysisBoard-invoceRateView
-analysisBoard-invoiceTypeView
-analysisBoard-businessRateView
-analysisBoard-goodsRateView
-analysisBoard-purchaseSalesTrend
-analysisBoard-invoiceRegionView
-bussiness-info
-bussiness-customer
-bussiness-credit
-bussiness-configurationManagement
-system-dept
-system-departmentInfo
-system-role
-system-onlineTaxationInfo
-system-user
-downloadCenter
+none
+```
+
+占位符证据页面：
+
+```text
+
 ```
 
 ## 缺失控制文档

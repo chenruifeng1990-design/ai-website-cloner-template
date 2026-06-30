@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/system-onlineTaxationInfo.cdp-load.har",
+    "pageKey": "system-onlineTaxationInfo",
+    "generatedAt": "2026-06-30T01:08:34.075Z",
+    "totalEntries": 96,
+    "taxCloudApiEntries": 0,
+    "byRisk": {},
+    "endpoints": []
+  },
+  "entries": []
+}

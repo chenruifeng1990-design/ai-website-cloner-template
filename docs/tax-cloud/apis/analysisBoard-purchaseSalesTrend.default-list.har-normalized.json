@@ -1,0 +1,211 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/analysisBoard-purchaseSalesTrend.default-list.har",
+    "pageKey": "analysisBoard-purchaseSalesTrend",
+    "generatedAt": "2026-06-30T01:08:32.583Z",
+    "totalEntries": 2,
+    "taxCloudApiEntries": 2,
+    "byRisk": {
+      "L1-review": 2
+    },
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/prod-api/system/typeLog/save",
+        "status": 200,
+        "risk": "L1-review"
+      },
+      {
+        "method": "POST",
+        "path": "/prod-api/dashboard/integrated/v1/invoiceTime/statistics",
+        "status": 200,
+        "risk": "L1-review"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "index": 0,
+      "pageKey": "analysisBoard-purchaseSalesTrend",
+      "startedDateTime": "2026-06-29T09:48:59.862Z",
+      "method": "POST",
+      "url": "https://fp.enuoyun.com/prod-api/system/typeLog/save?_t=1782726539861&title=analysisBoard&areaCode=13",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/system/typeLog/save",
+      "query": {
+        "_t": "1782726539861",
+        "title": "analysisBoard",
+        "areaCode": "13"
+      },
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 101.45199997350574,
+      "risk": "L1-review",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "0",
+        "host": "fp.enuoyun.com",
+        "origin": "https://fp.enuoyun.com",
+        "referer": "https://fp.enuoyun.com/billCenter/fullInvoiceQuery",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "requestPostData": null,
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Mon, 29 Jun 2026 09:49:00 GMT",
+        "server": "nginx",
+        "transfer-encoding": "chunked"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 33,
+        "json": {
+          "msg": "操作成功",
+          "code": 200
+        },
+        "textPreview": "{\"msg\":\"操作成功\",\"code\":200}"
+      }
+    },
+    {
+      "index": 1,
+      "pageKey": "analysisBoard-purchaseSalesTrend",
+      "startedDateTime": "2026-06-29T09:49:09.177Z",
+      "method": "POST",
+      "url": "https://fp.enuoyun.com/prod-api/dashboard/integrated/v1/invoiceTime/statistics?_t=1782726549177",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/dashboard/integrated/v1/invoiceTime/statistics",
+      "query": {
+        "_t": "1782726549177"
+      },
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 254.8969998024404,
+      "risk": "L1-review",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "298",
+        "content-type": "application/json;charset=UTF-8",
+        "host": "fp.enuoyun.com",
+        "origin": "https://fp.enuoyun.com",
+        "referer": "https://fp.enuoyun.com/analysisBoard/purchaseSalesTrend",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "requestPostData": {
+        "mimeType": "application/json;charset=UTF-8",
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "statisticsTimeStart": "2026-05-01",
+              "statisticsTimeEnd": "2026-06-29"
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"statisticsTimeStart\":\"2026-05-01\",\"statisticsTimeEnd\":\"2026-06-29\"}}}"
+      },
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Mon, 29 Jun 2026 09:49:09 GMT",
+        "server": "nginx",
+        "transfer-encoding": "chunked"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 757,
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "code": "0000",
+              "message": "OK",
+              "data": {
+                "cancellationList": [
+                  {
+                    "invoiceTime": "2026-06",
+                    "count": 9,
+                    "noTaxAmount": 5763449.66,
+                    "taxAmount": 749248.46,
+                    "totalAmount": 6512698.12
+                  },
+                  {
+                    "invoiceTime": "2026-05",
+                    "count": 5,
+                    "noTaxAmount": 9367451.58,
+                    "taxAmount": 1217768.7,
+                    "totalAmount": 10585220.28
+                  }
+                ],
+                "incomeList": [
+                  {
+                    "invoiceTime": "2026-06",
+                    "count": 45,
+                    "noTaxAmount": 8952962.54,
+                    "taxAmount": 1147130.02,
+                    "totalAmount": 10100092.56
+                  },
+                  {
+                    "invoiceTime": "2026-05",
+                    "count": 60,
+                    "noTaxAmount": 6117594.46,
+                    "taxAmount": 769686.14,
+                    "totalAmount": 6887280.6
+                  }
+                ]
+              },
+              "success": true
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"code\":\"0000\",\"message\":\"OK\",\"data\":{\"cancellationList\":[{\"invoiceTime\":\"2026-06\",\"count\":9,\"noTaxAmount\":5763449.66,\"taxAmount\":749248.46,\"totalAmount\":6512698.12},{\"invoiceTime\":\"2026-05\",\"count\":5,\"noTaxAmount\":9367451.58,\"taxAmount\":1217768.7,\"totalAmount\":10585220.28}],\"incomeList\":[{\"invoiceTime\":\"2026-06\",\"count\":45,\"noTaxAmount\":8952962.54,\"taxAmount\":1147130.02,\"totalAmount\":10100092.56},{\"invoiceTime\":\"2026-05\",\"count\":60,\"noTaxAmount\":6117594.46,\"taxAmount\":769686.14,\"totalAmount\":6887280.6}]},\"success\":true}}}"
+      }
+    }
+  ]
+}

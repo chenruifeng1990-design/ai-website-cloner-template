@@ -1,0 +1,771 @@
+{
+  "generatedAt": "2026-06-30T01:01:53.497Z",
+  "source": "Chrome Session Storage copied locally; token used in memory only and omitted from output.",
+  "tokenAttempts": [
+    {
+      "key": "map-3914-SCY-Token",
+      "tokenLength": 36,
+      "httpStatus": 200,
+      "code": 401,
+      "msg": "登录状态已过期"
+    },
+    {
+      "key": "map-3950-SCY-Token",
+      "tokenLength": 36,
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "操作成功"
+    }
+  ],
+  "summary": {
+    "probes": 21,
+    "transportAccepted": 20,
+    "authAccepted": 19,
+    "success": 11,
+    "pagesCovered": 19,
+    "pagesWithTransportAccepted": 18,
+    "pagesWithAuthAccepted": 17,
+    "pagesWithSuccess": 11
+  },
+  "pageSummary": {
+    "system-user": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 1
+    },
+    "system-role": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 1
+    },
+    "system-dept": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 1
+    },
+    "system-departmentInfo": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 1
+    },
+    "system-onlineTaxationInfo": {
+      "probes": 2,
+      "transportAccepted": 2,
+      "authAccepted": 2,
+      "success": 1
+    },
+    "bussiness-configurationManagement": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 0
+    },
+    "bussiness-credit": {
+      "probes": 2,
+      "transportAccepted": 2,
+      "authAccepted": 2,
+      "success": 0
+    },
+    "bussiness-info": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 1
+    },
+    "bussiness-customer": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 1
+    },
+    "billCenter-taskManagement": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 1
+    },
+    "billCenter-invoiceVerification": {
+      "probes": 1,
+      "transportAccepted": 0,
+      "authAccepted": 0,
+      "success": 0
+    },
+    "billCenter-accessSetting": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 1
+    },
+    "billCenter-sign": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 0
+    },
+    "platform-redMark": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 1
+    },
+    "platform-invoiceApplication": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 0
+    },
+    "platform-billIssue": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 1
+    },
+    "platform-scanRecords": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 0
+    },
+    "platform-scanCode": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 0
+    },
+    "downloadCenter": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 0,
+      "success": 0
+    }
+  },
+  "results": [
+    {
+      "pageKey": "system-user",
+      "menu": "系统设置/用户管理",
+      "method": "GET",
+      "path": "/prod-api/system/user/list?pageNum=1&pageSize=1",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.241Z",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "topLevelKeys": [
+        "total",
+        "rows",
+        "code",
+        "msg"
+      ],
+      "dataKeys": [],
+      "rowCount": 1,
+      "total": 1
+    },
+    {
+      "pageKey": "system-role",
+      "menu": "系统设置/角色管理",
+      "method": "GET",
+      "path": "/prod-api/system/role/list?pageNum=1&pageSize=1",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.285Z",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "topLevelKeys": [
+        "total",
+        "rows",
+        "code",
+        "msg"
+      ],
+      "dataKeys": [],
+      "rowCount": 1,
+      "total": 3
+    },
+    {
+      "pageKey": "system-dept",
+      "menu": "系统设置/组织管理",
+      "method": "GET",
+      "path": "/prod-api/system/dept/list",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.347Z",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "操作成功",
+      "topLevelKeys": [
+        "msg",
+        "code",
+        "data"
+      ],
+      "dataKeys": [
+        "0"
+      ]
+    },
+    {
+      "pageKey": "system-departmentInfo",
+      "menu": "系统设置/部门管理",
+      "method": "GET",
+      "path": "/prod-api/system/departmentInfo/list?pageNum=1&pageSize=1",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.380Z",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "操作成功",
+      "topLevelKeys": [
+        "msg",
+        "code",
+        "data"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "system-onlineTaxationInfo",
+      "menu": "系统设置/网上办税信息",
+      "method": "POST",
+      "path": "/prod-api/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+      "body": {
+        "pageNum": 1,
+        "pageSize": 1
+      },
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.404Z",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "操作成功",
+      "topLevelKeys": [
+        "msg",
+        "code",
+        "data"
+      ],
+      "dataKeys": [
+        "total",
+        "list",
+        "pageNum",
+        "pageSize",
+        "size",
+        "startRow",
+        "endRow",
+        "pages",
+        "prePage",
+        "nextPage",
+        "isFirstPage",
+        "isLastPage",
+        "hasPreviousPage",
+        "hasNextPage",
+        "navigatePages",
+        "navigatepageNums",
+        "navigateFirstPage",
+        "navigateLastPage"
+      ]
+    },
+    {
+      "pageKey": "system-onlineTaxationInfo",
+      "menu": "系统设置/网上办税信息",
+      "method": "GET",
+      "path": "/prod-api/system/bizOnlineTaxInformation/getOnlineTax",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.461Z",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "method": "GET",
+      "path": "/prod-api/system/config/list?pageNum=1&pageSize=1",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.484Z",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "没有权限，请联系管理员授权",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-credit",
+      "menu": "基础信息/开票额度配置",
+      "method": "GET",
+      "path": "/prod-api/bussiness/creditLine/query?pageNum=1&pageSize=1",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.507Z",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "未检测到开票设备，请联系管理员",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-credit",
+      "menu": "基础信息/开票额度配置",
+      "method": "GET",
+      "path": "/prod-api/bussiness/credit/creditInfo/1?_t=1782781312531",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.531Z",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-info",
+      "menu": "基础信息/商品信息",
+      "method": "GET",
+      "path": "/prod-api/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.558Z",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "topLevelKeys": [
+        "total",
+        "rows",
+        "code",
+        "msg"
+      ],
+      "dataKeys": [],
+      "rowCount": 0,
+      "total": 0
+    },
+    {
+      "pageKey": "bussiness-customer",
+      "menu": "基础信息/客户管理",
+      "method": "GET",
+      "path": "/prod-api/bussiness/bizCustomer/selectBizCustomerInfoOutNotList?pageNum=1&pageSize=1",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.600Z",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "topLevelKeys": [
+        "total",
+        "rows",
+        "code",
+        "msg"
+      ],
+      "dataKeys": [],
+      "rowCount": 0,
+      "total": 0
+    },
+    {
+      "pageKey": "billCenter-taskManagement",
+      "menu": "票据中心/任务管理",
+      "method": "GET",
+      "path": "/prod-api/system/taskRecord/list?pageNum=1&pageSize=1",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.633Z",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "topLevelKeys": [
+        "total",
+        "rows",
+        "code",
+        "msg"
+      ],
+      "dataKeys": [],
+      "rowCount": 0,
+      "total": 0
+    },
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "method": "POST",
+      "path": "/prod-api/invoicecheck/check/list/thirdPlatform/dataList",
+      "body": {
+        "pageNum": 1,
+        "pageSize": 1
+      },
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.790Z",
+      "httpStatus": 404,
+      "topLevelKeys": [
+        "timestamp",
+        "status",
+        "error",
+        "path"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "billCenter-accessSetting",
+      "menu": "票据中心/取票设置",
+      "method": "POST",
+      "path": "/prod-api/invoicecenter/sjruzhang/getSjruzhangSetting",
+      "body": {},
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:52.819Z",
+      "httpStatus": 200,
+      "code": "0000",
+      "topLevelKeys": [
+        "code",
+        "message",
+        "success"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "billCenter-sign",
+      "menu": "票据中心/签收",
+      "method": "POST",
+      "path": "/prod-api/invoicecenter/integrated/v1/invoicePool/query",
+      "body": {
+        "pageNum": 1,
+        "pageSize": 1
+      },
+      "risk": "L0 query; sign action not triggered",
+      "startedAt": "2026-06-30T01:01:52.990Z",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-redMark",
+      "menu": "销项管理/红字确认单",
+      "method": "GET",
+      "path": "/prod-api/bussiness/redConfirmInfo/list?pageNum=1&pageSize=1",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:53.021Z",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "topLevelKeys": [
+        "total",
+        "rows",
+        "code",
+        "msg"
+      ],
+      "dataKeys": [],
+      "rowCount": 0,
+      "total": 0
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "method": "GET",
+      "path": "/prod-api/deliveryWithGoods/list?pageNum=1&pageSize=1",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:53.101Z",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "404 NOT_FOUND",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-billIssue",
+      "menu": "销项管理/订单开票",
+      "method": "GET",
+      "path": "/prod-api/bussiness/bizBillInfo/findDraftList?pageNum=1&pageSize=1",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:53.121Z",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "操作成功",
+      "topLevelKeys": [
+        "msg",
+        "code",
+        "data"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getClientGuess",
+      "risk": "L0 query",
+      "startedAt": "2026-06-30T01:01:53.297Z",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "method": "GET",
+      "path": "/prod-api/system/dict/data/getInvoiceType",
+      "risk": "L0 dictionary query",
+      "startedAt": "2026-06-30T01:01:53.311Z",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "downloadCenter",
+      "menu": "顶部入口/下载中心",
+      "method": "POST",
+      "path": "/prod-api/invoicecenter/invoiceTemplate/v1/download/template/taskId",
+      "body": {},
+      "risk": "L0/L2 metadata query",
+      "startedAt": "2026-06-30T01:01:53.470Z",
+      "httpStatus": 200,
+      "topLevelKeys": [],
+      "dataKeys": [],
+      "textSample": ""
+    }
+  ],
+  "diagnostics": [
+    {
+      "pageKey": "system-user",
+      "method": "GET",
+      "path": "/prod-api/system/user/list?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "status": "success",
+      "reason": "接口返回业务成功码，可作为已认证只读接口证据；仍需 HAR 作为严格验收依据。",
+      "next": "导出该页面 DevTools HAR，补齐真实 Network 证据。"
+    },
+    {
+      "pageKey": "system-role",
+      "method": "GET",
+      "path": "/prod-api/system/role/list?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "status": "success",
+      "reason": "接口返回业务成功码，可作为已认证只读接口证据；仍需 HAR 作为严格验收依据。",
+      "next": "导出该页面 DevTools HAR，补齐真实 Network 证据。"
+    },
+    {
+      "pageKey": "system-dept",
+      "method": "GET",
+      "path": "/prod-api/system/dept/list",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "操作成功",
+      "status": "success",
+      "reason": "接口返回业务成功码，可作为已认证只读接口证据；仍需 HAR 作为严格验收依据。",
+      "next": "导出该页面 DevTools HAR，补齐真实 Network 证据。"
+    },
+    {
+      "pageKey": "system-departmentInfo",
+      "method": "GET",
+      "path": "/prod-api/system/departmentInfo/list?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "操作成功",
+      "status": "success",
+      "reason": "接口返回业务成功码，可作为已认证只读接口证据；仍需 HAR 作为严格验收依据。",
+      "next": "导出该页面 DevTools HAR，补齐真实 Network 证据。"
+    },
+    {
+      "pageKey": "system-onlineTaxationInfo",
+      "method": "POST",
+      "path": "/prod-api/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "操作成功",
+      "status": "success",
+      "reason": "接口返回业务成功码，可作为已认证只读接口证据；仍需 HAR 作为严格验收依据。",
+      "next": "导出该页面 DevTools HAR，补齐真实 Network 证据。"
+    },
+    {
+      "pageKey": "system-onlineTaxationInfo",
+      "method": "GET",
+      "path": "/prod-api/system/bizOnlineTaxInformation/getOnlineTax",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "status": "auth-accepted-parameter-required",
+      "reason": "token 被接受，但只读探针缺页面运行时参数。",
+      "next": "用真实页面 HAR 反查缺失参数；不得猜测触发 L3/L4 税务动作。"
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "method": "GET",
+      "path": "/prod-api/system/config/list?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "没有权限，请联系管理员授权",
+      "status": "auth-accepted-no-permission",
+      "reason": "token 被服务端接受，但当前企业/用户权限不足。",
+      "next": "用页面真实 Network HAR 确认该菜单实际接口；不要用脚本尝试写入或提权动作。"
+    },
+    {
+      "pageKey": "bussiness-credit",
+      "method": "GET",
+      "path": "/prod-api/bussiness/creditLine/query?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "未检测到开票设备，请联系管理员",
+      "status": "auth-accepted-device-required",
+      "reason": "token 被接受，但接口依赖开票设备/税控上下文。",
+      "next": "在已登录数税云页面操作并导出 HAR，记录设备上下文参数来源。"
+    },
+    {
+      "pageKey": "bussiness-credit",
+      "method": "GET",
+      "path": "/prod-api/bussiness/credit/creditInfo/1?_t=1782781312531",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "status": "auth-accepted-parameter-required",
+      "reason": "token 被接受，但只读探针缺页面运行时参数。",
+      "next": "用真实页面 HAR 反查缺失参数；不得猜测触发 L3/L4 税务动作。"
+    },
+    {
+      "pageKey": "bussiness-info",
+      "method": "GET",
+      "path": "/prod-api/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "status": "success",
+      "reason": "接口返回业务成功码，可作为已认证只读接口证据；仍需 HAR 作为严格验收依据。",
+      "next": "导出该页面 DevTools HAR，补齐真实 Network 证据。"
+    },
+    {
+      "pageKey": "bussiness-customer",
+      "method": "GET",
+      "path": "/prod-api/bussiness/bizCustomer/selectBizCustomerInfoOutNotList?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "status": "success",
+      "reason": "接口返回业务成功码，可作为已认证只读接口证据；仍需 HAR 作为严格验收依据。",
+      "next": "导出该页面 DevTools HAR，补齐真实 Network 证据。"
+    },
+    {
+      "pageKey": "billCenter-taskManagement",
+      "method": "GET",
+      "path": "/prod-api/system/taskRecord/list?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "status": "success",
+      "reason": "接口返回业务成功码，可作为已认证只读接口证据；仍需 HAR 作为严格验收依据。",
+      "next": "导出该页面 DevTools HAR，补齐真实 Network 证据。"
+    },
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "method": "POST",
+      "path": "/prod-api/invoicecheck/check/list/thirdPlatform/dataList",
+      "httpStatus": 404,
+      "status": "route-not-confirmed",
+      "reason": "候选路径未被当前网关识别，说明静态代码候选不能直接替代真实页面 Network。",
+      "next": "从 DevTools HAR 获取页面实际请求路径。"
+    },
+    {
+      "pageKey": "billCenter-accessSetting",
+      "method": "POST",
+      "path": "/prod-api/invoicecenter/sjruzhang/getSjruzhangSetting",
+      "httpStatus": 200,
+      "code": "0000",
+      "status": "success",
+      "reason": "接口返回业务成功码，可作为已认证只读接口证据；仍需 HAR 作为严格验收依据。",
+      "next": "导出该页面 DevTools HAR，补齐真实 Network 证据。"
+    },
+    {
+      "pageKey": "billCenter-sign",
+      "method": "POST",
+      "path": "/prod-api/invoicecenter/integrated/v1/invoicePool/query",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "status": "auth-accepted-parameter-required",
+      "reason": "token 被接受，但只读探针缺页面运行时参数。",
+      "next": "用真实页面 HAR 反查缺失参数；不得猜测触发 L3/L4 税务动作。"
+    },
+    {
+      "pageKey": "platform-redMark",
+      "method": "GET",
+      "path": "/prod-api/bussiness/redConfirmInfo/list?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "status": "success",
+      "reason": "接口返回业务成功码，可作为已认证只读接口证据；仍需 HAR 作为严格验收依据。",
+      "next": "导出该页面 DevTools HAR，补齐真实 Network 证据。"
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "method": "GET",
+      "path": "/prod-api/deliveryWithGoods/list?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "404 NOT_FOUND",
+      "status": "auth-accepted-route-or-runtime-missing",
+      "reason": "token 被接受，但候选接口路径或页面运行时上下文不完整。",
+      "next": "按页面实际 Network 校正接口路径、method 和 payload。"
+    },
+    {
+      "pageKey": "platform-billIssue",
+      "method": "GET",
+      "path": "/prod-api/bussiness/bizBillInfo/findDraftList?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "操作成功",
+      "status": "success",
+      "reason": "接口返回业务成功码，可作为已认证只读接口证据；仍需 HAR 作为严格验收依据。",
+      "next": "导出该页面 DevTools HAR，补齐真实 Network 证据。"
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getClientGuess",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "status": "auth-accepted-route-or-runtime-missing",
+      "reason": "token 被接受，但候选接口路径或页面运行时上下文不完整。",
+      "next": "按页面实际 Network 校正接口路径、method 和 payload。"
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "method": "GET",
+      "path": "/prod-api/system/dict/data/getInvoiceType",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "status": "auth-accepted-route-or-runtime-missing",
+      "reason": "token 被接受，但候选接口路径或页面运行时上下文不完整。",
+      "next": "按页面实际 Network 校正接口路径、method 和 payload。"
+    },
+    {
+      "pageKey": "downloadCenter",
+      "method": "POST",
+      "path": "/prod-api/invoicecenter/invoiceTemplate/v1/download/template/taskId",
+      "httpStatus": 200,
+      "status": "transport-accepted-non-json-or-empty",
+      "reason": "服务端返回 HTTP 200，但没有可识别 JSON 成功体，不能算业务成功。",
+      "next": "需要页面动作 HAR 确认该接口是否为下载/文件流/任务型响应。"
+    }
+  ]
+}

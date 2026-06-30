@@ -1,0 +1,1165 @@
+{
+  "generatedAt": "2026-06-30T01:02:01.364Z",
+  "missingHarPages": 19,
+  "pagesWithStaticEvidence": 19,
+  "pagesWithAuthProbe": 19,
+  "pagesWithSuccessfulProbe": 14,
+  "staticReadSecondPass": {
+    "pagesCovered": 8,
+    "probes": 46,
+    "transportAccepted": 41,
+    "authAccepted": 41,
+    "success": 3,
+    "pagesWithSuccess": 3
+  },
+  "rows": [
+    {
+      "pageKey": "billCenter-accessSetting",
+      "menu": "票据中心/取票设置",
+      "priority": "P1",
+      "minimalHarFile": "billCenter-accessSetting.sync.har",
+      "minimalAction": "sync",
+      "staticGroup": "accessSetting",
+      "staticEndpointCount": 9,
+      "safeStaticEndpoints": [
+        "/abnormalInvoice/setting",
+        "/getAbnormalInvoice/setting",
+        "/invoicecenter/sjruzhang/getSjruzhangSetting",
+        "/invoicecenter/sjruzhang/operateSjruzhangInfo",
+        "/system/bizUserInterface/getInvoiceCheckNum",
+        "/user/profile"
+      ],
+      "riskyStaticEndpoints": [
+        "/exportInvoicePool/checkExport",
+        "/invoicecenter/sjruzhang/restartTask",
+        "/invoicecenter/sjruzhang/saveSjruzhangSetting"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "POST",
+          "path": "/prod-api/invoicecenter/sjruzhang/getSjruzhangSetting",
+          "httpStatus": 200,
+          "code": "0000",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "priority": "P1",
+      "minimalHarFile": "billCenter-invoiceVerification.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "invoiceVerification",
+      "staticEndpointCount": 39,
+      "safeStaticEndpoints": [
+        "/abnormalInvoice/setting",
+        "/getInvoiceCheckDetail",
+        "/income/invoiceCheck/batchCheckRequest",
+        "/income/invoiceCheck/batchUnCheckRequest",
+        "/income/invoiceCheck/getPeriod",
+        "/income/invoiceCheck/gxConfirmList",
+        "/income/invoiceCheck/queryInfoList",
+        "/income/invoiceCheck365",
+        "/income/invoiceCheckConfig",
+        "/inputtax/h51InputTax/timeQuery",
+        "/invoicecheck/area/getZfUrl",
+        "/invoicecheck/check/customs/deductCheck"
+      ],
+      "riskyStaticEndpoints": [
+        "/download/checkVoucher",
+        "/download/checkVoucherByFp",
+        "/income/datapool/batchUpdateAuthMark",
+        "/invoicecheck/check/batch/uploadToCheck",
+        "/invoicecheck/check/scan/currentPeriodSelectedExport",
+        "/invoicecheck/check/scan/listQueryExport",
+        "/invoicecheck/operationLog/add",
+        "/invoiceFolder/addAllTypeInvoice/batch",
+        "/invoiceFolder/addByCheck"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "POST",
+          "path": "/prod-api/invoicecheck/check/list/thirdPlatform/dataList",
+          "httpStatus": 404,
+          "status": "transport-only"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/invoicecheck/check/list/thirdPlatform/dataList?pageNum=1&pageSize=1",
+          "httpStatus": 404,
+          "status": "transport-only"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/invoicecheck/check/list/thirdPlatform/getData?pageNum=1&pageSize=1",
+          "httpStatus": 404,
+          "status": "transport-only"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/getInvoiceCheckDetail",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "404 NOT_FOUND",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/abnormalInvoice/setting",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "404 NOT_FOUND",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/income/invoiceCheck/getPeriod",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/income/invoiceCheck/queryInfoList?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "查询成功",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "billCenter-sign",
+      "menu": "票据中心/签收",
+      "priority": "P1，高风险后置",
+      "minimalHarFile": "billCenter-sign.action-review.har",
+      "minimalAction": "action-review",
+      "staticGroup": "sign",
+      "staticEndpointCount": 19,
+      "safeStaticEndpoints": [
+        "/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList",
+        "/bussiness/paymentPlatform/notice",
+        "/bussiness/qhdpxbill/qhdpxH5Login",
+        "/inputtax/h51InputTax/statistics",
+        "/inputtax/h51InputTax/verified",
+        "/system/backstage/getInformation",
+        "/system/dept/acquiringFirm",
+        "/system/dept/generateBillCodeByDeptId",
+        "/system/dict/data/getInvoiceType",
+        "/system/fptt/getAliPayFpttInfo",
+        "/system/fptt/getWxSignatureInfo",
+        "/system/kpm/getSpxxByKpmGoodsId"
+      ],
+      "riskyStaticEndpoints": [
+        "/inputtax/h51InputTax/confirmSign",
+        "/invoiceFolder/addFromPool",
+        "/invoicePool/signInvoices"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "POST",
+          "path": "/prod-api/invoicecenter/integrated/v1/invoicePool/query",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/invoicecenter/integrated/v1/invoicePool/query?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/inputtax/h51InputTax/statistics",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "Request method 'GET' not supported",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/system/backstage/getInformation",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "success",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "billCenter-taskManagement",
+      "menu": "票据中心/任务管理",
+      "priority": "P1",
+      "minimalHarFile": "billCenter-taskManagement.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "taskManagement",
+      "staticEndpointCount": 21,
+      "safeStaticEndpoints": [
+        "/invoicecenter/invoiceTemplate/",
+        "/invoicecenter/invoiceTemplate/v1/preview/OFD",
+        "/invoicecenter/sjruzhang/getSjruzhangInfo",
+        "/system/taskRecord/list"
+      ],
+      "riskyStaticEndpoints": [
+        "/download/template/taskId",
+        "/download/XML/taskId",
+        "/downloadCenter",
+        "/invoicecenter/eInvoice/v1/download/xbrl",
+        "/invoicecenter/integrated/v1/download/checkVoucher",
+        "/invoicecenter/integrated/v1/download/checkVoucherByFp",
+        "/invoicecenter/integrated/v1/exportInvoicePool/exportTotalData",
+        "/invoicecenter/invoiceTemplate/v1/download/template",
+        "/invoicecenter/invoiceTemplate/v1/download/template/taskId",
+        "/invoicecenter/invoiceTemplate/v1/download/templateAll",
+        "/invoicecenter/invoiceTemplate/v1/download/XML",
+        "/invoicecenter/invoiceTemplate/v1/download/XML/taskId"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/taskRecord/list?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "查询成功",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "downloadCenter",
+      "menu": "顶部入口/下载中心",
+      "priority": "P1",
+      "minimalHarFile": "downloadCenter.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "download",
+      "staticEndpointCount": 37,
+      "safeStaticEndpoints": [
+        "/income/statistics/getPeriodStatus",
+        "/inputtax/h51InputTax/detailsQuery",
+        "/invoicecenter/invoiceGoods/detailList",
+        "/invoicecenter/invoiceTemplate/",
+        "/invoicecenter/invoiceTemplate/v1/preview/OFD",
+        "/invoicecenter/sjruzhang/complement/invoiceDetail",
+        "/reCheckInvoice",
+        "/statisticsInvoiceInfoQuery"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/bizInvoiceInfo/importBizInvoice",
+        "/download/checkVoucher",
+        "/download/checkVoucherByFp",
+        "/download/ReturnBase64Xml",
+        "/download/template",
+        "/download/template/taskId",
+        "/download/templateAll",
+        "/download/XML/taskId",
+        "/downloadCenter",
+        "/exportInvoicePool/exportUseInvoiceStatus",
+        "/income/datapool/ImportIncomeInvoice",
+        "/income/datapool/preDownloadInvoice"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "POST",
+          "path": "/prod-api/invoicecenter/invoiceTemplate/v1/download/template/taskId",
+          "httpStatus": 200,
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/income/statistics/getPeriodStatus",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/inputtax/h51InputTax/detailsQuery?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "Request method 'GET' not supported",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "POST",
+          "path": "/prod-api/invoicecenter/invoiceGoods/detailList?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": "0000",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "platform-billIssue",
+      "menu": "销项管理/订单开票",
+      "priority": "P1",
+      "minimalHarFile": "platform-billIssue.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "billIssue",
+      "staticEndpointCount": 26,
+      "safeStaticEndpoints": [
+        "/bussiness/bizBillInfo/checkBillNumber",
+        "/bussiness/bizBillInfo/findDraftList",
+        "/bussiness/bizBillInfo/h5getFpdyXml",
+        "/bussiness/bizBillInfo/isMotorFlag",
+        "/bussiness/bizBillInfo/isNatPerFlag",
+        "/bussiness/bizBillInfo/returnInvoiceType",
+        "/bussiness/bizBillInfo/stagingOrder",
+        "/bussiness/bizBillInfo/stagingOrderInfo",
+        "/bussiness/bizGoodsInfo/getGoodsGuess",
+        "/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList",
+        "/bussiness/bizGoodsInfo/verifyMargin",
+        "/bussiness/bizInvoiceInfo/getInvoiceInfoAndDetail"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/billIssue/",
+        "/bussiness/bizBillInfo/allElectricInvoice/issue",
+        "/bussiness/bizBillInfo/deleteAllStaging",
+        "/bussiness/bizBillInfo/deleteStaging",
+        "/bussiness/bizBillInfo/issue",
+        "/bussiness/bizInvoiceInfo/invoiceSave",
+        "/bussiness/bizInvoiceInfo/saveBillListImportGoods",
+        "/bussiness/creditLine/query",
+        "/bussiness/quick/updateStatus/"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/bizBillInfo/findDraftList?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "操作成功",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "priority": "P1 visual-only",
+      "minimalHarFile": "platform-invoiceApplication.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "invoiceApplication",
+      "staticEndpointCount": 22,
+      "safeStaticEndpoints": [
+        "/billCenter/bankBillPool/electonicAccount",
+        "/buyerwalletInvoicebuyer",
+        "/income/blackPageZfYrzDetail",
+        "/income/statistics/applyStatistics",
+        "/income/statistics/confirm",
+        "/income/statistics/getStatisticsResult",
+        "/invoicecheck/check/list/deductCheck",
+        "/invoicecheck/check/list/deductCheckAll",
+        "/invoicecheck/check/list/nodeductCheck",
+        "/invoiceSuccess",
+        "/statisticsGoodsRateDetail",
+        "/statisticsInvoiceInfoQuery"
+      ],
+      "riskyStaticEndpoints": [
+        "/deliveryWithGoods",
+        "/deliveryWithGoods/detail",
+        "/deliveryWithGoods/list",
+        "/deliveryWithGoods/search",
+        "/invoicecheck/check/batch/uploadToCheck"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/deliveryWithGoods/list?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "404 NOT_FOUND",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/income/blackPageZfYrzDetail",
+          "httpStatus": 404,
+          "status": "transport-only"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/income/statistics/applyStatistics",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "申请标志不能为空",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/income/statistics/getStatisticsResult",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "税款所属期不能为空",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/invoicecheck/check/list/deductCheck?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/invoicecheck/check/list/deductCheckAll?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/invoicecheck/check/list/nodeductCheck?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/statisticsGoodsRateDetail",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "404 NOT_FOUND",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/statisticsInvoiceInfoQuery?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "404 NOT_FOUND",
+          "status": "auth-accepted"
+        }
+      ],
+      "nextStep": "认证已被接受，需从真实页面 HAR 反查缺失参数或运行时上下文。"
+    },
+    {
+      "pageKey": "platform-redMark",
+      "menu": "销项管理/红字确认单",
+      "priority": "P1，高风险后置",
+      "minimalHarFile": "platform-redMark.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "redMark",
+      "staticEndpointCount": 24,
+      "safeStaticEndpoints": [
+        "/auth-redirect",
+        "/bussiness/bizBillInfo/h5getFpdyXml",
+        "/bussiness/redConfirmInfo",
+        "/bussiness/redConfirmInfo/",
+        "/bussiness/redConfirmInfo/handle",
+        "/bussiness/redConfirmInfo/list",
+        "/bussiness/redConfirmInfo/queryBlue",
+        "/bussiness/redConfirmInfo/queryBlue2",
+        "/bussiness/redConfirmInfo/reCommit",
+        "/bussiness/redConfirmInfo/sync",
+        "/invoicecheck/version/select",
+        "/redirect"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/bizBillInfo/allElectricInvoice/issue",
+        "/bussiness/bizInvoiceInfo/importBizInvoice",
+        "/bussiness/creditLine/query",
+        "/bussiness/redConfirmInfo/batchConfirm",
+        "/bussiness/redConfirmInfo/commit",
+        "/h5/deliveryWithGoods",
+        "/income/datapool/ImportIncomeInvoice",
+        "/income/datapool/preDownloadInvoice",
+        "/invoicecheck/operationLog/add"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/redConfirmInfo/list?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "查询成功",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "priority": "P1",
+      "minimalHarFile": "platform-scanCode.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "scanRecords",
+      "staticEndpointCount": 18,
+      "safeStaticEndpoints": [
+        "/bussiness/allElectricAuth/qrCodeQuery",
+        "/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList",
+        "/bussiness/scanInvoice/getClientDateByCode",
+        "/bussiness/scanInvoice/getClientGuess",
+        "/bussiness/scanInvoice/getOuterPdfBase64",
+        "/bussiness/scanInvoice/getScanInvoiceBillInfo",
+        "/bussiness/scanInvoice/getScanInvoiceInfo",
+        "/income",
+        "/platform/scanCode",
+        "/system/aes/config/encrypt",
+        "/system/allElectricAuth/authentication",
+        "/system/allElectricAuth/authenticationSd"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/quick/add",
+        "/bussiness/scanInvoice/H5CommitIssue",
+        "/bussiness/scanInvoice/invoiceDelivery"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/dict/data/getInvoiceType",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getClientGuess",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getClientDateByCode",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/system/aes/config/encrypt",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/system/dict/data/getInvoiceType",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        }
+      ],
+      "nextStep": "认证已被接受，需从真实页面 HAR 反查缺失参数或运行时上下文。"
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "priority": "P1",
+      "minimalHarFile": "platform-scanRecords.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "scanRecords",
+      "staticEndpointCount": 18,
+      "safeStaticEndpoints": [
+        "/bussiness/allElectricAuth/qrCodeQuery",
+        "/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList",
+        "/bussiness/scanInvoice/getClientDateByCode",
+        "/bussiness/scanInvoice/getClientGuess",
+        "/bussiness/scanInvoice/getOuterPdfBase64",
+        "/bussiness/scanInvoice/getScanInvoiceBillInfo",
+        "/bussiness/scanInvoice/getScanInvoiceInfo",
+        "/income",
+        "/platform/scanCode",
+        "/system/aes/config/encrypt",
+        "/system/allElectricAuth/authentication",
+        "/system/allElectricAuth/authenticationSd"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/quick/add",
+        "/bussiness/scanInvoice/H5CommitIssue",
+        "/bussiness/scanInvoice/invoiceDelivery"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getClientGuess",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getClientGuess",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getClientDateByCode",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/system/aes/config/encrypt",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/system/dict/data/getInvoiceType",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        }
+      ],
+      "nextStep": "认证已被接受，需从真实页面 HAR 反查缺失参数或运行时上下文。"
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "priority": "P2/P3",
+      "minimalHarFile": "bussiness-configurationManagement.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "config",
+      "staticEndpointCount": 24,
+      "safeStaticEndpoints": [
+        "/auth-redirect",
+        "/bussiness/configurationManagement",
+        "/bussiness/scanInvoice/getOuterPdfBase64",
+        "/bussiness/scanInvoice/getScanInvoiceBillInfo",
+        "/bussiness/scanInvoice/getScanInvoiceInfo",
+        "/income/blackPageDzswjYrzDetail",
+        "/income/invoiceCheck/batchCheckRequest",
+        "/income/invoiceCheck/batchUnCheckRequest",
+        "/income/invoiceCheck/getPeriod",
+        "/income/invoiceCheckConfig",
+        "/invoicecenter/invoiceGoods/detailList",
+        "/invoicecenter/invoiceTemplate/v1/preview/OFD"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/scanInvoice/invoiceDelivery",
+        "/invoicecenter/integrated/v1/download/checkVoucher",
+        "/invoicecenter/integrated/v1/exportInvoicePool/exportTotalData",
+        "/invoicecenter/integrated/v1/invoicePool/exInvoiceExport",
+        "/invoicecenter/invoiceTemplate/v1/print/invoice",
+        "/system/config/clearCache"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/config/list?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "没有权限，请联系管理员授权",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/system/config/list?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "没有权限，请联系管理员授权",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/system/config/configKey/",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/configurationManagement",
+          "httpStatus": 404,
+          "status": "transport-only"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "内部服务器错误",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/income/blackPageDzswjYrzDetail",
+          "httpStatus": 404,
+          "status": "transport-only"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/income/invoiceCheck/getPeriod",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        }
+      ],
+      "nextStep": "认证已被接受，需从真实页面 HAR 反查缺失参数或运行时上下文。"
+    },
+    {
+      "pageKey": "bussiness-credit",
+      "menu": "基础信息/开票额度配置",
+      "priority": "P2",
+      "minimalHarFile": "bussiness-credit.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "credit",
+      "staticEndpointCount": 2,
+      "safeStaticEndpoints": [
+        "/bussiness/bizBillInfo/h5getFpdyXml"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/creditLine/query"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/creditLine/query?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "未检测到开票设备，请联系管理员",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/credit/creditInfo/1?_t=1782781312531",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/bizBillInfo/h5getFpdyXml",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        }
+      ],
+      "nextStep": "认证已被接受，需从真实页面 HAR 反查缺失参数或运行时上下文。"
+    },
+    {
+      "pageKey": "bussiness-customer",
+      "menu": "基础信息/客户管理",
+      "priority": "P2",
+      "minimalHarFile": "bussiness-customer.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "customer",
+      "staticEndpointCount": 10,
+      "safeStaticEndpoints": [
+        "/bussiness/bizBatch/billInfoAndDetails/",
+        "/bussiness/bizCustomer/selectBizCustomerInfoOutNotList",
+        "/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList",
+        "/buyerwalletInvoicebuyer",
+        "/invoicecheck/users/loginStatus",
+        "/reimbursementSubmit/reimbursementBill",
+        "/system/token/getOpenTokenByLogin"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/bizCustomer/getClientDateByCodeIssue",
+        "/bussiness/bizCustomer/getClientGuessIssue",
+        "/bussiness/bizInvoiceSeller/issueSellerInfo"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/bizCustomer/selectBizCustomerInfoOutNotList?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "查询成功",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "bussiness-info",
+      "menu": "基础信息/商品信息",
+      "priority": "P2",
+      "minimalHarFile": "bussiness-info.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "goods",
+      "staticEndpointCount": 44,
+      "safeStaticEndpoints": [
+        "/bussiness/bizBillInfo/checkBillNumber",
+        "/bussiness/bizBillInfo/returnInvoiceType",
+        "/bussiness/bizBillInfo/stagingOrderInfo",
+        "/bussiness/bizCustomer/selectBizCustomerInfoOutNotList",
+        "/bussiness/bizGoodsInfo/getGoodsGuess",
+        "/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList",
+        "/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList",
+        "/bussiness/bizGoodsInfo/verifyMargin",
+        "/bussiness/bizInvoiceInfo/getEquipment",
+        "/bussiness/bizInvoiceInfo/queryListByBillNum",
+        "/bussiness/info",
+        "/bussiness/paymentPlatform/notice"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/bizBillInfo/issue",
+        "/bussiness/bizInvoiceInfo/invoiceSave",
+        "/bussiness/bizInvoiceInfo/saveBillListImportGoods",
+        "/bussiness/bizInvoiceSeller/issueSellerInfo",
+        "/bussiness/quick/add",
+        "/bussiness/scanInvoice/H5CommitIssue",
+        "/deliveryWithGoods",
+        "/deliveryWithGoods/detail",
+        "/deliveryWithGoods/list",
+        "/deliveryWithGoods/search",
+        "/h5/deliveryWithGoods",
+        "/invoicecenter/integrated/v1/exportInvoicePool/exportTotalData"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "查询成功",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "system-onlineTaxationInfo",
+      "menu": "系统设置/网上办税信息",
+      "priority": "P2",
+      "minimalHarFile": "system-onlineTaxationInfo.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "system",
+      "staticEndpointCount": 65,
+      "safeStaticEndpoints": [
+        "/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList",
+        "/bussiness/bizInvoiceInfo/queryListByBillNum",
+        "/bussiness/scanInvoice/getClientDateByCode",
+        "/bussiness/scanInvoice/getClientGuess",
+        "/income/datapool/check",
+        "/system/allElectricAuth/identityTypeSwitch",
+        "/system/asynchauth/getAsynchauth",
+        "/system/backstage/getInformation",
+        "/system/bizOnlineTaxInformation/getUserLoginInfoByDeptIdAndUserId",
+        "/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+        "/system/departmentInfo",
+        "/system/departmentInfo/"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/quick/add",
+        "/bussiness/scanInvoice/H5CommitIssue",
+        "/income/datapool/addFpbdkgxxx",
+        "/income/datapool/addFpdkgxxx",
+        "/income/datapool/editAudit",
+        "/system/kpm/add",
+        "/system/kpm/delete",
+        "/system/user/profile/updatePwd"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "POST",
+          "path": "/prod-api/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "操作成功",
+          "status": "success"
+        },
+        {
+          "method": "GET",
+          "path": "/prod-api/system/bizOnlineTaxInformation/getOnlineTax",
+          "httpStatus": 200,
+          "code": 500,
+          "msg": "参数异常!",
+          "status": "auth-accepted"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "system-departmentInfo",
+      "menu": "系统设置/部门管理",
+      "priority": "P3",
+      "minimalHarFile": "system-departmentInfo.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "system",
+      "staticEndpointCount": 65,
+      "safeStaticEndpoints": [
+        "/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList",
+        "/bussiness/bizInvoiceInfo/queryListByBillNum",
+        "/bussiness/scanInvoice/getClientDateByCode",
+        "/bussiness/scanInvoice/getClientGuess",
+        "/income/datapool/check",
+        "/system/allElectricAuth/identityTypeSwitch",
+        "/system/asynchauth/getAsynchauth",
+        "/system/backstage/getInformation",
+        "/system/bizOnlineTaxInformation/getUserLoginInfoByDeptIdAndUserId",
+        "/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+        "/system/departmentInfo",
+        "/system/departmentInfo/"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/quick/add",
+        "/bussiness/scanInvoice/H5CommitIssue",
+        "/income/datapool/addFpbdkgxxx",
+        "/income/datapool/addFpdkgxxx",
+        "/income/datapool/editAudit",
+        "/system/kpm/add",
+        "/system/kpm/delete",
+        "/system/user/profile/updatePwd"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/departmentInfo/list?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "操作成功",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "system-dept",
+      "menu": "系统设置/组织管理",
+      "priority": "P3",
+      "minimalHarFile": "system-dept.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "system",
+      "staticEndpointCount": 65,
+      "safeStaticEndpoints": [
+        "/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList",
+        "/bussiness/bizInvoiceInfo/queryListByBillNum",
+        "/bussiness/scanInvoice/getClientDateByCode",
+        "/bussiness/scanInvoice/getClientGuess",
+        "/income/datapool/check",
+        "/system/allElectricAuth/identityTypeSwitch",
+        "/system/asynchauth/getAsynchauth",
+        "/system/backstage/getInformation",
+        "/system/bizOnlineTaxInformation/getUserLoginInfoByDeptIdAndUserId",
+        "/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+        "/system/departmentInfo",
+        "/system/departmentInfo/"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/quick/add",
+        "/bussiness/scanInvoice/H5CommitIssue",
+        "/income/datapool/addFpbdkgxxx",
+        "/income/datapool/addFpdkgxxx",
+        "/income/datapool/editAudit",
+        "/system/kpm/add",
+        "/system/kpm/delete",
+        "/system/user/profile/updatePwd"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/dept/list",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "操作成功",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "system-role",
+      "menu": "系统设置/角色管理",
+      "priority": "P3",
+      "minimalHarFile": "system-role.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "system",
+      "staticEndpointCount": 65,
+      "safeStaticEndpoints": [
+        "/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList",
+        "/bussiness/bizInvoiceInfo/queryListByBillNum",
+        "/bussiness/scanInvoice/getClientDateByCode",
+        "/bussiness/scanInvoice/getClientGuess",
+        "/income/datapool/check",
+        "/system/allElectricAuth/identityTypeSwitch",
+        "/system/asynchauth/getAsynchauth",
+        "/system/backstage/getInformation",
+        "/system/bizOnlineTaxInformation/getUserLoginInfoByDeptIdAndUserId",
+        "/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+        "/system/departmentInfo",
+        "/system/departmentInfo/"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/quick/add",
+        "/bussiness/scanInvoice/H5CommitIssue",
+        "/income/datapool/addFpbdkgxxx",
+        "/income/datapool/addFpdkgxxx",
+        "/income/datapool/editAudit",
+        "/system/kpm/add",
+        "/system/kpm/delete",
+        "/system/user/profile/updatePwd"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/role/list?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "查询成功",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    },
+    {
+      "pageKey": "system-user",
+      "menu": "系统设置/用户管理",
+      "priority": "P3",
+      "minimalHarFile": "system-user.default-list.har",
+      "minimalAction": "default-list",
+      "staticGroup": "system",
+      "staticEndpointCount": 65,
+      "safeStaticEndpoints": [
+        "/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList",
+        "/bussiness/bizInvoiceInfo/queryListByBillNum",
+        "/bussiness/scanInvoice/getClientDateByCode",
+        "/bussiness/scanInvoice/getClientGuess",
+        "/income/datapool/check",
+        "/system/allElectricAuth/identityTypeSwitch",
+        "/system/asynchauth/getAsynchauth",
+        "/system/backstage/getInformation",
+        "/system/bizOnlineTaxInformation/getUserLoginInfoByDeptIdAndUserId",
+        "/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+        "/system/departmentInfo",
+        "/system/departmentInfo/"
+      ],
+      "riskyStaticEndpoints": [
+        "/bussiness/quick/add",
+        "/bussiness/scanInvoice/H5CommitIssue",
+        "/income/datapool/addFpbdkgxxx",
+        "/income/datapool/addFpdkgxxx",
+        "/income/datapool/editAudit",
+        "/system/kpm/add",
+        "/system/kpm/delete",
+        "/system/user/profile/updatePwd"
+      ],
+      "verifiedPaths": [
+        {
+          "method": "GET",
+          "path": "/prod-api/system/user/list?pageNum=1&pageSize=1",
+          "httpStatus": 200,
+          "code": 200,
+          "msg": "查询成功",
+          "status": "success"
+        }
+      ],
+      "nextStep": "按该成功接口补真实 HAR，校正 payload/分页字段。"
+    }
+  ]
+}

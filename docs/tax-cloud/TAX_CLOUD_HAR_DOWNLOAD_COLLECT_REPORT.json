@@ -1,0 +1,186 @@
+{
+  "generatedAt": "2026-06-30T01:02:21.274Z",
+  "sourceDir": "/Users/chenruifeng/Downloads",
+  "targetDir": "docs/tax-cloud/network-har",
+  "overwrite": false,
+  "expectedFiles": 19,
+  "copied": 0,
+  "overwritten": 0,
+  "skippedExisting": 0,
+  "missingSource": 19,
+  "extraHarFiles": 0,
+  "rows": [
+    {
+      "pageKey": "billCenter-accessSetting",
+      "menu": "票据中心/取票设置",
+      "harFile": "billCenter-accessSetting.sync.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "harFile": "billCenter-invoiceVerification.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "billCenter-sign",
+      "menu": "票据中心/签收",
+      "harFile": "billCenter-sign.action-review.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "billCenter-taskManagement",
+      "menu": "票据中心/任务管理",
+      "harFile": "billCenter-taskManagement.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "downloadCenter",
+      "menu": "顶部入口/下载中心",
+      "harFile": "downloadCenter.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "platform-billIssue",
+      "menu": "销项管理/订单开票",
+      "harFile": "platform-billIssue.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "platform-redMark",
+      "menu": "销项管理/红字确认单",
+      "harFile": "platform-redMark.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "bussiness-customer",
+      "menu": "基础信息/客户管理",
+      "harFile": "bussiness-customer.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "bussiness-info",
+      "menu": "基础信息/商品信息",
+      "harFile": "bussiness-info.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "system-onlineTaxationInfo",
+      "menu": "系统设置/网上办税信息",
+      "harFile": "system-onlineTaxationInfo.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "system-departmentInfo",
+      "menu": "系统设置/部门管理",
+      "harFile": "system-departmentInfo.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "system-dept",
+      "menu": "系统设置/组织管理",
+      "harFile": "system-dept.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "system-role",
+      "menu": "系统设置/角色管理",
+      "harFile": "system-role.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "system-user",
+      "menu": "系统设置/用户管理",
+      "harFile": "system-user.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "harFile": "platform-invoiceApplication.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "harFile": "platform-scanCode.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "harFile": "platform-scanRecords.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "harFile": "bussiness-configurationManagement.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    },
+    {
+      "pageKey": "bussiness-credit",
+      "menu": "基础信息/开票额度配置",
+      "harFile": "bussiness-credit.default-list.har",
+      "sourceFile": "",
+      "sourceSize": 0,
+      "targetAlreadyExists": false,
+      "action": "missing-source"
+    }
+  ],
+  "extraHarFilesList": []
+}

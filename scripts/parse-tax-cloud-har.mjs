@@ -155,7 +155,13 @@ function classifyRisk(method, url, responseJson) {
   const combined = `${lowerUrl} ${String(interfaceCode).toLowerCase()}`;
 
   const redActionPattern = /(^|[/_.-])(red|redmark|redconfirm|redinvoice|red-letter)($|[/_.-])/;
-  if (combined.includes("issue.sync") || redActionPattern.test(combined) || combined.includes("invoiceissue")) {
+  const redReadonlyPattern = /redconfirminfo\/list|redconfirm.*\/list|redmark.*\/list/;
+  if (
+    combined.includes("issue.sync") ||
+    (redActionPattern.test(combined) && !redReadonlyPattern.test(combined)) ||
+    /redconfirm.*(issue|operate|submit|confirm|save)|redmark.*(issue|operate|submit|confirm|save)/.test(combined) ||
+    combined.includes("invoiceissue")
+  ) {
     return "L4/L3-review";
   }
   if (
@@ -169,12 +175,10 @@ function classifyRisk(method, url, responseJson) {
     return "L3-review";
   }
   if (
-    combined.includes("download") ||
+    /(^|[/_.-])(download|export|print|import|upload|restart|clearcache|delete|save|update|add|edit|operate|task)($|[/_.-])/.test(combined) ||
     combined.includes("file") ||
     combined.includes("obtain") ||
     combined.includes("check") ||
-    combined.includes("import") ||
-    combined.includes("export") ||
     combined.includes("task")
   ) {
     return "L2-review";
@@ -186,6 +190,7 @@ function classifyRisk(method, url, responseJson) {
 function isTaxCloudApi(url) {
   try {
     const parsed = new URL(url);
+    if (isLoginOrShellOnly(parsed)) return false;
     return (
       parsed.hostname === "fp.enuoyun.com" &&
       (parsed.pathname.startsWith("/prod-api/") ||
@@ -199,6 +204,24 @@ function isTaxCloudApi(url) {
   } catch {
     return false;
   }
+}
+
+function isLoginOrShellOnly(parsed) {
+  const pathname = parsed.pathname;
+  if (pathname === "/prod-api/code") return true;
+  if (pathname === "/login") return true;
+  const shellPrefixes = [
+    "/platform/",
+    "/income/",
+    "/billCenter/",
+    "/analysisBoard/",
+    "/bussiness/",
+    "/system/",
+    "/downloadCenter",
+  ];
+  // CDP captures of unauthenticated navigation can include only the SPA route
+  // document plus captcha. Those are not business API evidence.
+  return parsed.hostname === "fp.enuoyun.com" && shellPrefixes.some((prefix) => pathname === prefix.slice(0, -1) || pathname.startsWith(prefix));
 }
 
 function normalizeEntry(entry, index) {

@@ -1,0 +1,350 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/analysisBoard-goodsRateView.default-list.har",
+    "pageKey": "analysisBoard-goodsRateView",
+    "generatedAt": "2026-06-30T01:08:32.497Z",
+    "totalEntries": 2,
+    "taxCloudApiEntries": 2,
+    "byRisk": {
+      "L1-review": 2
+    },
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/prod-api/dashboard/integrated/v1/goods/statistics",
+        "status": 200,
+        "risk": "L1-review"
+      },
+      {
+        "method": "POST",
+        "path": "/prod-api/dashboard/integrated/v1/goods/statistics",
+        "status": 200,
+        "risk": "L1-review"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "index": 0,
+      "pageKey": "analysisBoard-goodsRateView",
+      "startedDateTime": "2026-06-29T10:05:34.560Z",
+      "method": "POST",
+      "url": "https://fp.enuoyun.com/prod-api/dashboard/integrated/v1/goods/statistics?_t=1782727534560",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/dashboard/integrated/v1/goods/statistics",
+      "query": {
+        "_t": "1782727534560"
+      },
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 30.889000045135617,
+      "risk": "L1-review",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "335",
+        "content-type": "application/json;charset=UTF-8",
+        "host": "fp.enuoyun.com",
+        "origin": "https://fp.enuoyun.com",
+        "referer": "https://fp.enuoyun.com/analysisBoard/goodsRateView",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "requestPostData": {
+        "mimeType": "application/json;charset=UTF-8",
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "statisticsTimeStart": "2026-05-01",
+              "statisticsTimeEnd": "2026-05-31",
+              "pageSize": 10,
+              "pageNum": 1,
+              "type": "1"
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"statisticsTimeStart\":\"2026-05-01\",\"statisticsTimeEnd\":\"2026-05-31\",\"pageSize\":10,\"pageNum\":1,\"type\":\"1\"}}}"
+      },
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Mon, 29 Jun 2026 10:05:34 GMT",
+        "server": "nginx",
+        "transfer-encoding": "chunked"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 693,
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "code": "0000",
+              "message": "OK",
+              "data": {
+                "total": 2,
+                "size": 10,
+                "current": 1,
+                "records": [
+                  {
+                    "ssflbm": "1070103000000000000",
+                    "goodsName": "焦炭及其副产品",
+                    "count": 4,
+                    "noTaxAmount": 8656371.93,
+                    "taxAmount": 1125328.35,
+                    "amountTotal": 9781700.28,
+                    "amountProportion": "0.9241"
+                  },
+                  {
+                    "ssflbm": "1080127000000000000",
+                    "goodsName": "石墨及炭素制品",
+                    "count": 1,
+                    "noTaxAmount": 711079.65,
+                    "taxAmount": 92440.35,
+                    "amountTotal": 803520,
+                    "amountProportion": "0.0759"
+                  }
+                ],
+                "pages": 1
+              },
+              "success": true
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"code\":\"0000\",\"message\":\"OK\",\"data\":{\"total\":2,\"size\":10,\"current\":1,\"records\":[{\"ssflbm\":\"1070103000000000000\",\"goodsName\":\"焦炭及其副产品\",\"count\":4,\"noTaxAmount\":8656371.93,\"taxAmount\":1125328.35,\"amountTotal\":9781700.28,\"amountProportion\":\"0.9241\"},{\"ssflbm\":\"1080127000000000000\",\"goodsName\":\"石墨及炭素制品\",\"count\":1,\"noTaxAmount\":711079.65,\"taxAmount\":92440.35,\"amountTotal\":803520,\"amountProportion\":\"0.0759\"}],\"pages\":1},\"success\":true}}}"
+      }
+    },
+    {
+      "index": 1,
+      "pageKey": "analysisBoard-goodsRateView",
+      "startedDateTime": "2026-06-29T10:05:34.561Z",
+      "method": "POST",
+      "url": "https://fp.enuoyun.com/prod-api/dashboard/integrated/v1/goods/statistics?_t=1782727534560",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/dashboard/integrated/v1/goods/statistics",
+      "query": {
+        "_t": "1782727534560"
+      },
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 35.75100004673004,
+      "risk": "L1-review",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "335",
+        "content-type": "application/json;charset=UTF-8",
+        "host": "fp.enuoyun.com",
+        "origin": "https://fp.enuoyun.com",
+        "referer": "https://fp.enuoyun.com/analysisBoard/goodsRateView",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "requestPostData": {
+        "mimeType": "application/json;charset=UTF-8",
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "statisticsTimeStart": "2026-05-01",
+              "statisticsTimeEnd": "2026-05-31",
+              "pageSize": 10,
+              "pageNum": 1,
+              "type": "0"
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"statisticsTimeStart\":\"2026-05-01\",\"statisticsTimeEnd\":\"2026-05-31\",\"pageSize\":10,\"pageNum\":1,\"type\":\"0\"}}}"
+      },
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Mon, 29 Jun 2026 10:05:34 GMT",
+        "server": "nginx",
+        "transfer-encoding": "chunked"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 2054,
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "code": "0000",
+              "message": "OK",
+              "data": {
+                "total": 24,
+                "size": 10,
+                "current": 1,
+                "records": [
+                  {
+                    "ssflbm": "1070103000000000000",
+                    "goodsName": "焦炭及其副产品",
+                    "count": 8,
+                    "noTaxAmount": 4281411.56,
+                    "taxAmount": 556583.49,
+                    "amountTotal": 4837995.05,
+                    "amountProportion": "0.7025"
+                  },
+                  {
+                    "ssflbm": "3010502000000000000",
+                    "goodsName": "无运输工具承运陆路运输业务",
+                    "count": 24,
+                    "noTaxAmount": 508959.49,
+                    "taxAmount": 45806.36,
+                    "amountTotal": 554765.85,
+                    "amountProportion": "0.0805"
+                  },
+                  {
+                    "ssflbm": "1080127000000000000",
+                    "goodsName": "石墨及炭素制品",
+                    "count": 6,
+                    "noTaxAmount": 819857.96,
+                    "taxAmount": 106581.54,
+                    "amountTotal": 926439.5,
+                    "amountProportion": "0.1345"
+                  },
+                  {
+                    "ssflbm": "2010500000000000000",
+                    "goodsName": "其他加工劳务",
+                    "count": 2,
+                    "noTaxAmount": 317568.17,
+                    "taxAmount": 40343.83,
+                    "amountTotal": 357912,
+                    "amountProportion": "0.0520"
+                  },
+                  {
+                    "ssflbm": "1080207000000000000",
+                    "goodsName": "钢材",
+                    "count": 2,
+                    "noTaxAmount": 112676.29,
+                    "taxAmount": 14647.92,
+                    "amountTotal": 127324.21,
+                    "amountProportion": "0.0185"
+                  },
+                  {
+                    "ssflbm": "1090117000000000000",
+                    "goodsName": "泵及液体提升机",
+                    "count": 1,
+                    "noTaxAmount": 7814.16,
+                    "taxAmount": 1015.84,
+                    "amountTotal": 8830,
+                    "amountProportion": "0.0013"
+                  },
+                  {
+                    "ssflbm": "1090513000000000000",
+                    "goodsName": "信息系统安全产品",
+                    "count": 1,
+                    "noTaxAmount": 22330.1,
+                    "taxAmount": 669.9,
+                    "amountTotal": 23000,
+                    "amountProportion": "0.0033"
+                  },
+                  {
+                    "ssflbm": "3040502000000000000",
+                    "goodsName": "经营租赁",
+                    "count": 3,
+                    "noTaxAmount": 15843.6,
+                    "taxAmount": 366.4,
+                    "amountTotal": 16210,
+                    "amountProportion": "0.0024"
+                  },
+                  {
+                    "ssflbm": "1090409000000000000",
+                    "goodsName": "电线电缆",
+                    "count": 2,
+                    "noTaxAmount": 2057.44,
+                    "taxAmount": 267.46,
+                    "amountTotal": 2324.9,
+                    "amountProportion": "0.0003"
+                  },
+                  {
+                    "ssflbm": "1090110000000000000",
+                    "goodsName": "焊接设备",
+                    "count": 1,
+                    "noTaxAmount": 3008.85,
+                    "taxAmount": 391.15,
+                    "amountTotal": 3400,
+                    "amountProportion": "0.0005"
+                  }
+                ],
+                "pages": 3
+              },
+              "success": true
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"code\":\"0000\",\"message\":\"OK\",\"data\":{\"total\":24,\"size\":10,\"current\":1,\"records\":[{\"ssflbm\":\"1070103000000000000\",\"goodsName\":\"焦炭及其副产品\",\"count\":8,\"noTaxAmount\":4281411.56,\"taxAmount\":556583.49,\"amountTotal\":4837995.05,\"amountProportion\":\"0.7025\"},{\"ssflbm\":\"3010502000000000000\",\"goodsName\":\"无运输工具承运陆路运输业务\",\"count\":24,\"noTaxAmount\":508959.49,\"taxAmount\":45806.36,\"amountTotal\":554765.85,\"amountProportion\":\"0.0805\"},{\"ssflbm\":\"1080127000000000000\",\"goodsName\":\"石墨及炭素制品\",\"count\":6,\"noTaxAmount\":819857.96,\"taxAmount\":106581.54,\"amountTotal\":926439.5,\"amountProportion\":\"0.1345\"},{\"ssflbm\":\"2010500000000000000\",\"goodsName\":\"其他加工劳务\",\"count\":2,\"noTaxAmount\":317568.17,\"taxAmount\":40343.83,\"amountTotal\":357912,\"amountProportion\":\"0.0520\"},{\"ssflbm\":\"1080207000000000000\",\"goodsName\":\"钢材\",\"count\":2,\"noTaxAmount\":112676.29,\"taxAmount\":14647.92,\"amountTotal\":127324.21,\"amountProportion\":\"0.0185\"},{\"ssflbm\":\"1090117000000000000\",\"goodsName\":\"泵及液体提升机\",\"count\":1,\"noTaxAmount\":7814.16,\"taxAmount\":1015.84,\"amountTotal\":8830,\"amountProportion\":\"0.0013\"},{\"ssflbm\":\"1090513000000000000\",\"goodsName\":\"信息系统安全产品\",\"count\":1,\"noTaxAmount\":22330.1,\"taxAmount\":669.9,\"amountTotal\":23000,\"amountProportion\":\"0.0033\"},{\"ssflbm\":\"3040502000000000000\",\"goodsName\":\"经营租赁\",\"count\":3,\"noTaxAmount\":15843.6,\"taxAmount\":366.4,\"amountTotal\":16210,\"amountProportion\":\"0.0024\"},{\"ssflbm\":\"10904090000..."
+      }
+    }
+  ]
+}

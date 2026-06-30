@@ -1,0 +1,570 @@
+{
+  "generatedAt": "2026-06-30T01:08:34.397Z",
+  "source": [
+    "docs/tax-cloud/TAX_CLOUD_MINIMAL_HAR_BATCH.json",
+    "docs/tax-cloud/TAX_CLOUD_INTERFACE_CROSSCHECK.json",
+    "docs/tax-cloud/TAX_CLOUD_HAR_INTAKE_VALIDATION.json"
+  ],
+  "summary": {
+    "total": 19,
+    "missing": 0,
+    "withSuccessProbe": 14
+  },
+  "queue": [
+    {
+      "pageKey": "billCenter-accessSetting",
+      "menu": "票据中心/取票设置",
+      "priority": "P1",
+      "priorityRank": 1,
+      "url": "https://fp.enuoyun.com/billCenter/accessSetting",
+      "harFile": "billCenter-accessSetting.sync.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/invoicecenter/sjruzhang/getSjruzhangSetting"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `POST /prod-api/invoicecenter/sjruzhang/getSjruzhangSetting` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "priority": "P1",
+      "priorityRank": 1,
+      "url": "https://fp.enuoyun.com/billCenter/invoiceVerification",
+      "harFile": "billCenter-invoiceVerification.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/getInvoiceCheckDetail",
+        "/prod-api/abnormalInvoice/setting",
+        "/prod-api/income/invoiceCheck/getPeriod",
+        "/prod-api/income/invoiceCheck/queryInfoList?pageNum=1&pageSize=1"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/income/invoiceCheck/queryInfoList?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "billCenter-sign",
+      "menu": "票据中心/签收",
+      "priority": "P1，高风险后置",
+      "priorityRank": 1,
+      "url": "https://fp.enuoyun.com/billCenter/sign",
+      "harFile": "billCenter-sign.action-review.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/invoicecenter/integrated/v1/invoicePool/query",
+        "/prod-api/invoicecenter/integrated/v1/invoicePool/query?pageNum=1&pageSize=1",
+        "/prod-api/inputtax/h51InputTax/statistics",
+        "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+        "/prod-api/system/backstage/getInformation"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/system/backstage/getInformation` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "billCenter-taskManagement",
+      "menu": "票据中心/任务管理",
+      "priority": "P1",
+      "priorityRank": 1,
+      "url": "https://fp.enuoyun.com/billCenter/taskManagement",
+      "harFile": "billCenter-taskManagement.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/system/taskRecord/list?pageNum=1&pageSize=1"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/system/taskRecord/list?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "downloadCenter",
+      "menu": "顶部入口/下载中心",
+      "priority": "P1",
+      "priorityRank": 1,
+      "url": "https://fp.enuoyun.com/downloadCenter",
+      "harFile": "downloadCenter.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/invoicecenter/invoiceTemplate/v1/download/template/taskId",
+        "/prod-api/income/statistics/getPeriodStatus",
+        "/prod-api/inputtax/h51InputTax/detailsQuery?pageNum=1&pageSize=1",
+        "/prod-api/invoicecenter/invoiceGoods/detailList?pageNum=1&pageSize=1"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `POST /prod-api/invoicecenter/invoiceGoods/detailList?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "platform-billIssue",
+      "menu": "销项管理/订单开票",
+      "priority": "P1",
+      "priorityRank": 1,
+      "url": "https://fp.enuoyun.com/platform/billIssue",
+      "harFile": "platform-billIssue.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/bussiness/bizBillInfo/findDraftList?pageNum=1&pageSize=1"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/bussiness/bizBillInfo/findDraftList?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "platform-redMark",
+      "menu": "销项管理/红字确认单",
+      "priority": "P1，高风险后置",
+      "priorityRank": 1,
+      "url": "https://fp.enuoyun.com/platform/redMark",
+      "harFile": "platform-redMark.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/bussiness/redConfirmInfo/list?pageNum=1&pageSize=1"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/bussiness/redConfirmInfo/list?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "bussiness-customer",
+      "menu": "基础信息/客户管理",
+      "priority": "P2",
+      "priorityRank": 2,
+      "url": "https://fp.enuoyun.com/bussiness/customer",
+      "harFile": "bussiness-customer.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/bussiness/bizCustomer/selectBizCustomerInfoOutNotList?pageNum=1&pageSize=1"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/bussiness/bizCustomer/selectBizCustomerInfoOutNotList?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "bussiness-info",
+      "menu": "基础信息/商品信息",
+      "priority": "P2",
+      "priorityRank": 2,
+      "url": "https://fp.enuoyun.com/bussiness/info",
+      "harFile": "bussiness-info.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/bussiness/bizGoodsInfo/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "system-onlineTaxationInfo",
+      "menu": "系统设置/网上办税信息",
+      "priority": "P2",
+      "priorityRank": 2,
+      "url": "https://fp.enuoyun.com/system/onlineTaxationInfo",
+      "harFile": "system-onlineTaxationInfo.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList",
+        "/prod-api/system/bizOnlineTaxInformation/getOnlineTax"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `POST /prod-api/system/bizOnlineTaxInformation/selectBizOnlineTaxInfoList` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "system-departmentInfo",
+      "menu": "系统设置/部门管理",
+      "priority": "P3",
+      "priorityRank": 3,
+      "url": "https://fp.enuoyun.com/system/departmentInfo",
+      "harFile": "system-departmentInfo.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/system/departmentInfo/list?pageNum=1&pageSize=1"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/system/departmentInfo/list?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "system-dept",
+      "menu": "系统设置/组织管理",
+      "priority": "P3",
+      "priorityRank": 3,
+      "url": "https://fp.enuoyun.com/system/dept",
+      "harFile": "system-dept.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/system/dept/list"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/system/dept/list` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "system-role",
+      "menu": "系统设置/角色管理",
+      "priority": "P3",
+      "priorityRank": 3,
+      "url": "https://fp.enuoyun.com/system/role",
+      "harFile": "system-role.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/system/role/list?pageNum=1&pageSize=1"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/system/role/list?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "system-user",
+      "menu": "系统设置/用户管理",
+      "priority": "P3",
+      "priorityRank": 3,
+      "url": "https://fp.enuoyun.com/system/user",
+      "harFile": "system-user.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 1,
+      "expectedPaths": [
+        "/prod-api/system/user/list?pageNum=1&pageSize=1"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/system/user/list?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "priority": "P1 visual-only",
+      "priorityRank": 1,
+      "url": "https://fp.enuoyun.com/platform/invoiceApplication",
+      "harFile": "platform-invoiceApplication.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 0,
+      "expectedPaths": [
+        "/prod-api/deliveryWithGoods/list?pageNum=1&pageSize=1",
+        "/prod-api/income/statistics/applyStatistics",
+        "/prod-api/income/statistics/getStatisticsResult",
+        "/prod-api/invoicecheck/check/list/deductCheck?pageNum=1&pageSize=1",
+        "/prod-api/invoicecheck/check/list/deductCheckAll?pageNum=1&pageSize=1",
+        "/prod-api/invoicecheck/check/list/nodeductCheck?pageNum=1&pageSize=1",
+        "/prod-api/statisticsGoodsRateDetail",
+        "/prod-api/statisticsInvoiceInfoQuery?pageNum=1&pageSize=1"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/deliveryWithGoods/list?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "priority": "P1",
+      "priorityRank": 1,
+      "url": "https://fp.enuoyun.com/platform/scanCode",
+      "harFile": "platform-scanCode.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 0,
+      "expectedPaths": [
+        "/prod-api/system/dict/data/getInvoiceType",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+        "/prod-api/bussiness/scanInvoice/getClientGuess",
+        "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+        "/prod-api/bussiness/scanInvoice/getClientDateByCode",
+        "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+        "/prod-api/system/aes/config/encrypt",
+        "/prod-api/system/dict/data/getInvoiceType"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/system/dict/data/getInvoiceType` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "priority": "P1",
+      "priorityRank": 1,
+      "url": "https://fp.enuoyun.com/platform/scanRecords",
+      "harFile": "platform-scanRecords.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 0,
+      "expectedPaths": [
+        "/prod-api/bussiness/scanInvoice/getClientGuess",
+        "/prod-api/bussiness/scanInvoice/getClientGuess",
+        "/prod-api/bussiness/scanInvoice/getClientDateByCode",
+        "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+        "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+        "/prod-api/system/aes/config/encrypt",
+        "/prod-api/system/dict/data/getInvoiceType"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/bussiness/scanInvoice/getClientGuess` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "priority": "P2/P3",
+      "priorityRank": 2,
+      "url": "https://fp.enuoyun.com/bussiness/configurationManagement",
+      "harFile": "bussiness-configurationManagement.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 0,
+      "expectedPaths": [
+        "/prod-api/system/config/list?pageNum=1&pageSize=1",
+        "/prod-api/system/config/list?pageNum=1&pageSize=1",
+        "/prod-api/system/config/configKey/",
+        "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+        "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+        "/prod-api/income/invoiceCheck/getPeriod"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/system/config/list?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    },
+    {
+      "pageKey": "bussiness-credit",
+      "menu": "基础信息/开票额度配置",
+      "priority": "P2",
+      "priorityRank": 2,
+      "url": "https://fp.enuoyun.com/bussiness/credit",
+      "harFile": "bussiness-credit.default-list.har",
+      "intakeStatus": "accepted",
+      "intakeRank": 9,
+      "successCount": 0,
+      "expectedPaths": [
+        "/prod-api/bussiness/creditLine/query?pageNum=1&pageSize=1",
+        "/prod-api/bussiness/credit/creditInfo/1?_t=1782781312531",
+        "/prod-api/bussiness/bizBillInfo/h5getFpdyXml"
+      ],
+      "safeAction": "进入页面后只触发查询/默认加载，Network 中确认 `GET /prod-api/bussiness/creditLine/query?pageNum=1&pageSize=1` 出现；不要点提交/保存/确认。",
+      "forbiddenActions": [
+        "保存",
+        "提交",
+        "确认",
+        "签收",
+        "红字申请/确认",
+        "真实开票",
+        "勾选认证",
+        "重启任务",
+        "导出/下载文件",
+        "删除"
+      ]
+    }
+  ]
+}

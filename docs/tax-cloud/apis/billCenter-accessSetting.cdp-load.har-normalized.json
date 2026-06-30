@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/billCenter-accessSetting.cdp-load.har",
+    "pageKey": "billCenter-accessSetting",
+    "generatedAt": "2026-06-30T01:08:32.606Z",
+    "totalEntries": 96,
+    "taxCloudApiEntries": 0,
+    "byRisk": {},
+    "endpoints": []
+  },
+  "entries": []
+}

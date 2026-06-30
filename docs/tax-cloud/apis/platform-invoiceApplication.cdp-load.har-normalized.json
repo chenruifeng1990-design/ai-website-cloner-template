@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/platform-invoiceApplication.cdp-load.har",
+    "pageKey": "platform-invoiceApplication",
+    "generatedAt": "2026-06-30T01:08:33.696Z",
+    "totalEntries": 96,
+    "taxCloudApiEntries": 0,
+    "byRisk": {},
+    "endpoints": []
+  },
+  "entries": []
+}

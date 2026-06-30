@@ -21,6 +21,15 @@ const expectedDocs = [
   "docs/tax-cloud/TAX_CLOUD_P0_DEMO_ACCEPTANCE.md",
   "docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_AND_PARSE_RUNBOOK.md",
   "docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_TASKS.md",
+  "docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_QUEUE.md",
+  "docs/tax-cloud/TAX_CLOUD_HAR_DOWNLOAD_COLLECT_REPORT.md",
+  "docs/tax-cloud/TAX_CLOUD_AUTH_READ_HAR_GENERATION.md",
+  "docs/tax-cloud/TAX_CLOUD_MINIMAL_HAR_BATCH.md",
+  "docs/tax-cloud/TAX_CLOUD_STATIC_JS_INTERFACE_EVIDENCE.md",
+  "docs/tax-cloud/TAX_CLOUD_MISSING_PAGES_LOGIN_STATE_AUDIT.md",
+  "docs/tax-cloud/TAX_CLOUD_AUTHENTICATED_READ_API_PROBE.md",
+  "docs/tax-cloud/TAX_CLOUD_STATIC_READ_CANDIDATE_PROBE.md",
+  "docs/tax-cloud/TAX_CLOUD_INTERFACE_CROSSCHECK.md",
 ];
 
 const expectedP0DemoKeys = [
@@ -130,15 +139,37 @@ for (const file of apiFiles) {
   harRows.push({
     file,
     pageKey: data?.summary?.pageKey || "",
+    isPlaceholder: Boolean(data?.summary?.placeholder),
+    evidenceMode: data?.summary?.evidenceMode,
     taxCloudApiEntries: data?.summary?.taxCloudApiEntries || 0,
     byRisk: data?.summary?.byRisk || {},
   });
+}
+
+function hasRealHarEvidence(row) {
+  if (!row.pageKey) return false;
+  if (row.isPlaceholder) return false;
+  if (row.evidenceMode === "placeholder") return false;
+  return row.taxCloudApiEntries > 0;
 }
 
 const pageLayerMissing = pageRows.filter(
   (row) => !row.raw || !row.visibleDom || !row.screenshot || !row.designReference || !row.spec,
 );
 const missingDocs = expectedDocsRows.filter((row) => !row.exists);
+const missingPagesLoginAudit = await readJson("docs/tax-cloud/TAX_CLOUD_MISSING_PAGES_LOGIN_STATE_AUDIT.json", null);
+const missingPagesLoginRows = Array.isArray(missingPagesLoginAudit?.rows) ? missingPagesLoginAudit.rows : [];
+const missingPagesLoginKeys = new Set(missingPagesLoginRows.map((row) => row.key).filter(Boolean));
+const missingPagesLoginReachable = missingPagesLoginRows.filter((row) => (row.loginSignals || []).length > 0);
+const authenticatedProbe = await readJson("docs/tax-cloud/apis/authenticated-read-probe.json", null);
+const authenticatedProbeSummary = authenticatedProbe?.summary || {};
+const authenticatedProbePageSummary = authenticatedProbe?.pageSummary || {};
+const staticReadProbe = await readJson("docs/tax-cloud/apis/static-read-candidate-probe.json", null);
+const staticReadProbeSummary = staticReadProbe?.summary || {};
+const harIntake = await readJson("docs/tax-cloud/TAX_CLOUD_HAR_INTAKE_VALIDATION.json", null);
+const harIntakeSummary = harIntake || {};
+const harCaptureTasks = await readJson("docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_TASKS.json", null);
+const minimalHarBatch = await readJson("docs/tax-cloud/TAX_CLOUD_MINIMAL_HAR_BATCH.json", null);
 function pageCoveredInText(page, text) {
   const urlPath = safePathname(page.url || "");
   return Boolean(
@@ -181,10 +212,26 @@ const p123ActionCoverageMissing = pageKeys.filter((key) => {
 });
 const missingCandidateEvidence = candidateRows.filter((row) => row.count === 0).map((row) => row.key);
 
-const totalHarPages = new Set(harRows.filter((row) => row.taxCloudApiEntries > 0).map((row) => row.pageKey)).size;
+const totalHarPages = new Set(harRows.filter((row) => hasRealHarEvidence(row)).map((row) => row.pageKey)).size;
+const realHarPageKeys = new Set(harRows.filter((row) => hasRealHarEvidence(row)).map((row) => row.pageKey));
+const totalHarPlaceholderPages = new Set(
+  harRows
+    .filter((row) => row.pageKey && !realHarPageKeys.has(row.pageKey) && (row.isPlaceholder || row.evidenceMode === "placeholder"))
+    .map((row) => row.pageKey),
+).size;
 const requiredHarPageKeys = pageKeys.filter((key) => key !== "platform-created");
 const missingHarEvidence = requiredHarPageKeys.filter(
-  (key) => !harRows.some((row) => row.pageKey === key && row.taxCloudApiEntries > 0),
+  (key) => !harRows.some((row) => row.pageKey === key && hasRealHarEvidence(row)),
+);
+const missingLoginAuditCoverage = missingHarEvidence.filter((key) => !missingPagesLoginKeys.has(key));
+const missingLoginReachability = missingHarEvidence.filter((key) => {
+  const row = missingPagesLoginRows.find((item) => item.key === key);
+  return !row || (row.loginSignals || []).length === 0;
+});
+const currentMissingAuthProbeCoverage = missingHarEvidence.filter((key) => authenticatedProbePageSummary[key]);
+const currentMissingAuthAccepted = missingHarEvidence.filter((key) => (authenticatedProbePageSummary[key]?.authAccepted || 0) > 0);
+const currentMissingTransportAccepted = missingHarEvidence.filter(
+  (key) => (authenticatedProbePageSummary[key]?.transportAccepted || 0) > 0,
 );
 
 const checks = [
@@ -233,6 +280,37 @@ const checks = [
     name: "HAR-backed real interface evidence",
     pass: missingHarEvidence.length === 0,
     evidence: `${totalHarPages}/${requiredHarPageKeys.length} non-manual pages have normalized HAR evidence`,
+  },
+  {
+    name: "Missing HAR pages login-state reachability audit",
+    pass: missingLoginAuditCoverage.length === 0 && missingLoginReachability.length === 0,
+    evidence:
+      missingLoginAuditCoverage.length === 0 && missingLoginReachability.length === 0
+        ? `${missingHarEvidence.length - missingLoginReachability.length}/${missingHarEvidence.length} current missing-HAR pages reached in logged-in Chrome`
+        : `missing audit ${missingLoginAuditCoverage.join(", ")}; missing login signals ${missingLoginReachability.join(", ")}`,
+  },
+  {
+    name: "Authenticated read API probe for missing HAR pages",
+    pass:
+      missingHarEvidence.length === 0 ||
+      (currentMissingAuthProbeCoverage.length === missingHarEvidence.length &&
+        currentMissingAuthAccepted.length >= Math.max(1, missingHarEvidence.length - 2)),
+    evidence: `${currentMissingAuthProbeCoverage.length}/${missingHarEvidence.length} current missing pages probed; ${currentMissingTransportAccepted.length} current missing pages transport accepted; ${currentMissingAuthAccepted.length} current missing pages accepted auth; historical probe scope ${authenticatedProbeSummary.pagesCovered || 0} pages`,
+  },
+  {
+    name: "Static safe-read candidate second-pass probe",
+    pass: staticReadProbeSummary.pagesCovered >= Math.max(1, (authenticatedProbeSummary.pagesCovered || 0) - (authenticatedProbeSummary.pagesWithSuccess || 0) - 1),
+    evidence: `${staticReadProbeSummary.pagesCovered || 0} pages second-pass probed; ${staticReadProbeSummary.authAccepted || 0} probes accepted auth; ${staticReadProbeSummary.success || 0} probes success; ${staticReadProbeSummary.pagesWithSuccess || 0} pages success`,
+  },
+  {
+    name: "Minimal HAR intake validation readiness",
+    pass:
+      (harIntakeSummary.accepted || 0) +
+        (harIntakeSummary.review || 0) +
+        (harIntakeSummary.missing || 0) +
+        (harIntakeSummary.invalid || 0) ===
+      (minimalHarBatch?.minimalTasks || minimalHarBatch?.missingPages || 0),
+    evidence: `${harIntakeSummary.accepted || 0} accepted; ${harIntakeSummary.review || 0} review; ${harIntakeSummary.missing || 0} missing; ${harIntakeSummary.invalid || 0} invalid`,
   },
 ];
 
@@ -288,8 +366,67 @@ ${pageRows
 |---|---:|
 | normalized HAR files | ${harRows.length} |
 | pages with HAR evidence | ${totalHarPages} |
+| pages with placeholder HAR evidence only | ${totalHarPlaceholderPages} |
 | required non-manual pages | ${requiredHarPageKeys.length} |
 | missing HAR evidence pages | ${missingHarEvidence.length} |
+
+## HAR 采集任务范围
+
+| 项目 | 数量 |
+|---|---:|
+| non-manual pages | ${harCaptureTasks?.totalPages || 0} |
+| default HAR capture tasks | ${harCaptureTasks?.totalTasks || 0} |
+| non-default / excluded candidates | ${harCaptureTasks?.totalExcludedCandidates || 0} |
+| pages with current HAR evidence | ${harCaptureTasks?.pagesWithEvidence || 0} |
+| minimal HAR batch pages | ${minimalHarBatch?.missingPages || 0} |
+| minimal HAR batch tasks | ${minimalHarBatch?.minimalTasks || 0} |
+
+## 缺 HAR 页面登录态巡检
+
+| 项目 | 数量 |
+|---|---:|
+| audit rows | ${missingPagesLoginRows.length} |
+| audit rows with login signals | ${missingPagesLoginReachable.length} |
+| current missing-HAR pages covered by audit | ${missingHarEvidence.length - missingLoginAuditCoverage.length}/${missingHarEvidence.length} |
+| current missing-HAR pages missing login signals | ${missingLoginReachability.length} |
+
+## 缺 HAR 页面已认证只读接口探测
+
+| 项目 | 数量 |
+|---|---:|
+| probes | ${authenticatedProbeSummary.probes || 0} |
+| pages covered | ${authenticatedProbeSummary.pagesCovered || 0}/${missingHarEvidence.length} |
+| pages with transport accepted | ${authenticatedProbeSummary.pagesWithTransportAccepted || 0} |
+| pages with auth accepted | ${authenticatedProbeSummary.pagesWithAuthAccepted || 0} |
+| pages with success | ${authenticatedProbeSummary.pagesWithSuccess || 0} |
+
+说明：该探测只证明当前 Chrome Session Storage 中存在可用认证态，且部分 L0/L1 查询接口可直接返回；transport accepted 只代表 HTTP 层可达，不代表业务成功。它不替代 HAR 证据，也不会让 strict audit 因此通过。
+
+## 静态只读候选二次探测
+
+| 项目 | 数量 |
+|---|---:|
+| pages covered | ${staticReadProbeSummary.pagesCovered || 0} |
+| probes | ${staticReadProbeSummary.probes || 0} |
+| probes with transport accepted | ${staticReadProbeSummary.transportAccepted || 0} |
+| probes with auth accepted | ${staticReadProbeSummary.authAccepted || 0} |
+| probes with success | ${staticReadProbeSummary.success || 0} |
+| pages with success | ${staticReadProbeSummary.pagesWithSuccess || 0} |
+
+说明：二次探测只针对基础只读探测未成功页面，从静态 JS 候选中筛选明显查询类接口；它用于缩小人工 HAR 补抓范围，不替代真实 HAR。
+
+## 最小 HAR Intake 校验
+
+| 项目 | 数量 |
+|---|---:|
+| expected HAR files | ${harIntakeSummary.expectedHarFiles || 0} |
+| files in HAR dir | ${harIntakeSummary.filesInHarDir || 0} |
+| accepted | ${harIntakeSummary.accepted || 0} |
+| review | ${harIntakeSummary.review || 0} |
+| missing | ${harIntakeSummary.missing || 0} |
+| invalid | ${harIntakeSummary.invalid || 0} |
+
+说明：intake 校验用于导入人工 HAR 后第一时间识别“缺文件、登录壳、无业务 API、高风险误采、未命中预期接口”等问题；它是 strict audit 之前的预检门。
 
 ## 候选接口证据
 
@@ -311,6 +448,15 @@ ${candidateRows
 
 \`\`\`text
 ${missingHarEvidence.length > 0 ? missingHarEvidence.join("\n") : "none"}
+\`\`\`
+
+占位符证据页面：
+
+\`\`\`text
+${harRows
+  .filter((row) => row.pageKey && !realHarPageKeys.has(row.pageKey) && (row.isPlaceholder || row.evidenceMode === "placeholder"))
+  .map((row) => `${row.pageKey}（${row.file}）`)
+  .join("\n")}
 \`\`\`
 
 ## 缺失控制文档

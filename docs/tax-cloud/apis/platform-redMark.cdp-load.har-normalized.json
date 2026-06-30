@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/platform-redMark.cdp-load.har",
+    "pageKey": "platform-redMark",
+    "generatedAt": "2026-06-30T01:08:33.852Z",
+    "totalEntries": 96,
+    "taxCloudApiEntries": 0,
+    "byRisk": {},
+    "endpoints": []
+  },
+  "entries": []
+}

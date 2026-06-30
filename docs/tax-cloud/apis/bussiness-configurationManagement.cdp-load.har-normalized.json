@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/bussiness-configurationManagement.cdp-load.har",
+    "pageKey": "bussiness-configurationManagement",
+    "generatedAt": "2026-06-30T01:08:32.803Z",
+    "totalEntries": 96,
+    "taxCloudApiEntries": 0,
+    "byRisk": {},
+    "endpoints": []
+  },
+  "entries": []
+}

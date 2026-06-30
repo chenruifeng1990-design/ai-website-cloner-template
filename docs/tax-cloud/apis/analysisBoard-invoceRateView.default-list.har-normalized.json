@@ -1,0 +1,259 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/analysisBoard-invoceRateView.default-list.har",
+    "pageKey": "analysisBoard-invoceRateView",
+    "generatedAt": "2026-06-30T01:08:32.520Z",
+    "totalEntries": 1,
+    "taxCloudApiEntries": 1,
+    "byRisk": {
+      "L1-review": 1
+    },
+    "endpoints": [
+      {
+        "method": "POST",
+        "path": "/prod-api/dashboard/integrated/v1/taxRate/statistics",
+        "status": 200,
+        "risk": "L1-review"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "index": 0,
+      "pageKey": "analysisBoard-invoceRateView",
+      "startedDateTime": "2026-06-29T09:56:07.558Z",
+      "method": "POST",
+      "url": "https://fp.enuoyun.com/prod-api/dashboard/integrated/v1/taxRate/statistics?_t=1782726967556",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/dashboard/integrated/v1/taxRate/statistics",
+      "query": {
+        "_t": "1782726967556"
+      },
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 327.8930000960827,
+      "risk": "L1-review",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "298",
+        "content-type": "application/json;charset=UTF-8",
+        "host": "fp.enuoyun.com",
+        "origin": "https://fp.enuoyun.com",
+        "referer": "https://fp.enuoyun.com/analysisBoard/invoceRateView",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "requestPostData": {
+        "mimeType": "application/json;charset=UTF-8",
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "statisticsTimeStart": "2026-05-01",
+              "statisticsTimeEnd": "2026-05-31"
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"statisticsTimeStart\":\"2026-05-01\",\"statisticsTimeEnd\":\"2026-05-31\"}}}"
+      },
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Mon, 29 Jun 2026 09:56:08 GMT",
+        "server": "nginx",
+        "transfer-encoding": "chunked"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 2898,
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "code": "0000",
+              "message": "OK",
+              "data": {
+                "cancellationList": [
+                  {
+                    "taxRate": "0.13",
+                    "count": 5,
+                    "noTaxAmount": 9367451.58,
+                    "taxAmount": 1217768.7,
+                    "amountTotal": 10585220.28,
+                    "amountProportion": "1.0000"
+                  }
+                ],
+                "incomeList": [
+                  {
+                    "taxRate": "不征税",
+                    "count": 1,
+                    "noTaxAmount": 283.5,
+                    "taxAmount": 0,
+                    "amountTotal": 283.5,
+                    "amountProportion": "0.0000"
+                  },
+                  {
+                    "taxRate": "0.01",
+                    "count": 3,
+                    "noTaxAmount": 13476.23,
+                    "taxAmount": 134.77,
+                    "amountTotal": 13611,
+                    "amountProportion": "0.0020"
+                  },
+                  {
+                    "taxRate": "0.09",
+                    "count": 25,
+                    "noTaxAmount": 512271.42,
+                    "taxAmount": 46104.43,
+                    "amountTotal": 558375.85,
+                    "amountProportion": "0.0811"
+                  },
+                  {
+                    "taxRate": "0.13",
+                    "count": 24,
+                    "noTaxAmount": 5556236.08,
+                    "taxAmount": 722310.68,
+                    "amountTotal": 6278546.76,
+                    "amountProportion": "0.9116"
+                  },
+                  {
+                    "taxRate": "0.03",
+                    "count": 4,
+                    "noTaxAmount": 32779.12,
+                    "taxAmount": 983.37,
+                    "amountTotal": 33762.49,
+                    "amountProportion": "0.0049"
+                  },
+                  {
+                    "taxRate": "0.06",
+                    "count": 3,
+                    "noTaxAmount": 2548.11,
+                    "taxAmount": 152.89,
+                    "amountTotal": 2701,
+                    "amountProportion": "0.0004"
+                  }
+                ],
+                "mergeList": [
+                  {
+                    "taxRate": "0.13",
+                    "cancellationCount": 5,
+                    "cancellationNoTaxAmount": 9367451.58,
+                    "cancellationTaxAmount": 1217768.7,
+                    "cancellationAmountProportion": "1.0000",
+                    "incomeCount": 24,
+                    "incomeNoTaxAmount": 5556236.08,
+                    "incomeTaxAmount": 722310.68,
+                    "incomeAmountProportion": "0.9116"
+                  },
+                  {
+                    "taxRate": "不征税",
+                    "cancellationCount": 0,
+                    "cancellationNoTaxAmount": 0,
+                    "cancellationTaxAmount": 0,
+                    "cancellationAmountProportion": "0",
+                    "incomeCount": 1,
+                    "incomeNoTaxAmount": 283.5,
+                    "incomeTaxAmount": 0,
+                    "incomeAmountProportion": "0.0000"
+                  },
+                  {
+                    "taxRate": "0.01",
+                    "cancellationCount": 0,
+                    "cancellationNoTaxAmount": 0,
+                    "cancellationTaxAmount": 0,
+                    "cancellationAmountProportion": "0",
+                    "incomeCount": 3,
+                    "incomeNoTaxAmount": 13476.23,
+                    "incomeTaxAmount": 134.77,
+                    "incomeAmountProportion": "0.0020"
+                  },
+                  {
+                    "taxRate": "0.09",
+                    "cancellationCount": 0,
+                    "cancellationNoTaxAmount": 0,
+                    "cancellationTaxAmount": 0,
+                    "cancellationAmountProportion": "0",
+                    "incomeCount": 25,
+                    "incomeNoTaxAmount": 512271.42,
+                    "incomeTaxAmount": 46104.43,
+                    "incomeAmountProportion": "0.0811"
+                  },
+                  {
+                    "taxRate": "0.03",
+                    "cancellationCount": 0,
+                    "cancellationNoTaxAmount": 0,
+                    "cancellationTaxAmount": 0,
+                    "cancellationAmountProportion": "0",
+                    "incomeCount": 4,
+                    "incomeNoTaxAmount": 32779.12,
+                    "incomeTaxAmount": 983.37,
+                    "incomeAmountProportion": "0.0049"
+                  },
+                  {
+                    "taxRate": "0.06",
+                    "cancellationCount": 0,
+                    "cancellationNoTaxAmount": 0,
+                    "cancellationTaxAmount": 0,
+                    "cancellationAmountProportion": "0",
+                    "incomeCount": 3,
+                    "incomeNoTaxAmount": 2548.11,
+                    "incomeTaxAmount": 152.89,
+                    "incomeAmountProportion": "0.0004"
+                  },
+                  {
+                    "taxRate": "总计",
+                    "cancellationCount": 5,
+                    "cancellationNoTaxAmount": 9367451.58,
+                    "cancellationTaxAmount": 1217768.7,
+                    "cancellationAmountProportion": "1",
+                    "incomeCount": 60,
+                    "incomeNoTaxAmount": 6117594.46,
+                    "incomeTaxAmount": 769686.14,
+                    "incomeAmountProportion": "1"
+                  }
+                ]
+              },
+              "success": true
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"code\":\"0000\",\"message\":\"OK\",\"data\":{\"cancellationList\":[{\"taxRate\":\"0.13\",\"count\":5,\"noTaxAmount\":9367451.58,\"taxAmount\":1217768.7,\"amountTotal\":10585220.28,\"amountProportion\":\"1.0000\"}],\"incomeList\":[{\"taxRate\":\"不征税\",\"count\":1,\"noTaxAmount\":283.5,\"taxAmount\":0,\"amountTotal\":283.5,\"amountProportion\":\"0.0000\"},{\"taxRate\":\"0.01\",\"count\":3,\"noTaxAmount\":13476.23,\"taxAmount\":134.77,\"amountTotal\":13611,\"amountProportion\":\"0.0020\"},{\"taxRate\":\"0.09\",\"count\":25,\"noTaxAmount\":512271.42,\"taxAmount\":46104.43,\"amountTotal\":558375.85,\"amountProportion\":\"0.0811\"},{\"taxRate\":\"0.13\",\"count\":24,\"noTaxAmount\":5556236.08,\"taxAmount\":722310.68,\"amountTotal\":6278546.76,\"amountProportion\":\"0.9116\"},{\"taxRate\":\"0.03\",\"count\":4,\"noTaxAmount\":32779.12,\"taxAmount\":983.37,\"amountTotal\":33762.49,\"amountProportion\":\"0.0049\"},{\"taxRate\":\"0.06\",\"count\":3,\"noTaxAmount\":2548.11,\"taxAmount\":152.89,\"amountTotal\":2701,\"amountProportion\":\"0.0004\"}],\"mergeList\":[{\"taxRate\":\"0.13\",\"cancellationCount\":5,\"cancellationNoTaxAmount\":9367451.58,\"cancellationTaxAmount\":1217768.7,\"cancellationAmountProportion\":\"1.0000\",\"incomeCount\":24,\"incomeNoTaxAmount\":5556236.08,\"incomeTaxAmount\":722310.68,\"incomeAmountProportion\":\"0.9116\"},{\"taxRate\":\"不征税\",\"cancellationCount\":0,\"cancellationNoTaxAmount\":0,\"cancellationTaxAmount\":0,\"cancellationAmountProportion\":\"0\",\"incomeCount\":1,\"incomeNoTaxAmount\":283.5..."
+      }
+    }
+  ]
+}

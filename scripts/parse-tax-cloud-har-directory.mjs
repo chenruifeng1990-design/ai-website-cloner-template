@@ -105,11 +105,24 @@ for (const file of files) {
     reason: "",
     taxCloudApiEntries: parsed?.summary?.taxCloudApiEntries || 0,
     byRisk: parsed?.summary?.byRisk || {},
+    summary: parsed?.summary || {},
   });
 }
 
 const parsedRows = rows.filter((row) => row.status === "parsed");
-const pagesWithEvidence = new Set(parsedRows.filter((row) => row.taxCloudApiEntries > 0).map((row) => row.pageKey));
+function isRealHarEvidence(row) {
+  if (row.status !== "parsed") return false;
+  if (row.pageKey === "platform-created") return false;
+  if (row.pageKey === "") return false;
+  if (row.summary?.placeholder || row.summary?.evidenceMode === "placeholder") return false;
+  return row.taxCloudApiEntries > 0;
+}
+const pagesWithEvidence = new Set(
+  parsedRows.filter((row) => isRealHarEvidence(row)).map((row) => row.pageKey),
+);
+const pagesWithPlaceholderEvidence = new Set(
+  parsedRows.filter((row) => row.pageKey && (row.summary?.placeholder || row.summary?.evidenceMode === "placeholder")).map((row) => row.pageKey),
+);
 const report = `# 数税云 HAR 批量解析报告
 
 生成时间：${new Date().toISOString()}
@@ -122,6 +135,8 @@ const report = `# 数税云 HAR 批量解析报告
 | parsed files | ${parsedRows.length} |
 | pages with API evidence | ${pagesWithEvidence.size} |
 | skipped/failed files | ${rows.filter((row) => row.status !== "parsed").length} |
+| placeholder evidence files | ${rows.filter((row) => row.summary?.placeholder || row.summary?.evidenceMode === "placeholder").length} |
+| pages with placeholder evidence | ${pagesWithPlaceholderEvidence.size} |
 
 ## 明细
 

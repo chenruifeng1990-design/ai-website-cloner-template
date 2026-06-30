@@ -1,0 +1,751 @@
+{
+  "generatedAt": "2026-06-30T01:02:01.238Z",
+  "source": "Static JS safe-read candidates plus current Chrome Session Storage token; token used in memory only and omitted from output.",
+  "scope": {
+    "targetPages": [
+      "billCenter-invoiceVerification",
+      "billCenter-sign",
+      "downloadCenter",
+      "platform-invoiceApplication",
+      "platform-scanCode",
+      "platform-scanRecords",
+      "bussiness-configurationManagement",
+      "bussiness-credit"
+    ],
+    "safety": "Only endpoints with query/list/select/get/find/detail/statistics/status/config/setting/info/guess/search names; action-like endpoints are excluded."
+  },
+  "summary": {
+    "pagesCovered": 8,
+    "probes": 46,
+    "transportAccepted": 41,
+    "authAccepted": 41,
+    "success": 3,
+    "pagesWithSuccess": 3
+  },
+  "pageSummary": {
+    "billCenter-invoiceVerification": {
+      "probes": 6,
+      "transportAccepted": 4,
+      "authAccepted": 4,
+      "success": 1
+    },
+    "billCenter-sign": {
+      "probes": 4,
+      "transportAccepted": 4,
+      "authAccepted": 4,
+      "success": 1
+    },
+    "downloadCenter": {
+      "probes": 3,
+      "transportAccepted": 3,
+      "authAccepted": 3,
+      "success": 1
+    },
+    "platform-invoiceApplication": {
+      "probes": 8,
+      "transportAccepted": 7,
+      "authAccepted": 7,
+      "success": 0
+    },
+    "platform-scanCode": {
+      "probes": 8,
+      "transportAccepted": 8,
+      "authAccepted": 8,
+      "success": 0
+    },
+    "platform-scanRecords": {
+      "probes": 8,
+      "transportAccepted": 8,
+      "authAccepted": 8,
+      "success": 0
+    },
+    "bussiness-configurationManagement": {
+      "probes": 8,
+      "transportAccepted": 6,
+      "authAccepted": 6,
+      "success": 0
+    },
+    "bussiness-credit": {
+      "probes": 1,
+      "transportAccepted": 1,
+      "authAccepted": 1,
+      "success": 0
+    }
+  },
+  "results": [
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "method": "GET",
+      "path": "/prod-api/invoicecheck/check/list/thirdPlatform/dataList?pageNum=1&pageSize=1",
+      "httpStatus": 404,
+      "topLevelKeys": [
+        "timestamp",
+        "status",
+        "error",
+        "path"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "method": "GET",
+      "path": "/prod-api/invoicecheck/check/list/thirdPlatform/getData?pageNum=1&pageSize=1",
+      "httpStatus": 404,
+      "topLevelKeys": [
+        "timestamp",
+        "status",
+        "error",
+        "path"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "method": "GET",
+      "path": "/prod-api/getInvoiceCheckDetail",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "404 NOT_FOUND",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "method": "GET",
+      "path": "/prod-api/abnormalInvoice/setting",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "404 NOT_FOUND",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "method": "GET",
+      "path": "/prod-api/income/invoiceCheck/getPeriod",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "method": "GET",
+      "path": "/prod-api/income/invoiceCheck/queryInfoList?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "查询成功",
+      "topLevelKeys": [
+        "total",
+        "rows",
+        "code",
+        "msg",
+        "totalFreeAmount",
+        "totalTax",
+        "totalKdkTax",
+        "totalDkNumber",
+        "totalBdkNumber",
+        "totalNumber"
+      ],
+      "dataKeys": [],
+      "rowCount": 0,
+      "total": 0
+    },
+    {
+      "pageKey": "billCenter-sign",
+      "menu": "票据中心/签收",
+      "method": "GET",
+      "path": "/prod-api/invoicecenter/integrated/v1/invoicePool/query?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "billCenter-sign",
+      "menu": "票据中心/签收",
+      "method": "GET",
+      "path": "/prod-api/inputtax/h51InputTax/statistics",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "Request method 'GET' not supported",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "billCenter-sign",
+      "menu": "票据中心/签收",
+      "method": "GET",
+      "path": "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "billCenter-sign",
+      "menu": "票据中心/签收",
+      "method": "GET",
+      "path": "/prod-api/system/backstage/getInformation",
+      "httpStatus": 200,
+      "code": 200,
+      "msg": "success",
+      "topLevelKeys": [
+        "msg",
+        "code",
+        "data"
+      ],
+      "dataKeys": [
+        "bankAccount",
+        "declareRegisterStatus",
+        "linkPhone",
+        "oilEnterprises",
+        "invoiceSystemFlag",
+        "deptId",
+        "orderOrigin",
+        "bankName",
+        "taxRegisterStatus",
+        "linkMan",
+        "taxName",
+        "electricEnterprises"
+      ]
+    },
+    {
+      "pageKey": "downloadCenter",
+      "menu": "顶部入口/下载中心",
+      "method": "GET",
+      "path": "/prod-api/income/statistics/getPeriodStatus",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "downloadCenter",
+      "menu": "顶部入口/下载中心",
+      "method": "GET",
+      "path": "/prod-api/inputtax/h51InputTax/detailsQuery?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "Request method 'GET' not supported",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "downloadCenter",
+      "menu": "顶部入口/下载中心",
+      "method": "POST",
+      "path": "/prod-api/invoicecenter/invoiceGoods/detailList?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": "0000",
+      "topLevelKeys": [
+        "code",
+        "message",
+        "data",
+        "success"
+      ],
+      "dataKeys": [
+        "goodsList",
+        "total",
+        "amount",
+        "taxAmount"
+      ]
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "method": "GET",
+      "path": "/prod-api/income/blackPageZfYrzDetail",
+      "httpStatus": 404,
+      "topLevelKeys": [
+        "timestamp",
+        "status",
+        "error",
+        "path"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "method": "GET",
+      "path": "/prod-api/income/statistics/applyStatistics",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "申请标志不能为空",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "method": "GET",
+      "path": "/prod-api/income/statistics/getStatisticsResult",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "税款所属期不能为空",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "method": "GET",
+      "path": "/prod-api/invoicecheck/check/list/deductCheck?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "method": "GET",
+      "path": "/prod-api/invoicecheck/check/list/deductCheckAll?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "method": "GET",
+      "path": "/prod-api/invoicecheck/check/list/nodeductCheck?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "method": "GET",
+      "path": "/prod-api/statisticsGoodsRateDetail",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "404 NOT_FOUND",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "method": "GET",
+      "path": "/prod-api/statisticsInvoiceInfoQuery?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "404 NOT_FOUND",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getClientGuess",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "method": "GET",
+      "path": "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getClientDateByCode",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "method": "GET",
+      "path": "/prod-api/system/aes/config/encrypt",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "method": "GET",
+      "path": "/prod-api/system/dict/data/getInvoiceType",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getClientGuess",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getClientDateByCode",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "method": "GET",
+      "path": "/prod-api/bussiness/bizGoodsInfo/h5/selectBizGoodsInfoOuterList?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "method": "GET",
+      "path": "/prod-api/system/aes/config/encrypt",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "method": "GET",
+      "path": "/prod-api/system/dict/data/getInvoiceType",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "method": "GET",
+      "path": "/prod-api/system/config/list?pageNum=1&pageSize=1",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "没有权限，请联系管理员授权",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "method": "GET",
+      "path": "/prod-api/system/config/configKey/",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "method": "GET",
+      "path": "/prod-api/bussiness/configurationManagement",
+      "httpStatus": 404,
+      "topLevelKeys": [
+        "timestamp",
+        "status",
+        "error",
+        "path"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getOuterPdfBase64",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceBillInfo",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "method": "GET",
+      "path": "/prod-api/bussiness/scanInvoice/getScanInvoiceInfo",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "内部服务器错误",
+      "topLevelKeys": [
+        "code",
+        "msg"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "method": "GET",
+      "path": "/prod-api/income/blackPageDzswjYrzDetail",
+      "httpStatus": 404,
+      "topLevelKeys": [
+        "timestamp",
+        "status",
+        "error",
+        "path"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "method": "GET",
+      "path": "/prod-api/income/invoiceCheck/getPeriod",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    },
+    {
+      "pageKey": "bussiness-credit",
+      "menu": "基础信息/开票额度配置",
+      "method": "GET",
+      "path": "/prod-api/bussiness/bizBillInfo/h5getFpdyXml",
+      "httpStatus": 200,
+      "code": 500,
+      "msg": "参数异常!",
+      "topLevelKeys": [
+        "msg",
+        "code"
+      ],
+      "dataKeys": []
+    }
+  ]
+}

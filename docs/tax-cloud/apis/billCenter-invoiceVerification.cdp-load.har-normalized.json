@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/billCenter-invoiceVerification.cdp-load.har",
+    "pageKey": "billCenter-invoiceVerification",
+    "generatedAt": "2026-06-30T01:08:32.671Z",
+    "totalEntries": 96,
+    "taxCloudApiEntries": 0,
+    "byRisk": {},
+    "endpoints": []
+  },
+  "entries": []
+}

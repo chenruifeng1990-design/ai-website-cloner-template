@@ -1,0 +1,57 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/platform-scanRecords.default-list.har",
+    "pageKey": "platform-scanRecords",
+    "generatedAt": "2026-06-30T01:08:33.961Z",
+    "totalEntries": 1,
+    "taxCloudApiEntries": 1,
+    "byRisk": {
+      "L0-candidate": 1
+    },
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/prod-api/bussiness/scanInvoice/getClientGuess",
+        "status": 200,
+        "risk": "L0-candidate"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "index": 0,
+      "pageKey": "platform-scanRecords",
+      "startedDateTime": "2026-06-30T01:07:39.882Z",
+      "method": "GET",
+      "url": "https://fp.enuoyun.com/prod-api/bussiness/scanInvoice/getClientGuess",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/bussiness/scanInvoice/getClientGuess",
+      "query": {},
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 13,
+      "risk": "L0-candidate",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "x-tax-cloud-evidence": "authenticated-read"
+      },
+      "requestPostData": null,
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-length": "42",
+        "content-type": "application/json",
+        "date": "Tue, 30 Jun 2026 01:12:06 GMT"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 42,
+        "json": {
+          "code": 500,
+          "msg": "内部服务器错误"
+        },
+        "textPreview": "{\"code\":500,\"msg\":\"内部服务器错误\"}"
+      }
+    }
+  ]
+}

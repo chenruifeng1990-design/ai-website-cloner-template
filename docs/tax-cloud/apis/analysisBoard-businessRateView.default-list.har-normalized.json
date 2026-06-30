@@ -1,0 +1,532 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/analysisBoard-businessRateView.default-list.har",
+    "pageKey": "analysisBoard-businessRateView",
+    "generatedAt": "2026-06-30T01:08:32.474Z",
+    "totalEntries": 3,
+    "taxCloudApiEntries": 3,
+    "byRisk": {
+      "L0-candidate": 1,
+      "L1-review": 2
+    },
+    "endpoints": [
+      {
+        "method": "GET",
+        "path": "/prod-api/system/dept/loginDept",
+        "status": 200,
+        "risk": "L0-candidate"
+      },
+      {
+        "method": "POST",
+        "path": "/prod-api/dashboard/integrated/v1/enterprise/statistics",
+        "status": 200,
+        "risk": "L1-review"
+      },
+      {
+        "method": "POST",
+        "path": "/prod-api/dashboard/integrated/v1/enterprise/statistics",
+        "status": 200,
+        "risk": "L1-review"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "index": 0,
+      "pageKey": "analysisBoard-businessRateView",
+      "startedDateTime": "2026-06-29T09:58:06.004Z",
+      "method": "GET",
+      "url": "https://fp.enuoyun.com/prod-api/system/dept/loginDept?_t=1782727086000",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/system/dept/loginDept",
+      "query": {
+        "_t": "1782727086000"
+      },
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 24.49799980968237,
+      "risk": "L0-candidate",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "connection": "keep-alive",
+        "host": "fp.enuoyun.com",
+        "referer": "https://fp.enuoyun.com/analysisBoard/businessRateView",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "requestPostData": null,
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Mon, 29 Jun 2026 09:58:06 GMT",
+        "server": "nginx",
+        "transfer-encoding": "chunked"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 1056,
+        "json": {
+          "code": 200,
+          "msg": null,
+          "data": {
+            "searchValue": null,
+            "createBy": "邯郸",
+            "createTime": "2026-06-23 13:24:47",
+            "updateBy": "",
+            "updateTime": null,
+            "remark": null,
+            "menuId": null,
+            "params": {},
+            "deptId": 129850,
+            "parentId": 1,
+            "ancestors": "0,1",
+            "deptName": "邯郸市聚兴碳素有限公司",
+            "orderNum": 0,
+            "leader": null,
+            "phone": null,
+            "email": null,
+            "invoiceSystemFlag": null,
+            "status": "0",
+            "delFlag": "0",
+            "taxNum": "911304240774969489",
+            "deptType": "0",
+            "taxType": "0",
+            "registerAddress": "成安县辛义乡大郭庄村东",
+            "linkMan": "13931067368",
+            "bankName": "中国银行股份有限公司成安支行",
+            "bankAccount": "101130063760",
+            "linkName": null,
+            "linkPhone": null,
+            "linkEmail": null,
+            "authCode": "QY00072142",
+            "selectCondition": null,
+            "petroleumFlag": "0",
+            "deptCode": "01",
+            "taxName": "邯郸市聚兴碳素有限公司",
+            "parentName": null,
+            "certMode": null,
+            "certPassword": null,
+            "billingCode": null,
+            "acquiringFirm": "0",
+            "electricEnterprises": null,
+            "orderSheetsNum": 0,
+            "usedSheetsNum": 0,
+            "canBeCheckedNum": 0,
+            "distributorId": "100,200,205",
+            "distributorName": null,
+            "sysKpms": null,
+            "companyCode": null,
+            "children": []
+          }
+        },
+        "textPreview": "{\"code\":200,\"msg\":null,\"data\":{\"searchValue\":null,\"createBy\":\"邯郸\",\"createTime\":\"2026-06-23 13:24:47\",\"updateBy\":\"\",\"updateTime\":null,\"remark\":null,\"menuId\":null,\"params\":{},\"deptId\":129850,\"parentId\":1,\"ancestors\":\"0,1\",\"deptName\":\"邯郸市聚兴碳素有限公司\",\"orderNum\":0,\"leader\":null,\"phone\":null,\"email\":null,\"invoiceSystemFlag\":null,\"status\":\"0\",\"delFlag\":\"0\",\"taxNum\":\"911304240774969489\",\"deptType\":\"0\",\"taxType\":\"0\",\"registerAddress\":\"成安县辛义乡大郭庄村东\",\"linkMan\":\"13931067368\",\"bankName\":\"中国银行股份有限公司成安支行\",\"bankAccount\":\"101130063760\",\"linkName\":null,\"linkPhone\":null,\"linkEmail\":null,\"authCode\":\"QY00072142\",\"selectCondition\":null,\"petroleumFlag\":\"0\",\"deptCode\":\"01\",\"taxName\":\"邯郸市聚兴碳素有限公司\",\"parentName\":null,\"certMode\":null,\"certPassword\":null,\"billingCode\":null,\"acquiringFirm\":\"0\",\"electricEnterprises\":null,\"orderSheetsNum\":0,\"usedSheetsNum\":0,\"canBeCheckedNum\":0,\"distributorId\":\"100,200,205\",\"distributorName\":null,\"sysKpms\":null,\"companyCode\":null,\"children\":[]}}"
+      }
+    },
+    {
+      "index": 1,
+      "pageKey": "analysisBoard-businessRateView",
+      "startedDateTime": "2026-06-29T09:58:06.032Z",
+      "method": "POST",
+      "url": "https://fp.enuoyun.com/prod-api/dashboard/integrated/v1/enterprise/statistics?_t=1782727086031",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/dashboard/integrated/v1/enterprise/statistics",
+      "query": {
+        "_t": "1782727086031"
+      },
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 55.62899983488023,
+      "risk": "L1-review",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "335",
+        "content-type": "application/json;charset=UTF-8",
+        "host": "fp.enuoyun.com",
+        "origin": "https://fp.enuoyun.com",
+        "referer": "https://fp.enuoyun.com/analysisBoard/businessRateView",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "requestPostData": {
+        "mimeType": "application/json;charset=UTF-8",
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "statisticsTimeStart": "2026-05-01",
+              "statisticsTimeEnd": "2026-05-31",
+              "pageSize": 20,
+              "pageNum": 1,
+              "type": "0"
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"statisticsTimeStart\":\"2026-05-01\",\"statisticsTimeEnd\":\"2026-05-31\",\"pageSize\":20,\"pageNum\":1,\"type\":\"0\"}}}"
+      },
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Mon, 29 Jun 2026 09:58:06 GMT",
+        "server": "nginx",
+        "transfer-encoding": "chunked"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 3790,
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "code": "0000",
+              "message": "OK",
+              "data": {
+                "total": 30,
+                "size": 10,
+                "current": 1,
+                "records": [
+                  {
+                    "enterpriseTax": "91371625MA95ALRM1K",
+                    "enterpriseName": "山东鑫源新材料有限公司",
+                    "count": "2",
+                    "noTaxAmount": 2462598.58,
+                    "taxAmount": 320137.82,
+                    "totalAmount": 2782736.4
+                  },
+                  {
+                    "enterpriseTax": "91120116MA06KX8L4K",
+                    "enterpriseName": "天津盛源新材料科技有限公司",
+                    "count": "1",
+                    "noTaxAmount": 845415.62,
+                    "taxAmount": 109904.03,
+                    "totalAmount": 955319.65
+                  },
+                  {
+                    "enterpriseTax": "91130423693462717L",
+                    "enterpriseName": "临漳县墨龙碳素有限公司",
+                    "count": "1",
+                    "noTaxAmount": 559107.08,
+                    "taxAmount": 72683.92,
+                    "totalAmount": 631791
+                  },
+                  {
+                    "enterpriseTax": "91140100083728338B",
+                    "enterpriseName": "山西贵恩博信息科技有限公司",
+                    "count": "23",
+                    "noTaxAmount": 462875.09,
+                    "taxAmount": 41658.76,
+                    "totalAmount": 504533.85
+                  },
+                  {
+                    "enterpriseTax": "91211404MA0XKUK13A",
+                    "enterpriseName": "葫芦岛市宏远碳素有限公司",
+                    "count": "1",
+                    "noTaxAmount": 429239.66,
+                    "taxAmount": 55801.14,
+                    "totalAmount": 485040.8
+                  },
+                  {
+                    "enterpriseTax": "91130424MAD95W3K67",
+                    "enterpriseName": "河北郸炭新材料有限公司",
+                    "count": "3",
+                    "noTaxAmount": 342003.98,
+                    "taxAmount": 44460.52,
+                    "totalAmount": 386464.5
+                  },
+                  {
+                    "enterpriseTax": "91371102MA7LCTUT15",
+                    "enterpriseName": "日照恒桥能源有限公司",
+                    "count": "1",
+                    "noTaxAmount": 313792.92,
+                    "taxAmount": 40793.08,
+                    "totalAmount": 354586
+                  },
+                  {
+                    "enterpriseTax": "91370523567705642U",
+                    "enterpriseName": "东营启德新材料有限公司",
+                    "count": "3",
+                    "noTaxAmount": 294785.13,
+                    "taxAmount": 38322.07,
+                    "totalAmount": 333107.2
+                  },
+                  {
+                    "enterpriseTax": "91130424MADJT7UT3F",
+                    "enterpriseName": "河北星源新材料有限公司",
+                    "count": "1",
+                    "noTaxAmount": 102903.54,
+                    "taxAmount": 13377.46,
+                    "totalAmount": 116281
+                  },
+                  {
+                    "enterpriseTax": "91130402MA7B1CJ41Y",
+                    "enterpriseName": "邯郸市硕洲贸易有限公司",
+                    "count": "1",
+                    "noTaxAmount": 72657.48,
+                    "taxAmount": 9445.48,
+                    "totalAmount": 82102.96
+                  },
+                  {
+                    "enterpriseTax": "91210403MADAQXTX62",
+                    "enterpriseName": "辽宁中碳新材料有限公司",
+                    "count": "1",
+                    "noTaxAmount": 61157.52,
+                    "taxAmount": 7950.48,
+                    "totalAmount": 69108
+                  },
+                  {
+                    "enterpriseTax": "91130404MA0ECPNF22",
+                    "enterpriseName": "邯郸市友谊通物流有限公司",
+                    "count": "1",
+                    "noTaxAmount": 46084.4,
+                    "taxAmount": 4147.6,
+                    "totalAmount": 50232
+                  },
+                  {
+                    "enterpriseTax": "91130402061672898E",
+                    "enterpriseName": "邯郸市鼎通彩钢板制造有限公司",
+                    "count": "1",
+                    "noTaxAmount": 40018.81,
+                    "taxAmount": 5202.44,
+                    "totalAmount": 45221.25
+                  },
+                  {
+                    "enterpriseTax": "91130405MABP7EB9X3",
+                    "enterpriseName": "邯郸大潮智能科技有限公司",
+                    "count": "1",
+                    "noTaxAmount": 22330.1,
+                    "taxAmount": 669.9,
+                    "totalAmount": 23000
+                  },
+                  {
+                    "enterpriseTax": "91130424MA0801672J",
+                    "enterpriseName": "邯郸市永易电气设备有限公司",
+                    "count": "1",
+                    "noTaxAmount": 12872.57,
+                    "taxAmount": 1673.43,
+                    "totalAmount": 14546
+                  },
+                  {
+                    "enterpriseTax": "91130424MA07L99A1M",
+                    "enterpriseName": "国网河北省电力有限公司成安县供电分公司",
+                    "count": "2",
+                    "noTaxAmount": 10544.88,
+                    "taxAmount": 1333.98,
+                    "totalAmount": 11878.86
+                  },
+                  {
+                    "enterpriseTax": "91511523083383624Q",
+                    "enterpriseName": "江安百合物流有限公司",
+                    "count": "2",
+                    "noTaxAmount": 10398.06,
+                    "taxAmount": 311.94,
+                    "totalAmount": 10710
+                  },
+                  {
+                    "enterpriseTax": "130423198810301254",
+                    "enterpriseName": "王建国",
+                    "count": "1",
+                    "noTaxAmount": 7833.66,
+                    "taxAmount": 78.34,
+                    "totalAmount": 7912
+                  },
+                  {
+                    "enterpriseTax": "91130492MA0G9QJW4J",
+                    "enterpriseName": "邯郸市双宇贸易有限公司",
+                    "count": "1",
+                    "noTaxAmount": 6355.75,
+                    "taxAmount": 826.25,
+                    "totalAmount": 7182
+                  },
+                  {
+                    "enterpriseTax": "91130424MAC304CJ49",
+                    "enterpriseName": "邯郸冀鹏机械租赁有限公司",
+                    "count": "1",
+                    "noTaxAmount": 5445.54,
+                    "taxAmount": 54.46,
+                    "totalAmount": 5500
+                  }
+                ],
+                "pages": 3
+              },
+              "success": true
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"code\":\"0000\",\"message\":\"OK\",\"data\":{\"total\":30,\"size\":10,\"current\":1,\"records\":[{\"enterpriseTax\":\"91371625MA95ALRM1K\",\"enterpriseName\":\"山东鑫源新材料有限公司\",\"count\":\"2\",\"noTaxAmount\":2462598.58,\"taxAmount\":320137.82,\"totalAmount\":2782736.4},{\"enterpriseTax\":\"91120116MA06KX8L4K\",\"enterpriseName\":\"天津盛源新材料科技有限公司\",\"count\":\"1\",\"noTaxAmount\":845415.62,\"taxAmount\":109904.03,\"totalAmount\":955319.65},{\"enterpriseTax\":\"91130423693462717L\",\"enterpriseName\":\"临漳县墨龙碳素有限公司\",\"count\":\"1\",\"noTaxAmount\":559107.08,\"taxAmount\":72683.92,\"totalAmount\":631791},{\"enterpriseTax\":\"91140100083728338B\",\"enterpriseName\":\"山西贵恩博信息科技有限公司\",\"count\":\"23\",\"noTaxAmount\":462875.09,\"taxAmount\":41658.76,\"totalAmount\":504533.85},{\"enterpriseTax\":\"91211404MA0XKUK13A\",\"enterpriseName\":\"葫芦岛市宏远碳素有限公司\",\"count\":\"1\",\"noTaxAmount\":429239.66,\"taxAmount\":55801.14,\"totalAmount\":485040.8},{\"enterpriseTax\":\"91130424MAD95W3K67\",\"enterpriseName\":\"河北郸炭新材料有限公司\",\"count\":\"3\",\"noTaxAmount\":342003.98,\"taxAmount\":44460.52,\"totalAmount\":386464.5},{\"enterpriseTax\":\"91371102MA7LCTUT15\",\"enterpriseName\":\"日照恒桥能源有限公司\",\"count\":\"1\",\"noTaxAmount\":313792.92,\"taxAmount\":40793.08,\"totalAmount\":354586},{\"enterpriseTax\":\"91370523567705642U\",\"enterpriseName\":\"东营启德新材料有限公司\",\"count\":\"3\",\"noTaxAmount\":294785.13,\"taxAmount\":38322.07,\"totalAmount\":333107.2},{\"enterpriseTax\":\"91130424MADJT7UT3F\",\"enterpriseName\":\"河北星源新材料有限公司\",\"count\":\"1\",\"no..."
+      }
+    },
+    {
+      "index": 2,
+      "pageKey": "analysisBoard-businessRateView",
+      "startedDateTime": "2026-06-29T09:58:06.107Z",
+      "method": "POST",
+      "url": "https://fp.enuoyun.com/prod-api/dashboard/integrated/v1/enterprise/statistics?_t=1782727086105",
+      "host": "fp.enuoyun.com",
+      "path": "/prod-api/dashboard/integrated/v1/enterprise/statistics",
+      "query": {
+        "_t": "1782727086105"
+      },
+      "status": 200,
+      "statusText": "OK",
+      "timeMs": 45.32400006428361,
+      "risk": "L1-review",
+      "requestHeaders": {
+        "accept": "application/json, text/plain, */*",
+        "accept-encoding": "gzip, deflate, br, zstd",
+        "accept-language": "zh-CN,zh;q=0.9",
+        "connection": "keep-alive",
+        "content-length": "335",
+        "content-type": "application/json;charset=UTF-8",
+        "host": "fp.enuoyun.com",
+        "origin": "https://fp.enuoyun.com",
+        "referer": "https://fp.enuoyun.com/analysisBoard/businessRateView",
+        "sec-fetch-dest": "empty",
+        "sec-fetch-mode": "cors",
+        "sec-fetch-site": "same-origin",
+        "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36",
+        "sec-ch-ua": "\"Google Chrome\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"",
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": "\"macOS\""
+      },
+      "requestPostData": {
+        "mimeType": "application/json;charset=UTF-8",
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "statisticsTimeStart": "2026-05-01",
+              "statisticsTimeEnd": "2026-05-31",
+              "pageSize": 20,
+              "pageNum": 1,
+              "type": "1"
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"statisticsTimeStart\":\"2026-05-01\",\"statisticsTimeEnd\":\"2026-05-31\",\"pageSize\":20,\"pageNum\":1,\"type\":\"1\"}}}"
+      },
+      "responseHeaders": {
+        "access-control-allow-origin": "*.enuoyun.com",
+        "connection": "keep-alive",
+        "content-type": "application/json",
+        "date": "Mon, 29 Jun 2026 09:58:06 GMT",
+        "server": "nginx",
+        "transfer-encoding": "chunked"
+      },
+      "response": {
+        "mimeType": "application/json",
+        "size": 883,
+        "json": {
+          "header": {
+            "version": "",
+            "terminalCode": "0",
+            "requestUserType": "0",
+            "deviceId": "",
+            "interfaceCode": "",
+            "tradeSeq": "",
+            "requestTime": ""
+          },
+          "data": {
+            "zipCode": "0",
+            "encryptCode": "1",
+            "hashType": "",
+            "signature": "",
+            "symmetricKey": "",
+            "content": {
+              "code": "0000",
+              "message": "OK",
+              "data": {
+                "total": 3,
+                "size": 10,
+                "current": 1,
+                "records": [
+                  {
+                    "enterpriseTax": "915115007422756018",
+                    "enterpriseName": "四川屏山天原钛业股份有限公司",
+                    "count": "2",
+                    "noTaxAmount": 6228318.58,
+                    "taxAmount": 809681.42,
+                    "totalAmount": 7038000
+                  },
+                  {
+                    "enterpriseTax": "91211300791572581J",
+                    "enterpriseName": "朝阳金达钛业股份有限公司",
+                    "count": "1",
+                    "noTaxAmount": 1909877.24,
+                    "taxAmount": 248284.04,
+                    "totalAmount": 2158161.28
+                  },
+                  {
+                    "enterpriseTax": "91120116MA07ADY0XJ",
+                    "enterpriseName": "天津诚信新能源技术有限公司",
+                    "count": "2",
+                    "noTaxAmount": 1229255.76,
+                    "taxAmount": 159803.24,
+                    "totalAmount": 1389059
+                  }
+                ],
+                "pages": 1
+              },
+              "success": true
+            }
+          }
+        },
+        "textPreview": "{\"header\":{\"version\":\"\",\"terminalCode\":\"0\",\"requestUserType\":\"0\",\"deviceId\":\"\",\"interfaceCode\":\"\",\"tradeSeq\":\"\",\"requestTime\":\"\"},\"data\":{\"zipCode\":\"0\",\"encryptCode\":\"1\",\"hashType\":\"\",\"signature\":\"\",\"symmetricKey\":\"\",\"content\":{\"code\":\"0000\",\"message\":\"OK\",\"data\":{\"total\":3,\"size\":10,\"current\":1,\"records\":[{\"enterpriseTax\":\"915115007422756018\",\"enterpriseName\":\"四川屏山天原钛业股份有限公司\",\"count\":\"2\",\"noTaxAmount\":6228318.58,\"taxAmount\":809681.42,\"totalAmount\":7038000},{\"enterpriseTax\":\"91211300791572581J\",\"enterpriseName\":\"朝阳金达钛业股份有限公司\",\"count\":\"1\",\"noTaxAmount\":1909877.24,\"taxAmount\":248284.04,\"totalAmount\":2158161.28},{\"enterpriseTax\":\"91120116MA07ADY0XJ\",\"enterpriseName\":\"天津诚信新能源技术有限公司\",\"count\":\"2\",\"noTaxAmount\":1229255.76,\"taxAmount\":159803.24,\"totalAmount\":1389059}],\"pages\":1},\"success\":true}}}"
+      }
+    }
+  ]
+}

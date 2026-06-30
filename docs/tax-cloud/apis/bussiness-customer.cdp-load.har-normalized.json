@@ -1,0 +1,12 @@
+{
+  "summary": {
+    "sourceHar": "docs/tax-cloud/network-har/bussiness-customer.cdp-load.har",
+    "pageKey": "bussiness-customer",
+    "generatedAt": "2026-06-30T01:08:32.889Z",
+    "totalEntries": 96,
+    "taxCloudApiEntries": 0,
+    "byRisk": {},
+    "endpoints": []
+  },
+  "entries": []
+}

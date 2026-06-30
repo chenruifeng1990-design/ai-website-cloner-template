@@ -1,0 +1,4811 @@
+{
+  "generatedAt": "2026-06-30T00:02:28.168Z",
+  "count": 19,
+  "rows": [
+    {
+      "key": "platform-scanCode",
+      "menu": "销项管理/扫码开票",
+      "targetUrl": "https://fp.enuoyun.com/platform/scanCode",
+      "finalUrl": "https://fp.enuoyun.com/platform/scanCode",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "添加明细行",
+        "确定",
+        "打印二维码",
+        "发送链接",
+        "复制链接",
+        "取 消",
+        "确 定",
+        "取 消",
+        "确 定",
+        "重新导入",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "普通开具"
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "数电票（普通发票）"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入内容",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "1"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "0"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [],
+      "textSample": "销项管理 手工开票 扫码开票 扫码记录 开票记录 订单开票 开票申请单 红字确认单 进项管理 票据中心 分析看板 基础信息 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 特定要素 发票种类 开票金额 元 折扣金额 元 单价 数量 商品名称 规格型号 添加明细行 订单编号 备注信息 填入发票备注栏 不填入发票备注栏 确定 小票预览 二维码 暂无 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "platform-scanRecords",
+      "menu": "销项管理/扫码记录",
+      "targetUrl": "https://fp.enuoyun.com/platform/scanRecords",
+      "finalUrl": "https://fp.enuoyun.com/platform/scanRecords",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "查询",
+        "重置",
+        "展开",
+        "批量失效",
+        "批量开票",
+        "确 定",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "开始日期",
+          "type": "text",
+          "value": "2026-06-28"
+        },
+        {
+          "placeholder": "结束日期",
+          "type": "text",
+          "value": "2026-06-30"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "近三天"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "近一周"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "本月"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "上月"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "近一年"
+        },
+        {
+          "placeholder": "请输入发票抬头",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择开票员",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入订单编号",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "10条/页"
+        },
+        {
+          "placeholder": "",
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "批量失效",
+        "批量开票",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "发票种类 生成时间 订单编号 含税金额 发票抬头 状态"
+        },
+        {
+          "rows": 0,
+          "text": ""
+        },
+        {
+          "rows": 1,
+          "text": ""
+        },
+        {
+          "rows": 0,
+          "text": ""
+        },
+        {
+          "rows": 1,
+          "text": "操作"
+        }
+      ],
+      "textSample": "销项管理 手工开票 扫码开票 扫码记录 开票记录 订单开票 开票申请单 红字确认单 进项管理 票据中心 分析看板 基础信息 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 时间范围 - 近三天 近一周 本月 上月 近一年查询重置展开 批量失效 批量开票 生成时间：2026/06/28 - 2026/06/30 共 0 条 总金额 0元 发票种类 生成时间 订单编号 含税金额 发票抬头 状态 暂无数据 操作 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "platform-billIssue",
+      "menu": "销项管理/订单开票",
+      "targetUrl": "https://fp.enuoyun.com/platform/billIssue",
+      "finalUrl": "https://fp.enuoyun.com/platform/billIssue",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定",
+        "取消",
+        "立即前往"
+      ],
+      "inputs": [
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [],
+      "textSample": "销项管理 手工开票 扫码开票 扫码记录 开票记录 订单开票 开票申请单 红字确认单 进项管理 票据中心 分析看板 基础信息 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证 提示 请到【基础信息】【配置管理】中完成订单开票配置 取消立即前往",
+      "title": "数税云"
+    },
+    {
+      "key": "platform-invoiceApplication",
+      "menu": "销项管理/开票申请单",
+      "targetUrl": "https://fp.enuoyun.com/platform/invoiceApplication",
+      "finalUrl": "https://fp.enuoyun.com/platform/invoiceApplication",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "查询",
+        "重置",
+        "展开",
+        "批量导出",
+        "批量开票",
+        "批量修改",
+        "取 消",
+        "确 定",
+        "取 消",
+        "确 定",
+        "取 消",
+        "修复",
+        "无匹配发票，重开",
+        "取消",
+        "确定",
+        "取消",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "创建时间"
+        },
+        {
+          "placeholder": "开始日期",
+          "type": "text",
+          "value": "2026-06-28"
+        },
+        {
+          "placeholder": "结束日期",
+          "type": "text",
+          "value": "2026-06-30"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "近三天"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "近一周"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "本月"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "上月"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "近一年"
+        },
+        {
+          "placeholder": "请输入开票申请编号",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入订单编号",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入购方名称",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择发票种类",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入数电号码",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入交付手机",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入发票代码",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "发票号码起",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "发票号码止",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择回传状态",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择操作人",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择特定业务",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入交付邮箱",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入备注",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "10条/页"
+        },
+        {
+          "placeholder": "",
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "批量导出",
+        "批量开票",
+        "批量修改",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "创建时间 开票申请编号 订单编号 发票代码/号码 数电票号码 购方名称 特定业务 含税金额 税率 交付手机/邮箱 开票状态 回传状态 操作人 开票类型"
+        },
+        {
+          "rows": 0,
+          "text": ""
+        },
+        {
+          "rows": 1,
+          "text": ""
+        },
+        {
+          "rows": 0,
+          "text": ""
+        },
+        {
+          "rows": 1,
+          "text": "操作"
+        }
+      ],
+      "textSample": "销项管理 手工开票 扫码开票 扫码记录 开票记录 订单开票 开票申请单 红字确认单 进项管理 票据中心 分析看板 基础信息 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 全部待开票开票中开票失败发票生成开票完成 - 近三天 近一周 本月 上月 近一年开票申请编号订单编号购方名称发票种类 数电票号码交付手机查询重置展开 批量导出 批量开票 批量修改 创建时间 开票申请编号 订单编号 发票代码/号码 数电票号码 购方名称 特定业务 含税金额 税率 交付手机/邮箱 开票状态 回传状态 操作人 开票类型 暂无数据 操作 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "platform-redMark",
+      "menu": "销项管理/红字确认单",
+      "targetUrl": "https://fp.enuoyun.com/platform/redMark",
+      "finalUrl": "https://fp.enuoyun.com/platform/redMark",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "查询",
+        "重置",
+        "展开",
+        "红字确认单填开",
+        "红字确认单下载",
+        "批量开票",
+        "取 消",
+        "确 定",
+        "取 消",
+        "确 定",
+        "取 消",
+        "确 定",
+        "取 消",
+        "确 定",
+        "取 消",
+        "确 定",
+        "取 消",
+        "确 定",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "请选择确认单状态",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入对方纳税人名称",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入蓝票数电票号码",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "开始日期",
+          "type": "text",
+          "value": "2026-06-01"
+        },
+        {
+          "placeholder": "结束日期",
+          "type": "text",
+          "value": "2026-06-30"
+        },
+        {
+          "placeholder": "请选择开票状态",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入蓝票发票代码",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入蓝票发票号码",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择购/销方选择",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择录入方身份",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入红字确认单编号",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "10条/页"
+        },
+        {
+          "placeholder": "",
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "红字确认单填开",
+        "红字确认单下载",
+        "批量开票",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "填开日期 购销身份 对方纳税人名称 纳税人识别号 对应蓝票数电票号码 对应蓝票发票代码 对应蓝票发票号码 红票数电票号码 红字确认单编号 发票金额 发票税额 蓝票含税金额 冲红原因 确认即开票 状态 备注 开票状态 来源"
+        },
+        {
+          "rows": 0,
+          "text": ""
+        },
+        {
+          "rows": 1,
+          "text": ""
+        },
+        {
+          "rows": 0,
+          "text": ""
+        },
+        {
+          "rows": 1,
+          "text": "操作"
+        }
+      ],
+      "textSample": "销项管理 手工开票 扫码开票 扫码记录 开票记录 订单开票 开票申请单 红字确认单 进项管理 票据中心 分析看板 基础信息 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 确认单状态 对方纳税人名称蓝票数电票号码查询重置展开 红字确认单填开 红字确认单下载 批量开票 填开日期 购销身份 对方纳税人名称 纳税人识别号 对应蓝票数电票号码 对应蓝票发票代码 对应蓝票发票号码 红票数电票号码 红字确认单编号 发票金额 发票税额 蓝票含税金额 冲红原因 确认即开票 状态 备注 开票状态 来源 暂无数据 操作 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "billCenter-sign",
+      "menu": "票据中心/签收",
+      "targetUrl": "https://fp.enuoyun.com/billCenter/sign",
+      "finalUrl": "https://fp.enuoyun.com/billCenter/sign",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "重 置",
+        "签 收",
+        "取消",
+        "确认",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "请输入发票代码或扫码枪（英文输入法）",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入发票号码或后4位",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择开票日期",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入校验码后六位",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择签收部门",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择业务类型",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择计税方式",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入备注",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "确认",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [],
+      "textSample": "销项管理 进项管理 票据中心 发票池 签收 查验 取票设置 任务管理 分析看板 基础信息 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 签收签收历史 单张签收扫码签收扫描签收版式/图像签收Excel签收 发票代码 发票号码 开票日期 校验码(后六位) 签收部门 业务类型 计税方式 备注 重 置签 收 暂无数据 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "billCenter-invoiceVerification",
+      "menu": "票据中心/查验",
+      "targetUrl": "https://fp.enuoyun.com/billCenter/invoiceVerification",
+      "finalUrl": "https://fp.enuoyun.com/billCenter/invoiceVerification",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "重 置",
+        "查 验",
+        "查看查验凭证",
+        "下载查验凭证",
+        "取 消",
+        "确 定",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "请输入发票代码或扫码枪（英文输入法）",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入发票号码或后4位",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择开票日期",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入校验码后六位",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "下载查验凭证",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [],
+      "textSample": "销项管理 进项管理 票据中心 发票池 签收 查验 取票设置 任务管理 分析看板 基础信息 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 发票查验查验历史 手工查验扫码查验扫描查验版式/图像查验Excel查验 剩余查验次数：0/0次，如有疑问请拨打95113 发票代码 发票号码 开票日期 校验码(后六位) 重 置查 验 当前状态 发票代码 发票号码 开票日期 发票金额 销方名称 备注 查看查验凭证下载查验凭证 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "billCenter-accessSetting",
+      "menu": "票据中心/取票设置",
+      "targetUrl": "https://fp.enuoyun.com/billCenter/accessSetting",
+      "finalUrl": "https://fp.enuoyun.com/billCenter/accessSetting",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "保存设置",
+        "添加银行",
+        "删除银行",
+        "编辑账号",
+        "保存设置",
+        "确认",
+        "取消",
+        "添加电子邮箱",
+        "添加关键词规则",
+        "保存设置",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "选择年",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "选择年",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "1"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "2"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "0"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "1"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": "on"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "1"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "2"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "3"
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "1"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "保存设置",
+        "删除银行",
+        "保存设置",
+        "确认",
+        "保存设置",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "序号银行账户名称银行账号开户网点"
+        },
+        {
+          "rows": 0,
+          "text": ""
+        },
+        {
+          "rows": 1,
+          "text": "发票关键字异常分类备注操作"
+        },
+        {
+          "rows": 0,
+          "text": ""
+        }
+      ],
+      "textSample": "销项管理 进项管理 票据中心 发票池 签收 查验 取票设置 任务管理 分析看板 基础信息 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 发票获取设置银行单据获取设置异常发票规则配置 开启销项数据获取定时任务 开启进项数据获取定时任务 获取进项发票版式文件 同时获取PDF文件 同时获取XML文件 同时获取OFD文件 *同时获取版式文件所需时间较长且出错风险会增大！ 初始化设置 初始化设置 初始化年份选择 - *数电登录成功后可用 *初始化设置只允许设置一次，请谨慎操作! 保存设置 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "billCenter-taskManagement",
+      "menu": "票据中心/任务管理",
+      "targetUrl": "https://fp.enuoyun.com/billCenter/taskManagement",
+      "finalUrl": "https://fp.enuoyun.com/billCenter/taskManagement",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "批量下载",
+        "重新开始",
+        "重新开始",
+        "重新开始",
+        "重新开始",
+        "重新开始",
+        "重新开始",
+        "重新开始",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "20条/页"
+        },
+        {
+          "placeholder": "",
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "批量下载",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "序号 获取数据范围 业务类型 任务类型 任务开始时间 任务结束时间 获取条数 说明 任务状态 操作"
+        },
+        {
+          "rows": 7,
+          "text": "1 2026-06-26至2026-06-26 进项发票 税务数字账户 2026-06-26 19:38:12 2026-06-26 19:38:17 2 同步成功 重新开始 2 2026-06-12至2026-06-26 进项发票 税务数字账户 2026-06-26 08:58:32 2026-06-26 08:58:38 18 同步成功 重新开始 3 2026-06-12至2026-06-26 销项发票 税务数字账户 2026-06-26 08:58:32 2026-06-26 08:58:36 6 同步成功 重新开始 4 2026-01-01至2026-06-24 进项发票 税务数字账户 2026-06-24 16:58:26 2026-06-24 16:59:24 422 同步成功 重新开始 5 2026-01-01至2026-06-24 销项发票 税务数字账户 2026-06-24 16:58:26 2026-06-24 16:58:31 36 同步成功 重新开始 6 2026-06-01至2026-06-23 进项发票 税务数字账户 2026-06-23 14:21:44 "
+        }
+      ],
+      "textSample": "销项管理 进项管理 票据中心 发票池 签收 查验 取票设置 任务管理 分析看板 基础信息 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 数据同步任务下载任务 序号 获取数据范围 业务类型 任务类型 任务开始时间 任务结束时间 获取条数 说明 任务状态 操作 1 2026-06-26至2026-06-26 进项发票 税务数字账户 2026-06-26 19:38:12 2026-06-26 19:38:17 2 同步成功 重新开始 2 2026-06-12至2026-06-26 进项发票 税务数字账户 2026-06-26 08:58:32 2026-06-26 08:58:38 18 同步成功 重新开始 3 2026-06-12至2026-06-26 销项发票 税务数字账户 2026-06-26 08:58:32 2026-06-26 08:58:36 6 同步成功 重新开始 4 2026-01-01至2026-06-24 进项发票 税务数字账户 2026-06-24 16:58:26 2026-06-24 16:59:24 422 同步成功 重新开始 5 2026-01-01至2026-06-24 销项发票 税务数字账户 2026-06-24 16:58:26 2026-06-24 16:58:31 36 同步成功 重新开始 6 2026-06-01至2026-06-23 进项发票 税务数字账户 2026-06-23 14:21:44 2026-06-23 14:21:50 41 同步成功 重新开始 7 2026-06-01至2026-06-23 销项发票 税务数字账户 2026-06-23 14:21:37 2026-06-23 14:21:40 7 同步成功 重新开始 共 7 条 1 前往页 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "bussiness-info",
+      "menu": "基础信息/商品信息",
+      "targetUrl": "https://fp.enuoyun.com/bussiness/info",
+      "finalUrl": "https://fp.enuoyun.com/bussiness/info",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "查询",
+        "重置",
+        "新增",
+        "批量导入",
+        "批量删除",
+        "批量导出",
+        "批量修改税率",
+        "确 定",
+        "取 消",
+        "确 定",
+        "取 消",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "请输入商品名称",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入商品编码",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择税率",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "10条/页"
+        },
+        {
+          "placeholder": "",
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "批量导入",
+        "批量删除",
+        "批量导出",
+        "批量修改税率",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "商品名称 商品编码 简称 税收分类编码 税收分类名称 税率 单价 单位 规格型号 商品分类"
+        },
+        {
+          "rows": 0,
+          "text": ""
+        },
+        {
+          "rows": 1,
+          "text": ""
+        },
+        {
+          "rows": 0,
+          "text": ""
+        },
+        {
+          "rows": 1,
+          "text": "操作"
+        }
+      ],
+      "textSample": "销项管理 进项管理 票据中心 分析看板 基础信息 商品信息 客户管理 开票额度配置 配置管理 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 商品管理 商品名称商品编码税率 查询重置 新增 批量导入 批量删除 批量导出 批量修改税率 商品名称 商品编码 简称 税收分类编码 税收分类名称 税率 单价 单位 规格型号 商品分类 暂无数据 操作 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "bussiness-customer",
+      "menu": "基础信息/客户管理",
+      "targetUrl": "https://fp.enuoyun.com/bussiness/customer",
+      "finalUrl": "https://fp.enuoyun.com/bussiness/customer",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "新增",
+        "批量导入",
+        "批量删除",
+        "导出",
+        "确 定",
+        "取 消",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "企业名称或纳税人识别号",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "10条/页"
+        },
+        {
+          "placeholder": "",
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "批量导入",
+        "批量删除",
+        "导出",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "企业名称 纳税人识别号 客户编码 客户简称 地址、电话 开户行及账号 交付手机 交付邮箱"
+        },
+        {
+          "rows": 0,
+          "text": ""
+        },
+        {
+          "rows": 1,
+          "text": ""
+        },
+        {
+          "rows": 0,
+          "text": ""
+        },
+        {
+          "rows": 1,
+          "text": "操作"
+        }
+      ],
+      "textSample": "销项管理 进项管理 票据中心 分析看板 基础信息 商品信息 客户管理 开票额度配置 配置管理 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 新增 批量导入 批量删除 导出 企业名称 纳税人识别号 客户编码 客户简称 地址、电话 开户行及账号 交付手机 交付邮箱 暂无数据 操作 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "bussiness-credit",
+      "menu": "基础信息/开票额度配置",
+      "targetUrl": "https://fp.enuoyun.com/bussiness/credit",
+      "finalUrl": "https://fp.enuoyun.com/bussiness/credit",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "配置",
+        "保 存",
+        "取 消",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "请输入组织名称",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "序号 组织名称 周期 下级可用额度（元） 开票额度（元） 剩余开票额度（元） 开票数量（张） 剩余开票数量（张） 操作"
+        },
+        {
+          "rows": 1,
+          "text": "1 邯郸市聚兴碳素有限公司 配置"
+        }
+      ],
+      "textSample": "销项管理 进项管理 票据中心 分析看板 基础信息 商品信息 客户管理 开票额度配置 配置管理 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 组织开票额度用户开票额度 序号 组织名称 周期 下级可用额度（元） 开票额度（元） 剩余开票额度（元） 开票数量（张） 剩余开票数量（张） 操作 1 邯郸市聚兴碳素有限公司 配置 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "bussiness-configurationManagement",
+      "menu": "基础信息/配置管理",
+      "targetUrl": "https://fp.enuoyun.com/bussiness/configurationManagement",
+      "finalUrl": "https://fp.enuoyun.com/bussiness/configurationManagement",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "刷新",
+        "保存",
+        "新增",
+        "批量删除",
+        "确 定",
+        "取 消",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "请输入企业名称",
+          "type": "text",
+          "value": "邯郸市聚兴碳素有限公司"
+        },
+        {
+          "placeholder": "请输入企业税号",
+          "type": "text",
+          "value": "911304240774969489"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "一般纳税人"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "国家税务总局成安县税务局商城税务分局"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "11304240800"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "白酒，客运场站服务，建筑服务，货物运输服务，不动产销售，拖拉机和联合收割机，不动产经营租赁服务，旅客运输服务，金融商品转让"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "N"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "三类授信纳税人"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "03"
+        },
+        {
+          "placeholder": "请输入地址",
+          "type": "text",
+          "value": "成安县辛义乡大郭庄村东"
+        },
+        {
+          "placeholder": "请输入电话",
+          "type": "text",
+          "value": "13931067368"
+        },
+        {
+          "placeholder": "请输入收款人",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入复核人",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入开票员",
+          "type": "text",
+          "value": "郭静云"
+        },
+        {
+          "placeholder": "请输入开户行",
+          "type": "text",
+          "value": "中国银行股份有限公司成安支行"
+        },
+        {
+          "placeholder": "请输入开户行账号",
+          "type": "text",
+          "value": "101130063760"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "0"
+        },
+        {
+          "placeholder": "请输入开票员",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "checkbox",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "10条/页"
+        },
+        {
+          "placeholder": "",
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "刷新",
+        "保存",
+        "批量删除",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "地址 电话 开户行 银行账号 收款人 复核人 开票员 操作"
+        },
+        {
+          "rows": 0,
+          "text": ""
+        }
+      ],
+      "textSample": "销项管理 进项管理 票据中心 分析看板 基础信息 商品信息 客户管理 开票额度配置 配置管理 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 开票信息开票码设备分配通用配置扫码开票配置订单开票配置发票种类分配 企业名称企业税号纳税人类型税务机关名称税务机关代码企业行性质特定要素即征即退标志信用等级授信类别风险纳税人类型纳税人预警级别风险纳税人标志纳税人状态代码地址电话收款人复核人开票员开户行 开户行账号 默认 刷新保存 新增 批量删除 地址 电话 开户行 银行账号 收款人 复核人 开票员 操作 暂无数据 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "system-dept",
+      "menu": "系统设置/组织管理",
+      "targetUrl": "https://fp.enuoyun.com/system/dept",
+      "finalUrl": "https://fp.enuoyun.com/system/dept",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "新增",
+        "修改",
+        "新增",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "组织编码、组织名称、税号",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "序号 组织名称 组织类型 上级组织名称 纳税人识别号 状态 操作"
+        },
+        {
+          "rows": 1,
+          "text": "1 邯郸市聚兴碳素有限公司 总公司 911304240774969489 有效 修改新增"
+        }
+      ],
+      "textSample": "销项管理 进项管理 票据中心 分析看板 基础信息 系统设置 部门管理 组织管理 角色管理 网上办税信息 用户管理 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 新增 序号 组织名称 组织类型 上级组织名称 纳税人识别号 状态 操作 1 邯郸市聚兴碳素有限公司 总公司 911304240774969489 有效 修改新增 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "system-departmentInfo",
+      "menu": "系统设置/部门管理",
+      "targetUrl": "https://fp.enuoyun.com/system/departmentInfo",
+      "finalUrl": "https://fp.enuoyun.com/system/departmentInfo",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "新增",
+        "确 定",
+        "取 消",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "部门名称",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "序号 部门名称 上级部门名称 状态 备注 操作"
+        },
+        {
+          "rows": 0,
+          "text": ""
+        }
+      ],
+      "textSample": "销项管理 进项管理 票据中心 分析看板 基础信息 系统设置 组织管理 部门管理 角色管理 网上办税信息 用户管理 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 新增 序号 部门名称 上级部门名称 状态 备注 操作 暂无数据 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "system-role",
+      "menu": "系统设置/角色管理",
+      "targetUrl": "https://fp.enuoyun.com/system/role",
+      "finalUrl": "https://fp.enuoyun.com/system/role",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "新增",
+        "导出",
+        "修改",
+        "数据权限",
+        "删除",
+        "修改",
+        "数据权限",
+        "删除",
+        "修改",
+        "数据权限",
+        "删除",
+        "确 定",
+        "取 消",
+        "确 定",
+        "取 消",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "角色编码、角色名称",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "10条/页"
+        },
+        {
+          "placeholder": "",
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "导出",
+        "删除",
+        "删除",
+        "删除",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "序号 角色编码 角色名称 角色状态 操作"
+        },
+        {
+          "rows": 3,
+          "text": "1 003 开票员 有效 修改数据权限删除 2 002 管理员 有效 修改数据权限删除 3 001 超级管理员 有效 修改数据权限删除"
+        }
+      ],
+      "textSample": "销项管理 进项管理 票据中心 分析看板 基础信息 系统设置 部门管理 组织管理 角色管理 网上办税信息 用户管理 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 新增 导出 序号 角色编码 角色名称 角色状态 操作 1 003 开票员 有效 修改数据权限删除 2 002 管理员 有效 修改数据权限删除 3 001 超级管理员 有效 修改数据权限删除 共 3 条 1 前往页 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "system-onlineTaxationInfo",
+      "menu": "系统设置/网上办税信息",
+      "targetUrl": "https://fp.enuoyun.com/system/onlineTaxationInfo",
+      "finalUrl": "https://fp.enuoyun.com/system/onlineTaxationInfo",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "新增",
+        "修改",
+        "删除",
+        "确 定",
+        "取 消",
+        "确 定",
+        "确定",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "用户",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "911304240774969489"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "邯郸市聚兴碳素有限公司"
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "10条/页"
+        },
+        {
+          "placeholder": "",
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "邯郸市聚兴碳素有限公司"
+        },
+        {
+          "placeholder": "请选择纳税人所在地",
+          "type": "text",
+          "value": "河北(综服版）"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "911304240774969489"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "邯郸市聚兴碳素有限公司"
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "否"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "0"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "1"
+        },
+        {
+          "placeholder": "",
+          "type": "radio",
+          "value": "2"
+        },
+        {
+          "placeholder": "请输入设备证书口令",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择登录身份",
+          "type": "text",
+          "value": "1"
+        },
+        {
+          "placeholder": "请输入身份证号",
+          "type": "text",
+          "value": "**************0528"
+        },
+        {
+          "placeholder": "请输入手机号",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请输入密码",
+          "type": "text",
+          "value": "crf196877"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "删除",
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "数电账号 手机号 身份 用户 数电登录模式 操作"
+        },
+        {
+          "rows": 1,
+          "text": "13383305105 13383305105 开票员 管理员 911304240774969489 短信验证码 修改删除"
+        }
+      ],
+      "textSample": "销项管理 进项管理 票据中心 分析看板 基础信息 系统设置 组织管理 部门管理 网上办税信息 角色管理 用户管理 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 网上办税信息（金四）网上办税信息（金三） 邯郸市聚兴碳素有限公司 纳税人识别号纳税人名称 新增 数电账号 手机号 身份 用户 数电登录模式 操作 13383305105 13383305105 开票员 管理员 911304240774969489 短信验证码 修改删除 共 1 条 1 前往页 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "system-user",
+      "menu": "系统设置/用户管理",
+      "targetUrl": "https://fp.enuoyun.com/system/user",
+      "finalUrl": "https://fp.enuoyun.com/system/user",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "新增",
+        "修改",
+        "重置密码",
+        "确 定",
+        "取 消",
+        "重新导入",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "输入组织名称",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "登录用户名、姓名或手机号码或员工工号",
+          "type": "text",
+          "value": ""
+        },
+        {
+          "placeholder": "请选择",
+          "type": "text",
+          "value": "10条/页"
+        },
+        {
+          "placeholder": "",
+          "type": "number",
+          "value": "1"
+        },
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [
+        {
+          "rows": 1,
+          "text": "序号 账号 姓名 所属组织 手机号码 状态 员工工号 创建时间 所属部门 操作"
+        },
+        {
+          "rows": 1,
+          "text": "1 911304240774969489 管理员 邯郸市聚兴碳素有限公司 有效 2026-06-23 13:24:54 修改重置密码"
+        }
+      ],
+      "textSample": "销项管理 进项管理 票据中心 分析看板 基础信息 系统设置 部门管理 组织管理 角色管理 网上办税信息 用户管理 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 邯郸市聚兴碳素有限公司 新增 序号 账号 姓名 所属组织 手机号码 状态 员工工号 创建时间 所属部门 操作 1 911304240774969489 管理员 邯郸市聚兴碳素有限公司 有效 2026-06-23 13:24:54 修改重置密码 共 1 条 1 前往页 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    },
+    {
+      "key": "downloadCenter",
+      "menu": "顶部入口/下载中心",
+      "targetUrl": "https://fp.enuoyun.com/downloadCenter",
+      "finalUrl": "https://fp.enuoyun.com/downloadCenter",
+      "buttons": [
+        "取 消",
+        "确 定",
+        "已阅读并同意上述协议 （10s）",
+        "已阅读并同意上述政策 （10s）",
+        "已阅读并同意上述协议 （10s）",
+        "登录",
+        "刷新二维码",
+        "我已认证",
+        "确 定"
+      ],
+      "inputs": [
+        {
+          "placeholder": "请选择数电账号",
+          "type": "text",
+          "value": "13383305105"
+        },
+        {
+          "placeholder": "",
+          "type": "password",
+          "value": "***"
+        },
+        {
+          "placeholder": "",
+          "type": "text",
+          "value": "未登录"
+        }
+      ],
+      "links": [
+        {
+          "href": "/platform/created",
+          "text": "手工开票"
+        },
+        {
+          "href": "/platform/scanCode",
+          "text": "扫码开票"
+        },
+        {
+          "href": "/platform/scanRecords",
+          "text": "扫码记录"
+        },
+        {
+          "href": "/platform/records",
+          "text": "开票记录"
+        },
+        {
+          "href": "/platform/billIssue",
+          "text": "订单开票"
+        },
+        {
+          "href": "/platform/invoiceApplication",
+          "text": "开票申请单"
+        },
+        {
+          "href": "/platform/redMark",
+          "text": "红字确认单"
+        },
+        {
+          "href": "/income/invoiceCheck",
+          "text": "手工勾选"
+        },
+        {
+          "href": "/income/scanCodeCheck",
+          "text": "快捷勾选"
+        },
+        {
+          "href": "/income/confirmCheck",
+          "text": "勾选审核"
+        },
+        {
+          "href": "/income/confirmSign",
+          "text": "统计确认"
+        },
+        {
+          "href": "/income/certificationResults",
+          "text": "认证结果"
+        },
+        {
+          "href": "/billCenter/fullInvoiceQuery",
+          "text": "发票池"
+        },
+        {
+          "href": "/billCenter/sign",
+          "text": "签收"
+        },
+        {
+          "href": "/billCenter/invoiceVerification",
+          "text": "查验"
+        },
+        {
+          "href": "/billCenter/accessSetting",
+          "text": "取票设置"
+        },
+        {
+          "href": "/billCenter/taskManagement",
+          "text": "任务管理"
+        },
+        {
+          "href": "/analysisBoard/invoceRateView",
+          "text": "按税率统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceTypeView",
+          "text": "按发票种类统计"
+        },
+        {
+          "href": "/analysisBoard/businessRateView",
+          "text": "按上下游企业统计"
+        },
+        {
+          "href": "/analysisBoard/goodsRateView",
+          "text": "按进销商品统计"
+        },
+        {
+          "href": "/analysisBoard/purchaseSalesTrend",
+          "text": "按进销趋势统计"
+        },
+        {
+          "href": "/analysisBoard/invoiceRegionView",
+          "text": "按进销地区统计"
+        },
+        {
+          "href": "/bussiness/info",
+          "text": "商品信息"
+        },
+        {
+          "href": "/bussiness/customer",
+          "text": "客户管理"
+        },
+        {
+          "href": "/bussiness/credit",
+          "text": "开票额度配置"
+        },
+        {
+          "href": "/bussiness/configurationManagement",
+          "text": "配置管理"
+        },
+        {
+          "href": "/system/dept",
+          "text": "组织管理"
+        },
+        {
+          "href": "/system/departmentInfo",
+          "text": "部门管理"
+        },
+        {
+          "href": "/system/role",
+          "text": "角色管理"
+        },
+        {
+          "href": "/system/onlineTaxationInfo",
+          "text": "网上办税信息"
+        },
+        {
+          "href": "/system/user",
+          "text": "用户管理"
+        },
+        {
+          "href": "/downloadCenter",
+          "text": "下载中心"
+        },
+        {
+          "href": "/user/profile",
+          "text": "个人中心"
+        },
+        {
+          "href": "https://download.enuoyun.com/rjxz/YINUO365/YCSFW/SSY/CloudTaxBaseService.exe",
+          "text": "下载"
+        },
+        {
+          "href": "https://fp.enuoyun.com/AisinoPrinterSetup.exe",
+          "text": "下载"
+        },
+        {
+          "href": "https://fp.enuoyun.com/accessClient.exe",
+          "text": "下载"
+        },
+        {
+          "href": "https://fp.enuoyun.com/ERPImportTool.zip",
+          "text": "下载"
+        },
+        {
+          "href": "https://fp.enuoyun.com/shushuiyunkehuduan.zip",
+          "text": "下载"
+        }
+      ],
+      "loginSignals": [
+        "邯郸市聚兴碳素有限公司",
+        "管理员",
+        "数电账号",
+        "登录状态"
+      ],
+      "riskButtons": [
+        "刷新二维码",
+        "我已认证"
+      ],
+      "tables": [],
+      "textSample": "销项管理 进项管理 票据中心 分析看板 基础信息 系统设置 任务管理 下载中心 邯郸市聚兴碳素有限公司 管理员 一、同步工具 持有税控设备或托管用户可以使用该工具下载至数税云 365基础服务工具2.0 下载 二、打印工具 如若需要打印纸质发票，则需要安装打印助手 打印助手 下载 三、51发票客户端 持有税控设备的用户，下载51发票客户端 51发票助手 下载 四、数据库工具 需要在本地数据库取数或者发票回传到数据库的用户，需要下载数据库工具 数据库工具 下载 五、ERP导入工具 需要将ERP系统中心的订单快速导入系统，并将发票回传到ERP系统的用户，需下载此工具 ERP导入工具 下载 六、税控系统、A9服务器获取发票客户端 从税控系统获取发票需要用户安装开票软件且有对应库，登录本系统和客户端程序后获取发票 从A9服务器获取发票请联系客服人员进行主控地址、分机号、终端号配置后，下载A9服务器获取发票客户端进行发票获取 获取发票客户端 下载 数电登录 数电认证 电子税局登录 数电账号 密码 登录状态 登录 如您触发了风险监控预警，需完成身份认证!请按照指引完成身份认证处理。 若您在当天已完成认证，无需重新认证 操作指引 电子税务局APP扫脸认证 国家网络身份认证APP扫脸认证 请使用电子税务局APP扫脸完成认证 数电账号:133****5105 二维码有效时间 4 分 45 秒 如果扫码失败请刷新二维码后重试 刷新二维码我已认证",
+      "title": "数税云"
+    }
+  ]
+}
