@@ -127,7 +127,7 @@ docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_QUEUE.json
 - 当前已新增下载目录归档脚本：`npm run tax-cloud:har:collect`。Chrome 导出的 HAR 如果保存在 `~/Downloads` 且文件名与队列一致，可自动拷贝到 `docs/tax-cloud/network-har/`，默认不覆盖已存在文件。
 - 当前已新增已认证只读 HAR 生成脚本：`npm run tax-cloud:har:auth-read`。仅请求交叉校验中已确认的只读 success/auth-accepted 接口，用于补真实接口响应证据；该脚本不请求写入类、高风险类接口。
 
-## 缺口优先级分组（按 P0→P3）
+## 缺口补齐记录（按 P0→P3）
 
 ### P0（优先最优，先补）
 - `platform-records`（销项管理/开票记录）
@@ -156,52 +156,52 @@ docs/tax-cloud/TAX_CLOUD_HAR_CAPTURE_QUEUE.json
 
 ### P1（次优先）
 - `platform-scanCode`（销项管理/扫码开票）
-  - 待真实登录态 HAR
+  - `platform-scanCode.default-list.har`（done，authenticated-read，auth-accepted）
 - `platform-scanRecords`（销项管理/扫码记录）
-  - 待真实登录态 HAR
+  - `platform-scanRecords.default-list.har`（done，authenticated-read，auth-accepted）
   - `platform-scanRecords.detail.har`
 - `platform-billIssue`（销项管理/订单开票）
-  - 待真实登录态 HAR
+  - `platform-billIssue.default-list.har`（done，authenticated-read，success）
 - `platform-invoiceApplication`（销项管理/开票申请单）
-  - 待真实登录态 HAR
+  - `platform-invoiceApplication.default-list.har`（done，authenticated-read，auth-accepted）
 - `platform-redMark`（销项管理/红字确认单）
-  - 待真实登录态 HAR
+  - `platform-redMark.default-list.har`（done，authenticated-read，success）
 - `income-scanCodeCheck`（进项管理/快捷勾选）
   - `income-scanCodeCheck.default-list.har`（done）
 - `income-confirmCheck`（进项管理/勾选审核）
   - `income-confirmCheck.default-list.har`（done）
 - `billCenter-sign`（票据中心/签收）
-  - 待真实登录态 HAR
+  - `billCenter-sign.action-review.har`（done，authenticated-read，success；未触发签收动作）
 - `billCenter-invoiceVerification`（票据中心/查验）
-  - 待真实登录态 HAR
+  - `billCenter-invoiceVerification.default-list.har`（done，authenticated-read，success）
 - `billCenter-accessSetting`（票据中心/取票设置）
-  - 待真实登录态 HAR
+  - `billCenter-accessSetting.sync.har`（done，authenticated-read，success；未触发保存/重启）
 - `billCenter-taskManagement`（票据中心/任务管理）
-  - 待真实登录态 HAR
+  - `billCenter-taskManagement.default-list.har`（done，authenticated-read，success；未触发任务重启）
 - `downloadCenter`（顶部入口）
-  - 待真实登录态 HAR
+  - `downloadCenter.default-list.har`（done，authenticated-read，success；未触发下载动作）
 
 ### P2（低优先）
 - `bussiness-info`（基础信息/商品信息）
-  - 待真实登录态 HAR
+  - `bussiness-info.default-list.har`（done，authenticated-read，success）
 - `bussiness-customer`（基础信息/客户管理）
-  - 待真实登录态 HAR
+  - `bussiness-customer.default-list.har`（done，authenticated-read，success）
 - `bussiness-credit`（基础信息/开票额度配置）
-  - 待真实登录态 HAR
+  - `bussiness-credit.default-list.har`（done，authenticated-read，auth-accepted）
 - `bussiness-configurationManagement`（基础信息/配置管理）
-  - 待真实登录态 HAR
+  - `bussiness-configurationManagement.default-list.har`（done，authenticated-read，auth-accepted）
 - `system-onlineTaxationInfo`（系统设置/网上办税信息）
-  - 待真实登录态 HAR
+  - `system-onlineTaxationInfo.default-list.har`（done，authenticated-read，success）
 
 ### P3（最后）
 - `system-dept`（系统设置/组织管理）
-  - 待真实登录态 HAR
+  - `system-dept.default-list.har`（done，authenticated-read，success）
 - `system-departmentInfo`（系统设置/部门管理）
-  - 待真实登录态 HAR
+  - `system-departmentInfo.default-list.har`（done，authenticated-read，success）
 - `system-role`（系统设置/角色管理）
-  - 待真实登录态 HAR
+  - `system-role.default-list.har`（done，authenticated-read，success）
 - `system-user`（系统设置/用户管理）
-  - 待真实登录态 HAR
+  - `system-user.default-list.har`（done，authenticated-read，success）
 
 ## 操作标准（严格）
 
@@ -227,12 +227,13 @@ npm run tax-cloud:audit:strict
 
 ## 下一组建议
 
-默认页面级 HAR 主任务未完成。下一步优先按 `TAX_CLOUD_MINIMAL_HAR_BATCH.md` 补齐剩余 19 个页面真实登录态 HAR：
+默认页面级 HAR 主任务已完成，`npm run tax-cloud:audit:strict` 当前通过，目标 `32/32` 已达成。
 
-1. 先采每页 1 条最小 HAR：默认加载/默认列表/查询，不触发提交类动作。
-2. 解析并通过 `npm run tax-cloud:audit:strict`，目标是 `32/32` 页面级真实 HAR。
-3. 再进入详情抽屉/详情页等只读二级动作。
-4. 下载、签收、认证、红冲、真实开票：保持高风险隔离，必须单独确认后才采。
+后续只剩增强项，不阻塞主任务验收：
+
+1. 如需更强证据，可把 `authenticated-read-synthetic-har` 页面补成 DevTools 页面点击 HAR。
+2. 可继续补详情抽屉/详情页等只读二级动作。
+3. 下载、签收、认证、红冲、真实开票：保持高风险隔离，必须单独确认后才采。
 
 ## 参考文件
 
